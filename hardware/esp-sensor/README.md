@@ -17,6 +17,7 @@ Revision **B-ES1** remains the simpler ESP32-C3-DevKitM-1 bench-test version.
 - B-ES3-C6 PCB source: `IDM-RoomSensor-ESP-B-ES3-C6.kicad_pcb`
 - B-ES3-C6 schematic: `IDM-RoomSensor-ESP-B-ES3-C6.kicad_sch`
 - B-ES3-C6 pin map: `B-ES3-C6-PINMAP.md`
+- B-ES3-C6 printable enclosure: `enclosure/B-ES3-C6-PRINTING.md`
 - B-ES2-C6 order instructions: `manufacturing/B-ES2-C6/README.md`
 - B-ES2-C6 PCB source: `IDM-RoomSensor-ESP-B-ES2-C6.kicad_pcb`
 - B-ES2-C6 schematic: `IDM-RoomSensor-ESP-B-ES2-C6.kicad_sch`
