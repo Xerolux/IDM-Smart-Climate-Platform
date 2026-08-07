@@ -38,6 +38,7 @@ def main() -> None:
     args = parser.parse_args()
     board = pcbnew.LoadBoard(str(args.board))
     extended = pcbnew.ToMM(board.GetBoardEdgesBoundingBox().GetWidth()) > 120
+    air = pcbnew.ToMM(board.GetBoardEdgesBoundingBox().GetHeight()) > 90
 
     # Idempotent when rerun on the released board.
     for zone in list(board.Zones()):
@@ -47,6 +48,10 @@ def main() -> None:
     # Logic ground covers the board except the isolated RS-485 region.  It may
     # extend to the SHT45 at the upper-right without entering the bus island.
     logic_outline = (
+        ((10.5, 10.5), (139.5, 10.5), (139.5, 34.0), (103.5, 34.0),
+         (103.5, 70.0), (139.5, 70.0), (139.5, 109.5), (50.0, 109.5),
+         (50.0, 89.5), (20.0, 89.5), (20.0, 109.5), (10.5, 109.5))
+        if air else
         ((10.5, 10.5), (139.5, 10.5), (139.5, 34.0), (103.5, 34.0),
          (103.5, 70.0), (139.5, 70.0), (139.5, 89.5), (10.5, 89.5))
         if extended else

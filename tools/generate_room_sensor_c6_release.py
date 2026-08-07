@@ -69,6 +69,20 @@ ES3_PARTS = [
     ("LED2,LED3", "MEIHUA", "MHT192CGCT", "green diagnostic LED", "0603", "C389518"),
 ]
 
+AIR_PARTS = [
+    ("U8", "Sensirion", "SCD41-D-R1", "photoacoustic CO2 sensor", "SCD4x 10.1x10.1 mm", "C3659362"),
+    ("U9", "Sensirion", "SGP41-D-R4", "VOC and NOx index sensor", "DFN-6 2.4x2.4 mm", "C3659325"),
+    ("U10", "Bosch Sensortec", "BMP390", "barometric pressure sensor", "LGA-10 2x2 mm", "C5124834"),
+    ("U11", "TECH PUBLIC", "AP2112K-3.3TRG1", "dedicated 3.3 V 600 mA AIR LDO", "SOT-23-5", "C23380830"),
+    ("C22,C26,C27", "Murata", "GRM21BR71H104KA01L", "100 nF 50 V X7R", "0805", "C49678"),
+    ("C23", "CCTC", "TCC0805X7R475K100FTM", "4.7 uF 10 V X7R", "0805", "C51912533"),
+    ("C24,C25", "Samsung Electro-Mechanics", "CL21B105KBFNNNE", "1 uF 50 V X7R", "0805", "C28323"),
+    ("C28", "Murata", "GRM21BR71A106KE51L", "10 uF 10 V X7R", "0805", "C86038"),
+    ("C29", "TDK", "C2012X5R1A226MT0J0E", "22 uF 10 V X5R", "0805", "C361180"),
+    ("R26", "Yageo", "RC0603FR-0710RL", "10 ohm 1% SGP41 VDD filter", "0603", "C109318"),
+    ("C30", "KS", "UT1A221M0810VG", "220 uF 10 V USB peak-current reservoir", "SMD D8x10.2 mm", "C963255"),
+]
+
 
 def refs(text: str) -> list[str]:
     return [item.strip() for item in text.split(",")]
@@ -101,10 +115,10 @@ def write_archives(release: Path, revision: str) -> None:
         release / f"IDM-RoomSensor-ESP-{revision}-schematic.pdf",
         release / f"IDM-RoomSensor-ESP-{revision}-top.png",
     ]
-    if revision == "B-ES3-C6":
+    if revision in {"B-ES3-C6", "B-ES4-AIR"}:
         package_files.extend([
             release / "START-HIER-BESTELLUNG.md",
-            release / "B-ES3-C6-MECHANIK-BOM.csv",
+            release / f"{revision}-MECHANIK-BOM.csv",
             release / "RELEASE-VERIFICATION.md",
         ])
     if all(path.is_file() for path in package_files):
@@ -112,20 +126,30 @@ def write_archives(release: Path, revision: str) -> None:
             for path in package_files:
                 archive.write(path, path.relative_to(release).as_posix())
 
+    if revision == "B-ES4-AIR" and (release / "Gehaeuse").is_dir() and order.is_file():
+        complete = release / "IDM-RoomSensor-B-ES4-AIR-KOMPLETTPAKET.zip"
+        excluded = {complete, release / "DRC.txt"}
+        with zipfile.ZipFile(complete, "w", zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
+            for path in sorted(release.rglob("*")):
+                if path.is_file() and path not in excluded and "gerbers" not in path.parts:
+                    archive.write(path, path.relative_to(release).as_posix())
+
 
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("positions", type=Path)
     parser.add_argument("release", type=Path)
-    parser.add_argument("--revision", choices=("B-ES2-C6", "B-ES3-C6"), default="B-ES2-C6")
+    parser.add_argument("--revision", choices=("B-ES2-C6", "B-ES3-C6", "B-ES4-AIR"), default="B-ES2-C6")
     args = parser.parse_args()
     with args.positions.open(newline="", encoding="utf-8-sig") as handle:
         positions = {row["Ref"]: row for row in csv.DictReader(handle)}
 
     parts = list(PARTS)
-    if args.revision == "B-ES3-C6":
+    if args.revision in {"B-ES3-C6", "B-ES4-AIR"}:
         parts[0] = ("J1,J2", "MAX", "MX205R-5.0-04P-GN01-Cu-A", "4-way push-in spring terminal", "THT P5.00mm 1x04", "C7471336")
         parts.extend(ES3_PARTS)
+    if args.revision == "B-ES4-AIR":
+        parts.extend(AIR_PARTS)
     all_refs = [ref for row in parts for ref in refs(row[0])]
     missing = sorted(set(all_refs) - set(positions))
     if missing:

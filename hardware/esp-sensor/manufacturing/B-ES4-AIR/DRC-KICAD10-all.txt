@@ -1,0 +1,214 @@
+** Drc report for IDM-RoomSensor-ESP-B-ES4-AIR.kicad_pcb **
+** Created on 2026-08-07T23:36:23 **
+** Report includes: Errors, Warnings **
+
+** Found 53 DRC violations **
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: Einschränkungen aus Platinenkonfiguration zum Bestückungsdruck; warning
+    @(10.0000 mm, 10.0000 mm): Segment on Edge.Cuts
+    @(130.7500 mm, 9.8800 mm): Reference field of J7
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: Einschränkungen aus Platinenkonfiguration zum Bestückungsdruck; warning
+    @(10.0000 mm, 10.0000 mm): Segment on Edge.Cuts
+    @(88.7500 mm, 9.8800 mm): Reference field of J5
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: Einschränkungen aus Platinenkonfiguration zum Bestückungsdruck; warning
+    @(140.0000 mm, 110.0000 mm): Segment on Edge.Cuts
+    @(70.3000 mm, 109.2000 mm): Segment of J3 on F.Silkscreen
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: Einschränkungen aus Platinenkonfiguration zum Bestückungsdruck; warning
+    @(140.0000 mm, 110.0000 mm): Segment on Edge.Cuts
+    @(79.7000 mm, 109.2000 mm): Segment of J3 on F.Silkscreen
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: Einschränkungen aus Platinenkonfiguration zum Bestückungsdruck; warning
+    @(10.0000 mm, 10.0000 mm): Segment on Edge.Cuts
+    @(14.0000 mm, 9.8500 mm): Reference field of H1
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: Einschränkungen aus Platinenkonfiguration zum Bestückungsdruck; warning
+    @(10.0000 mm, 10.0000 mm): Segment on Edge.Cuts
+    @(108.7500 mm, 9.8800 mm): Reference field of J6
+[text_height]: Schrifthöhe außerhalb des zulässigen Bereichs (Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe min. Breite 0,8000 mm; tatsächlich 0,5500 mm)
+    Rule: Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe; warning
+    @(29.0000 mm, 108.0000 mm): PCB text 'SCD41 CO2' on F.Silkscreen
+[text_height]: Schrifthöhe außerhalb des zulässigen Bereichs (Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe min. Breite 0,8000 mm; tatsächlich 0,5500 mm)
+    Rule: Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe; warning
+    @(44.0000 mm, 106.8000 mm): PCB text 'SGP41 VOC/NOx | BMP390 hPa' on F.Silkscreen
+[text_height]: Schrifthöhe außerhalb des zulässigen Bereichs (Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe min. Breite 0,8000 mm; tatsächlich 0,5500 mm)
+    Rule: Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe; warning
+    @(84.0000 mm, 22.5000 mm): PCB text '1W-A: 3V DQ GND' on F.Silkscreen
+[text_height]: Schrifthöhe außerhalb des zulässigen Bereichs (Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe min. Breite 0,8000 mm; tatsächlich 0,5500 mm)
+    Rule: Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe; warning
+    @(104.0000 mm, 22.5000 mm): PCB text '1W-B: 3V DQ GND' on F.Silkscreen
+[text_height]: Schrifthöhe außerhalb des zulässigen Bereichs (Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe min. Breite 0,8000 mm; tatsächlich 0,5500 mm)
+    Rule: Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe; warning
+    @(108.0000 mm, 82.0000 mm): PCB text 'SERVICE' on F.Silkscreen
+[text_height]: Schrifthöhe außerhalb des zulässigen Bereichs (Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe min. Breite 0,8000 mm; tatsächlich 0,5500 mm)
+    Rule: Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe; warning
+    @(122.0000 mm, 69.0000 mm): PCB text 'TERM' on F.Silkscreen
+[text_height]: Schrifthöhe außerhalb des zulässigen Bereichs (Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe min. Breite 0,8000 mm; tatsächlich 0,5500 mm)
+    Rule: Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe; warning
+    @(126.0000 mm, 22.5000 mm): PCB text 'DI1 COM DI2' on F.Silkscreen
+[text_height]: Schrifthöhe außerhalb des zulässigen Bereichs (Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe min. Breite 0,8000 mm; tatsächlich 0,5500 mm)
+    Rule: Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe; warning
+    @(127.0000 mm, 84.0000 mm): PCB text '0-10V IN | GND' on F.Silkscreen
+[text_height]: Schrifthöhe außerhalb des zulässigen Bereichs (Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe min. Breite 0,8000 mm; tatsächlich 0,5500 mm)
+    Rule: Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe; warning
+    @(128.0000 mm, 61.0000 mm): PCB text 'A B COM SH' on F.Silkscreen
+[text_height]: Schrifthöhe außerhalb des zulässigen Bereichs (Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe min. Breite 0,8000 mm; tatsächlich 0,6500 mm)
+    Rule: Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe; warning
+    @(35.0000 mm, 22.5000 mm): PCB text 'by Xerolux | xerolux.de | REV B-ES4-AIR | 2026' on F.Silkscreen
+[text_height]: Schrifthöhe außerhalb des zulässigen Bereichs (Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe min. Breite 0,8000 mm; tatsächlich 0,6500 mm)
+    Rule: Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe; warning
+    @(40.0000 mm, 84.0000 mm): PCB text '43 TEMP | 42 +24V | 41 GND | 40 RH' on F.Silkscreen
+[text_height]: Schrifthöhe außerhalb des zulässigen Bereichs (Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe min. Breite 0,8000 mm; tatsächlich 0,6500 mm)
+    Rule: Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe; warning
+    @(45.0000 mm, 89.8000 mm): PCB text 'ULTIMATE AIR - SENSOR ISLAND' on F.Silkscreen
+[text_height]: Schrifthöhe außerhalb des zulässigen Bereichs (Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe min. Breite 0,8000 mm; tatsächlich 0,6500 mm)
+    Rule: Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe; warning
+    @(75.0000 mm, 102.0000 mm): PCB text 'USB-C FLASH / POWER' on F.Silkscreen
+[text_height]: Schrifthöhe außerhalb des zulässigen Bereichs (Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe min. Breite 0,8000 mm; tatsächlich 0,6500 mm)
+    Rule: Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe; warning
+    @(108.0000 mm, 35.0000 mm): PCB text 'PUSH-IN FIELD I/O - NO USER SOLDERING' on F.Silkscreen
+[text_height]: Schrifthöhe außerhalb des zulässigen Bereichs (Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe min. Breite 0,8000 mm; tatsächlich 0,6500 mm)
+    Rule: Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe; warning
+    @(130.0000 mm, 68.0000 mm): PCB text 'RS485 ISOLATED' on F.Silkscreen
+[text_height]: Schrifthöhe außerhalb des zulässigen Bereichs (Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe min. Breite 0,8000 mm; tatsächlich 0,7000 mm)
+    Rule: Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe; warning
+    @(57.0000 mm, 33.0000 mm): PCB text 'ENGINEERING SAMPLE - BENCH TEST FIRST' on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: Einschränkungen aus Platinenkonfiguration zum Bestückungsdruck; warning
+    @(112.7387 mm, 54.7350 mm): Segment of C17 on F.Silkscreen
+    @(113.0000 mm, 55.3200 mm): Reference field of C18
+[silk_overlap]: Silkscreen clearance
+    Rule: Einschränkungen aus Platinenkonfiguration zum Bestückungsdruck; warning
+    @(126.0000 mm, 22.5000 mm): PCB text 'DI1 COM DI2' on F.Silkscreen
+    @(128.0000 mm, 23.1500 mm): Reference field of TVS4
+[silk_overlap]: Silkscreen clearance
+    Rule: Einschränkungen aus Platinenkonfiguration zum Bestückungsdruck; warning
+    @(75.0000 mm, 101.5550 mm): Reference field of J3
+    @(75.0000 mm, 102.0000 mm): PCB text 'USB-C FLASH / POWER' on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: Einschränkungen aus Platinenkonfiguration zum Bestückungsdruck; warning
+    @(75.0000 mm, 65.6000 mm): Reference field of ESD1
+    @(73.5500 mm, 66.4900 mm): Polygon of ESD1 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: Einschränkungen aus Platinenkonfiguration zum Bestückungsdruck; warning
+    @(66.5700 mm, 67.0000 mm): Reference field of R4
+    @(66.3000 mm, 67.1000 mm): Segment of L1 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: Einschränkungen aus Platinenkonfiguration zum Bestückungsdruck; warning
+    @(69.0700 mm, 67.0000 mm): Reference field of R5
+    @(68.5225 mm, 67.2373 mm): Segment of R4 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: Einschränkungen aus Platinenkonfiguration zum Bestückungsdruck; warning
+    @(130.8800 mm, 78.1200 mm): Segment of J8 on F.Silkscreen
+    @(130.0000 mm, 68.0000 mm): PCB text 'RS485 ISOLATED' on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: Einschränkungen aus Platinenkonfiguration zum Bestückungsdruck; warning
+    @(125.1500 mm, 75.0000 mm): Reference field of TVS5
+    @(124.0000 mm, 73.5700 mm): Reference field of R21
+[silk_overlap]: Silkscreen clearance
+    Rule: Einschränkungen aus Platinenkonfiguration zum Bestückungsdruck; warning
+    @(104.0000 mm, 22.5000 mm): PCB text '1W-B: 3V DQ GND' on F.Silkscreen
+    @(108.0000 mm, 23.1500 mm): Reference field of TVS3
+[silk_overlap]: Silkscreen clearance
+    Rule: Einschränkungen aus Platinenkonfiguration zum Bestückungsdruck; warning
+    @(77.7627 mm, 40.5225 mm): Segment of R13 on F.Silkscreen
+    @(77.0000 mm, 40.5000 mm): Reference field of SW2
+[silk_overlap]: Silkscreen clearance
+    Rule: Einschränkungen aus Platinenkonfiguration zum Bestückungsdruck; warning
+    @(93.5150 mm, 40.7350 mm): Segment of LED2 on F.Silkscreen
+    @(94.0000 mm, 40.5700 mm): Reference field of C12
+[silk_overlap]: Silkscreen clearance
+    Rule: Einschränkungen aus Platinenkonfiguration zum Bestückungsdruck; warning
+    @(99.0000 mm, 44.5700 mm): Reference field of R11
+    @(100.5700 mm, 46.0000 mm): Reference field of C13
+[silk_overlap]: Silkscreen clearance
+    Rule: Einschränkungen aus Platinenkonfiguration zum Bestückungsdruck; warning
+    @(94.0000 mm, 31.0000 mm): Circle of TP10 on F.Silkscreen
+    @(91.0000 mm, 32.5020 mm): Reference field of TP12
+[silk_overlap]: Silkscreen clearance
+    Rule: Einschränkungen aus Platinenkonfiguration zum Bestückungsdruck; warning
+    @(95.7387 mm, 53.2350 mm): Segment of C16 on F.Silkscreen
+    @(96.0000 mm, 53.8200 mm): Reference field of C14
+[silk_overlap]: Silkscreen clearance
+    Rule: Einschränkungen aus Platinenkonfiguration zum Bestückungsdruck; warning
+    @(96.0000 mm, 50.8200 mm): Reference field of C16
+    @(95.7627 mm, 50.5225 mm): Segment of R9 on F.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(113.0000 mm, 55.3200 mm): Reference field of C18
+    @(113.9500 mm, 54.0000 mm): Pad 2 [RS485_COM] of C17 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(113.0000 mm, 55.3200 mm): Reference field of C18
+    @(112.0500 mm, 54.0000 mm): Pad 1 [VISO] of C17 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(66.5700 mm, 67.0000 mm): Reference field of R4
+    @(65.1500 mm, 65.0000 mm): Pad 2 [5V_BUCK] of L1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(69.0700 mm, 67.0000 mm): Reference field of R5
+    @(68.0000 mm, 67.8250 mm): Pad 1 [USB_CC1] of R4 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(69.0700 mm, 67.0000 mm): Reference field of R5
+    @(68.0000 mm, 66.1750 mm): Pad 2 [GND] of R4 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(35.0000 mm, 22.5000 mm): PCB text 'by Xerolux | xerolux.de | REV B-ES4-AIR | 2026' on F.Silkscreen
+    @(46.2500 mm, 22.5750 mm): Pad 5 [EXP_GPIO5] of U3 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(57.0000 mm, 33.0000 mm): PCB text 'ENGINEERING SAMPLE - BENCH TEST FIRST' on F.Silkscreen
+    @(46.2500 mm, 32.7350 mm): Pad 13 [USB_D-] of U3 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(125.1500 mm, 75.0000 mm): Reference field of TVS5
+    @(124.8250 mm, 75.0000 mm): Pad 2 [GND] of R21 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(57.0000 mm, 33.0000 mm): PCB text 'ENGINEERING SAMPLE - BENCH TEST FIRST' on F.Silkscreen
+    @(63.7500 mm, 32.7350 mm): Pad 16 [CONTACT1] of U3 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(77.0000 mm, 40.5000 mm): Reference field of SW2
+    @(77.1750 mm, 40.0000 mm): Pad 1 [STATUS_LED] of R13 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(94.0000 mm, 40.5700 mm): Reference field of C12
+    @(94.2125 mm, 40.0000 mm): Pad 1 [PWR24_LED_R] of LED2 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(100.5700 mm, 46.0000 mm): Reference field of C13
+    @(99.8250 mm, 46.0000 mm): Pad 2 [RH_OUT] of R11 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(96.0000 mm, 53.8200 mm): Reference field of C14
+    @(95.0500 mm, 52.5000 mm): Pad 1 [+3V3] of C16 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(96.0000 mm, 53.8200 mm): Reference field of C14
+    @(96.9500 mm, 52.5000 mm): Pad 2 [GND] of C16 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(96.0000 mm, 50.8200 mm): Reference field of C16
+    @(95.1750 mm, 50.0000 mm): Pad 1 [OPAMP_OUT] of R9 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(96.0000 mm, 50.8200 mm): Reference field of C16
+    @(96.8250 mm, 50.0000 mm): Pad 2 [OPAMP_FB] of R9 on F.Cu
+
+** Found 0 unconnected pads **
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **

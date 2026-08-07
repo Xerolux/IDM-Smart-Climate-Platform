@@ -23,17 +23,22 @@ def main() -> None:
     args = parser.parse_args()
     board = pcbnew.LoadBoard(str(args.board))
     footprint = next(fp for fp in board.GetFootprints() if fp.GetReference() == "U4")
-    targets = {"1": (71.8, 18.8), "2": (71.8, 21.2), "3": (76.2, 21.2), "4": (76.2, 18.8)}
+    # Leave the sensor's footprint keepout horizontally, then fan out at 45°.
+    # The final vias are far enough apart for 0.2 mm copper clearance.
+    elbows = {"1": (71.8, 19.6), "2": (71.8, 20.4), "3": (76.2, 20.4), "4": (76.2, 19.6)}
+    targets = {"1": (70.6, 18.4), "2": (70.6, 21.6), "3": (77.4, 21.6), "4": (77.4, 18.4)}
 
     for pad in footprint.Pads():
+        elbow = point(*elbows[pad.GetNumber()])
         target = point(*targets[pad.GetNumber()])
-        track = pcbnew.PCB_TRACK(board)
-        track.SetStart(pad.GetPosition())
-        track.SetEnd(target)
-        track.SetLayer(pcbnew.F_Cu)
-        track.SetWidth(mm(0.2))
-        track.SetNet(pad.GetNet())
-        board.Add(track)
+        for start, end in ((pad.GetPosition(), elbow), (elbow, target)):
+            track = pcbnew.PCB_TRACK(board)
+            track.SetStart(start)
+            track.SetEnd(end)
+            track.SetLayer(pcbnew.F_Cu)
+            track.SetWidth(mm(0.2))
+            track.SetNet(pad.GetNet())
+            board.Add(track)
 
         via = pcbnew.PCB_VIA(board)
         via.SetPosition(target)

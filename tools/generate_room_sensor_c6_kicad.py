@@ -54,7 +54,8 @@ def add_passive(builder: Builder, ref: str, kind: str, center, value: str,
 
 
 def build(revision: str = "B-ES2-C6"):
-    extended = revision == "B-ES3-C6"
+    extended = revision in {"B-ES3-C6", "B-ES4-AIR"}
+    air = revision == "B-ES4-AIR"
     terminal = lambda pins: (
         f"TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-{pins:02d}P_1x{pins:02d}_P5.00mm"
         if extended else
@@ -68,7 +69,9 @@ def build(revision: str = "B-ES2-C6"):
         comments={
             1: "ENGINEERING SAMPLE - BENCH VALIDATION REQUIRED BEFORE IDM CONNECTION",
             2: "ESP32-C6-WROOM-1-N16; USB-C; isolated Modbus RS-485",
-            3: "SHT45 room sensing; passive KTY81/210; active 0-10 V humidity output",
+            3: ("SHT45 + SCD41 + SGP41 + BMP390 indoor-air sensing"
+                if air else
+                "SHT45 room sensing; passive KTY81/210; active 0-10 V humidity output"),
         },
     )
     b.sch.titleBlock.revision = revision
@@ -242,6 +245,47 @@ def build(revision: str = "B-ES2-C6"):
         add_passive(b,"R25","R",(205,270),"1k","Resistor_SMD:R_0603_1608Metric",{"1":"BUS_LED","2":"BUS_LED_R"})
         add_passive(b,"LED3","LED",(225,270),"BUS GREEN","LED_SMD:LED_0603_1608Metric",{"1":"BUS_LED_R","2":"GND"})
 
+    if air:
+        title(b, "Ultimate AIR: CO2, VOC, NOx and barometric pressure", 155, 292)
+        b.add(reference="U8", nickname="Sensor_Gas", entry="SCD41-D-R2",
+            center=(55, 315), value="SCD41-D-R1", footprint="Xerolux-Air:SENSOR-SMD_SCD41-D-R1",
+            datasheet="https://sensirion.com/resource/datasheet/scd4x",
+            nets={"6":"GND", "7":"AIR_3V3", "9":"I2C_SCL", "10":"I2C_SDA",
+                  "19":"AIR_3V3", "20":"GND", "21":"GND"})
+        b.add(reference="U9", nickname="Connector_Generic", entry="Conn_01x07",
+            center=(105,315), value="SGP41-D-R4", footprint="Xerolux-Air:DFN-6_L2.4-W2.4-P0.80-TL-EP",
+            datasheet="https://sensirion.com/resource/datasheet/sgp41",
+            nets={"1":"SGP_VDD", "2":"GND", "3":"I2C_SDA", "4":"GND",
+                  "5":"AIR_3V3", "6":"I2C_SCL", "7":"GND"})
+        b.add(reference="U10", nickname="Connector_Generic", entry="Conn_02x05_Odd_Even",
+            center=(155,315), value="BMP390", footprint="Xerolux-Air:LGA-10_L2.0-W2.0-P0.50-BL",
+            datasheet="https://www.bosch-sensortec.com/products/environmental-sensors/pressure-sensors/bmp390/",
+            nets={"1":"AIR_3V3", "2":"I2C_SCL", "3":"GND", "4":"I2C_SDA",
+                  "5":"GND", "6":"AIR_3V3", "8":"GND", "9":"GND", "10":"AIR_3V3"},
+            no_connect={"7"})
+        b.add(reference="U11", nickname="Regulator_Linear", entry="AP2112K-3.3",
+            center=(215,315), value="AP2112K-3.3TRG1 AIR RAIL", footprint="Package_TO_SOT_SMD:SOT-23-5",
+            datasheet="https://www.diodes.com/assets/Datasheets/AP2112.pdf",
+            nets={"1":"SYS_5V", "2":"GND", "3":"SYS_5V", "5":"AIR_3V3"}, no_connect={"4"})
+        for ref, center, value, nets in (
+            ("C22",(45,340),"100n",{"1":"AIR_3V3","2":"GND"}),
+            ("C23",(60,340),"4.7u",{"1":"AIR_3V3","2":"GND"}),
+            ("C24",(90,340),"1u",{"1":"SGP_VDD","2":"GND"}),
+            ("C25",(105,340),"1u",{"1":"AIR_3V3","2":"GND"}),
+            ("C26",(140,340),"100n",{"1":"AIR_3V3","2":"GND"}),
+            ("C27",(155,340),"100n",{"1":"AIR_3V3","2":"GND"}),
+            ("C28",(205,340),"10u",{"1":"SYS_5V","2":"GND"}),
+            ("C29",(220,340),"22u",{"1":"AIR_3V3","2":"GND"}),
+        ):
+            add_passive(b,ref,"C",center,value,"Capacitor_SMD:C_0805_2012Metric",nets)
+        add_passive(b,"R26","R",(80,315),"10R", "Resistor_SMD:R_0603_1608Metric",
+                    {"1":"AIR_3V3","2":"SGP_VDD"})
+        add_passive(b,"C30","C_Polarized",(250,315),"220u 10V USB peak reservoir",
+                    "Capacitor_SMD:CP_Elec_8x10",{"1":"SYS_5V","2":"GND"})
+        b.add(reference="TP13",nickname="Connector_Generic",entry="Conn_01x01",center=(260,340),
+            value="AIR_3V3",footprint="TestPoint:TestPoint_Plated_Hole_D2.0mm",datasheet="~",
+            nets={"1":"AIR_3V3"})
+
     for idx,net in enumerate(("24V_RAW","24V_PROT","SYS_5V","+3V3","I2C_SDA","I2C_SCL","RH_OUT","TEMP_KTY","RS485_A","RS485_B","RS485_COM","GND"),1):
         b.add(reference=f"TP{idx}",nickname="Connector_Generic",entry="Conn_01x01",center=(20+idx*22,205),value=net,
             footprint="TestPoint:TestPoint_Plated_Hole_D2.0mm",datasheet="~",nets={"1":net})
@@ -253,7 +297,7 @@ def build(revision: str = "B-ES2-C6"):
 
 def main() -> None:
     parser=argparse.ArgumentParser(); parser.add_argument("output",type=Path)
-    parser.add_argument("--revision",choices=("B-ES2-C6","B-ES3-C6"),default="B-ES2-C6"); args=parser.parse_args()
+    parser.add_argument("--revision",choices=("B-ES2-C6","B-ES3-C6","B-ES4-AIR"),default="B-ES2-C6"); args=parser.parse_args()
     args.output.parent.mkdir(parents=True,exist_ok=True); build(args.revision).to_file(args.output,encoding="utf-8")
 
 

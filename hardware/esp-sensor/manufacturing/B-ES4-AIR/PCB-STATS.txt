@@ -1,0 +1,63 @@
+Platinenstatistik-Bericht
+=========================
+- Datum: 07.08.2026 23:42:37
+- Projekt: IDM-RoomSensor-ESP-B-ES4-AIR
+- Platinennname: IDM-RoomSensor-ESP-B-ES4-AIR
+
+Platine
+-----
+- Breite: 130,0000 mm
+- Höhe: 100,0000 mm
+- Fläche: 13000,00 mm²
+- Vorderseitige Kupferfläche: 891,307 mm²
+- Rückseitige Kupferfläche: 316,78 mm²
+- Min. Leiterbahnfreiraum: 0,2016 mm
+- Min. Leiterbahnbreite: 0,2000 mm
+- Min. Bohrdurchmesser: 0,3000 mm
+- Platinen Lagenaufbaudicke: 1,6000 mm
+
+- Vorderseitige Footprintfläche: 2948,354 mm²
+- Rückseitige Footprintfläche: 343,51 mm²
+- Vorderseitige Bauteildichte: 22,68 %
+- Rückseitige Bauteildichte: 2,64 %
+Pads
+----
+- Durchgehende Bohrung: 56
+- SMD: 298
+- Anschluss: 0
+- NPTH: 6
+- Castellated (Halbloch): 0
+- Einpress: 0
+
+Vias
+----
+- Durchkontaktierungen: 134
+- Blinde Vias: 0
+- Vergrabene Vias: 0
+- Mikro-Vias: 0
+
+Bauteile
+----------
+
+|             | Vorderseite | Rückseite | Insgesamt |
+|-------------|-------------|-----------|-----------|
+|Durchsteck:  |           7 |         0 |         7 |
+|SMD:         |          86 |         0 |        86 |
+|Unbestimmt:  |          18 |         0 |        18 |
+|Gesamt:      |         111 |         0 |       111 |
+
+Bohrlöcher
+-----------
+
+| Anzahl |    Form |   Größe X |   Größe Y | Metallisiert |            Via/Pad | Startlage | Endlage |
+|--------|---------|-----------|-----------|--------------|--------------------|-----------|---------|
+|    130 | Rundung | 0,3000 mm | 0,3000 mm |          PTH | Durchkontaktierung |      F.Cu |    B.Cu |
+|     19 | Rundung | 1,3000 mm | 1,3000 mm |          PTH |                Pad |      F.Cu |    B.Cu |
+|     17 | Rundung | 0,3000 mm | 0,3000 mm |          PTH |                Pad |      F.Cu |    B.Cu |
+|     13 | Rundung | 2,0000 mm | 2,0000 mm |          PTH |                Pad |      F.Cu |    B.Cu |
+|      4 | Rundung | 3,2000 mm | 3,2000 mm |         NPTH |                Pad |      F.Cu |    B.Cu |
+|      4 | Rundung | 0,4000 mm | 0,4000 mm |          PTH | Durchkontaktierung |      F.Cu |    B.Cu |
+|      3 | Rundung | 0,7500 mm | 0,7500 mm |          PTH |                Pad |      F.Cu |    B.Cu |
+|      2 | Rundung | 0,6500 mm | 0,6500 mm |         NPTH |                Pad |      F.Cu |    B.Cu |
+|      2 |    Slot | 0,6000 mm | 1,7000 mm |          PTH |                Pad |      F.Cu |    B.Cu |
+|      2 |    Slot | 0,6000 mm | 1,2000 mm |          PTH |                Pad |      F.Cu |    B.Cu |
