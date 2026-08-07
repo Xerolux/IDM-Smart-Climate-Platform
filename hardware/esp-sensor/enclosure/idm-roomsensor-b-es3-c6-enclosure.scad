@@ -3,7 +3,7 @@
 // Export with: openscad -D 'part="base"' -o ..._base.stl this_file.scad
 //              openscad -D 'part="lid"'  -o ..._lid.stl  this_file.scad
 
-part = "assembly";             // "base", "lid", or "assembly"
+part = "assembly";             // "base", "lid", "plate", or "assembly"
 $fn = 48;
 
 case_w = 150;
@@ -79,6 +79,19 @@ module connector_side_cuts(z0, height) {
     north_cut(130.7,19,z0,height);
 }
 
+module base_locating_lip() {
+    // Full-height inner liner is supported by the floor and enters the lid by
+    // 2 mm. The 0.30 mm radial fit is suitable for an S5 with a 0.4 mm core.
+    difference() {
+        translate([wall+fit,wall+fit,floor_t-0.1])
+            linear_extrude(height=base_h+2.0-floor_t+0.1)
+                offset(delta=-(wall+fit)) rounded_rect_2d(case_w,case_h,corner_r);
+        translate([wall+fit+1.2,wall+fit+1.2,floor_t-0.2])
+            linear_extrude(height=base_h+2.3-floor_t+0.2)
+                offset(delta=-(wall+fit+1.2)) rounded_rect_2d(case_w,case_h,corner_r);
+    }
+}
+
 module base() {
     difference() {
         union() {
@@ -91,23 +104,25 @@ module base() {
             // Lid screw bosses for M3 heat-set inserts (4.2 mm nominal OD).
             for (p=case_screws)
                 translate([p[0],p[1],floor_t-0.1]) cylinder(h=base_h-floor_t+0.1,r=4.2);
+
+            base_locating_lip();
         }
 
         for (p=board_holes)
             translate([p[0],p[1],floor_t-0.1]) cylinder(h=board_z-floor_t+0.3,r=1.05);
 
         for (p=case_screws) {
-            translate([p[0],p[1],base_h-5.3]) cylinder(h=5.5,r=2.1);
-            translate([p[0],p[1],base_h-0.7]) cylinder(h=0.9,r1=2.1,r2=2.35);
+            translate([p[0],p[1],base_h-5.3]) cylinder(h=5.5,r=1.95);
+            translate([p[0],p[1],base_h-0.7]) cylinder(h=0.9,r1=1.95,r2=2.2);
         }
 
         // Wall-mounting holes with recessed screw heads on the outside.
         for (x=[42,108]) {
             translate([x,50,-0.1]) cylinder(h=floor_t+0.2,r=2.1);
-            translate([x,50,-0.1]) cylinder(h=1.25,r=4.2);
+            translate([x,50,-0.1]) cylinder(h=1.45,r1=4.2,r2=2.1);
         }
 
-        connector_side_cuts(board_z-1.1,base_h-board_z+2.2);
+        connector_side_cuts(board_z-1.1,base_h+3.0-(board_z-1.1));
     }
 }
 
@@ -140,28 +155,6 @@ module lid_access_openings() {
         translate([20,y,lid_h-roof_t-0.1]) cube([14.0,2.0,roof_t+0.3]);
 }
 
-module locating_lip() {
-    // Lip enters the base cavity; fit controls the FDM clearance.
-    difference() {
-        translate([wall+fit,wall+fit,-2.0])
-            linear_extrude(height=2.8)
-                offset(delta=-(wall+fit)) rounded_rect_2d(case_w,case_h,corner_r);
-        translate([wall+fit+1.2,wall+fit+1.2,-2.1])
-            linear_extrude(height=3.0)
-                offset(delta=-(wall+fit+1.2)) rounded_rect_2d(case_w,case_h,corner_r);
-    }
-
-    // Short internal bridges join the inset lip to the lid wall above the seam.
-    for (x=[20,75,130]) {
-        translate([x-3,wall-0.1,0]) cube([6,fit+1.4,0.8]);
-        translate([x-3,case_h-wall-fit-1.3,0]) cube([6,fit+1.4,0.8]);
-    }
-    for (y=[25,50,75]) {
-        translate([wall-0.1,y-3,0]) cube([fit+1.4,6,0.8]);
-        translate([case_w-wall-fit-1.3,y-3,0]) cube([fit+1.4,6,0.8]);
-    }
-}
-
 module lid_labels() {
     translate([75,47,lid_h-0.08])
         linear_extrude(height=0.53)
@@ -178,20 +171,19 @@ module lid() {
     difference() {
         union() {
             shell(case_w,case_h,lid_h,lid_h-roof_t,wall,corner_r);
-            locating_lip();
 
             // Continuous screw tubes prevent the lid from bowing.
             for (p=case_screws)
-                translate([p[0],p[1],-0.1]) cylinder(h=lid_h-roof_t+0.2,r=4.2);
+                translate([p[0],p[1],0]) cylinder(h=lid_h-roof_t+0.1,r=4.2);
             lid_labels();
         }
 
         for (p=case_screws) {
-            translate([p[0],p[1],-2.1]) cylinder(h=lid_h+2.8,r=1.7);
-            translate([p[0],p[1],lid_h-1.7]) cylinder(h=2.3,r=3.25);
+            translate([p[0],p[1],-0.1]) cylinder(h=lid_h+0.8,r=1.7);
+            translate([p[0],p[1],lid_h-2.2]) cylinder(h=2.4,r1=1.7,r2=3.25);
         }
 
-        connector_side_cuts(-2.1,13.5);
+        connector_side_cuts(-0.1,11.5);
         lid_access_openings();
     }
 }
@@ -202,13 +194,15 @@ module preview_board() {
         translate([board_x,board_y,board_z]) cube([board_w,board_h,pcb_t]);
 
     // Push-in terminal envelopes: J1, J2, J5, J6, J7 and J8.
+    // The 14.4 mm height comes from the MX205R-5.0 datasheet and is used
+    // here as the worst-case roof-clearance check (16.7 mm are available).
     color("LimeGreen",0.9) {
-        translate([10.5,30.5,board_z+pcb_t]) cube([9.2,21.6,11]);
-        translate([130.5,48.5,board_z+pcb_t]) cube([9.2,21.6,11]);
-        translate([80.5,80.5,board_z+pcb_t]) cube([16.6,9.2,11]);
-        translate([100.5,80.5,board_z+pcb_t]) cube([16.6,9.2,11]);
-        translate([122.5,80.5,board_z+pcb_t]) cube([16.6,9.2,11]);
-        translate([130.5,21.5,board_z+pcb_t]) cube([9.2,11.6,11]);
+        translate([10.5,30.5,board_z+pcb_t]) cube([9.2,21.6,14.4]);
+        translate([130.5,48.5,board_z+pcb_t]) cube([9.2,21.6,14.4]);
+        translate([80.5,80.5,board_z+pcb_t]) cube([16.6,9.2,14.4]);
+        translate([100.5,80.5,board_z+pcb_t]) cube([16.6,9.2,14.4]);
+        translate([122.5,80.5,board_z+pcb_t]) cube([16.6,9.2,14.4]);
+        translate([130.5,21.5,board_z+pcb_t]) cube([9.2,11.6,14.4]);
     }
 
     // USB-C and click connector envelopes.
@@ -220,6 +214,14 @@ module preview_board() {
 
 if (part == "base") base();
 else if (part == "lid") lid();
+else if (part == "plate") {
+    // S5 build-plate layout centered at the STL origin. Cura places that
+    // origin at the 330 x 240 mm bed center, leaving 10 mm X margin.
+    translate([-155,-50,0]) {
+        base();
+        translate([160,0,0]) lid();
+    }
+}
 else {
     color("DimGray") base();
     preview_board();
