@@ -1,0 +1,10 @@
+Designator,Quantity,Manufacturer,Manufacturer Part Number,Description,Assembly note
+C1,1,Murata,GRM32ER71H226KE15L,22uF 50V X7R 1210 capacitor,Hand solder after JLCPCB SMT assembly
+D1,1,Vishay,SS16-E3/61T,1A 60V Schottky diode SMA,Observe cathode marking
+R3,1,Panasonic,ERA-3AEB2032V,20.3k 0.1% thin-film resistor 0603,Gain-setting precision part
+J1,1,Phoenix Contact,1984633,PT 1.5/4-3.5-H terminal block,Hand solder
+F1 clips,2,Littelfuse,111,5x20mm PCB fuse clips,Hand solder before inserting fuse
+F1 fuse,1,Littelfuse,0218.500MXP,500mA time-lag 5x20mm fuse,Insert after electrical inspection
+U1,1,Traco Power,TSR 1-2450,5V 1A SIP3 regulator,Observe pin 1 and body orientation
+A1,1,Espressif,ESP32-C3-DevKitM-1,ESP32-C3 development board,Fit on two 15-pin headers or solder directly
+RTH1,1,NXP,"KTY81/210,112",2k silicon temperature sensor SOD70,Obsolete - use verified stock and confirm characteristic
