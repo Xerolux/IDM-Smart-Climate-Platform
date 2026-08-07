@@ -105,7 +105,7 @@ def build():
     p("R7","4.7k","Resistor_SMD","R_0603_1608Metric",103,18,0,{1:"+3V3",2:"I2C_SDA"}); p("R8","4.7k","Resistor_SMD","R_0603_1608Metric",103,21,0,{1:"+3V3",2:"I2C_SCL"}); p("C10","100n","Capacitor_SMD","C_0603_1608Metric",112,20,90,{1:"+3V3",2:"GND"})
     p("U5","MCP4725A0T","Package_TO_SOT_SMD","SOT-23-6",83,46,0,{1:"DAC_RAW",2:"GND",3:"+3V3",4:"I2C_SDA",5:"I2C_SCL",6:"GND"})
     p("U6","OPA197IDBVR","Package_TO_SOT_SMD","SOT-23-5",92,46,0,{1:"OPAMP_OUT",2:"GND",3:"DAC_RAW",4:"OPAMP_FB",5:"24V_PROT"})
-    p("R9","21k 0.1%","Resistor_SMD","R_0603_1608Metric",96,50,0,{1:"OPAMP_OUT",2:"OPAMP_FB"}); p("R10","10k","Resistor_SMD","R_0603_1608Metric",91,52,0,{1:"OPAMP_FB",2:"GND"}); p("R11","220R","Resistor_SMD","R_0603_1608Metric",99,46,0,{1:"OPAMP_OUT",2:"RH_OUT"})
+    p("R9","21k 1% CAL","Resistor_SMD","R_0603_1608Metric",96,50,0,{1:"OPAMP_OUT",2:"OPAMP_FB"}); p("R10","10k","Resistor_SMD","R_0603_1608Metric",91,52,0,{1:"OPAMP_FB",2:"GND"}); p("R11","220R","Resistor_SMD","R_0603_1608Metric",99,46,0,{1:"OPAMP_OUT",2:"RH_OUT"})
     p("C11","100n","Capacitor_SMD","C_0603_1608Metric",81,50,0,{1:"+3V3",2:"GND"}); p("C12","100n 50V","Capacitor_SMD","C_0603_1608Metric",94,42,0,{1:"24V_PROT",2:"GND"}); p("C13","100n 50V","Capacitor_SMD","C_0603_1608Metric",102,46,90,{1:"RH_OUT",2:"GND"})
     p("U7","ADM2587EBRWZ","Package_SO","SOIC-20W_7.5x12.8mm_P1.27mm",105,60,0,{1:"GND",2:"+3V3",3:"GND",4:"RS485_RX",5:"RS485_DE",6:"RS485_DE",7:"RS485_TX",8:"+3V3",9:"GND",10:"GND",11:"ISO_GND_PWR",12:"VISO",13:"RS485_A",14:"ISO_GND_PWR",15:"RS485_B",16:"RS485_COM",17:"RS485_B",18:"RS485_A",19:"VISO",20:"RS485_COM"})
     p("FB1","600R","Inductor_SMD","L_0805_2012Metric",106,71,0,{1:"ISO_GND_PWR",2:"RS485_COM"})

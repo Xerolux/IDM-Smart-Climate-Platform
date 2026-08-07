@@ -4754,7 +4754,7 @@
     (property "Reference" "R9" (at 270.51 67.31 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "21k 0.1%" (at 270.51 69.85000000000001 0)
+    (property "Value" "21k 1% CAL" (at 270.51 69.85000000000001 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 270.51 72.39 0)

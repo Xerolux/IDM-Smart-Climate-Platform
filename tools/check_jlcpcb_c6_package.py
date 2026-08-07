@@ -49,6 +49,8 @@ def main() -> int:
     expected = {
         "U3": "C5445014", "U7": "C5119494", "U4": "C5221601",
         "U1": "C1858393", "J3": "C165948", "J1,J2": "C589905",
+        "R2": "C25962", "R12": "C114928", "SW1,SW2": "C231329",
+        "FB1": "C2661425", "LED1": "C389518",
     }
     for designator, part in expected.items():
         assert critical[designator] == part, (designator, critical[designator])

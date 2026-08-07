@@ -2,7 +2,7 @@
 	(version "E")
 	(design
 		(source "C:\\Users\\Basti\\Documents\\GitHub\\IDM-Smart-Climate-Platform\\hardware\\esp-sensor\\IDM-RoomSensor-ESP-B-ES2-C6.kicad_sch")
-		(date "2026-08-07T14:37:15")
+		(date "2026-08-07T15:12:15")
 		(tool "Eeschema 10.0.5")
 		(sheet
 			(number "1")
@@ -2723,7 +2723,7 @@
 		)
 		(comp
 			(ref "R9")
-			(value "21k 0.1%")
+			(value "21k 1% CAL")
 			(footprint "Resistor_SMD:R_0603_1608Metric")
 			(description "Resistor")
 			(fields

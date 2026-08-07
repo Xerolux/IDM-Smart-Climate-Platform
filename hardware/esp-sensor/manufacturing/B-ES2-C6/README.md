@@ -17,7 +17,8 @@ bench-tested prototype run, not for an untested connection to a heat pump.
 
 Part inventory and JLCPCB's assembly classification change continuously. Before
 payment, resolve any stock/pre-order prompt. In particular, check KTY81/210
-(legacy part), C1 (JLCPCB generic 4.7 uF/100 V), L1, FB1 and precision R9.
+(legacy part), C1 (JLCPCB generic 4.7 uF/100 V), the THT terminals and the
+ESP32-C6-N16 module.
 Do not silently accept a functional substitute for the ESP32 module, isolated
 RS-485 transceiver, KTY sensor or 0-10 V amplifier.
 
@@ -50,4 +51,3 @@ operation, particularly the 0-10 V output. The first assembled unit must pass:
 The `*-all.txt` reports retain non-electrical documentation warnings such as
 silkscreen overlap, the embedded custom ESP module footprint, intentional
 `GND2` naming on the isolated side and the deliberately open shield net.
-

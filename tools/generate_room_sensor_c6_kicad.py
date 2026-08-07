@@ -150,7 +150,7 @@ def build():
         footprint="Package_TO_SOT_SMD:SOT-23-5",datasheet="https://www.ti.com/lit/ds/symlink/opa197.pdf",
         nets={"1":"OPAMP_OUT","2":"GND","3":"DAC_RAW","4":"OPAMP_FB","5":"24V_PROT"})
     for ref,center,value,nets in [
-        ("R9",(270,78),"21k 0.1%",{"1":"OPAMP_OUT","2":"OPAMP_FB"}),
+        ("R9",(270,78),"21k 1% CAL",{"1":"OPAMP_OUT","2":"OPAMP_FB"}),
         ("R10",(250,90),"10k 0.1%",{"1":"OPAMP_FB","2":"GND"}),
         ("R11",(285,58),"220R",{"1":"OPAMP_OUT","2":"RH_OUT"}),
     ]: add_passive(b,ref,"R",center,value,"Resistor_SMD:R_0603_1608Metric",nets)
