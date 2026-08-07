@@ -1,0 +1,1516 @@
+** Drc report for IDM-RoomSensor-ESP-B-ES3-C6.kicad_pcb **
+** Created on 2026-08-07T20:14:37 **
+** Report includes: Errors, Warnings, Exclusions **
+
+** Found 51 DRC violations **
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: Einschränkungen aus Platinenkonfiguration zum Bestückungsdruck; warning
+    @(10.0000 mm, 10.0000 mm): Segment on Edge.Cuts
+    @(130.7500 mm, 9.8800 mm): Reference field of J7
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: Einschränkungen aus Platinenkonfiguration zum Bestückungsdruck; warning
+    @(10.0000 mm, 10.0000 mm): Segment on Edge.Cuts
+    @(88.7500 mm, 9.8800 mm): Reference field of J5
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: Einschränkungen aus Platinenkonfiguration zum Bestückungsdruck; warning
+    @(10.0000 mm, 10.0000 mm): Segment on Edge.Cuts
+    @(108.7500 mm, 9.8800 mm): Reference field of J6
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: Einschränkungen aus Platinenkonfiguration zum Bestückungsdruck; warning
+    @(10.0000 mm, 10.0000 mm): Segment on Edge.Cuts
+    @(14.0000 mm, 9.8500 mm): Reference field of H1
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: Einschränkungen aus Platinenkonfiguration zum Bestückungsdruck; warning
+    @(140.0000 mm, 90.0000 mm): Segment on Edge.Cuts
+    @(70.3000 mm, 89.2000 mm): Segment of J3 on F.Silkscreen
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: Einschränkungen aus Platinenkonfiguration zum Bestückungsdruck; warning
+    @(140.0000 mm, 90.0000 mm): Segment on Edge.Cuts
+    @(79.7000 mm, 89.2000 mm): Segment of J3 on F.Silkscreen
+[lib_footprint_issues]: Die aktuelle Konfiguration enthält die Footprint-Bibliothek "Custom" nicht
+    Local override; warning
+    @(55.0000 mm, 22.7500 mm): Footprint U3
+[text_height]: Schrifthöhe außerhalb des zulässigen Bereichs (Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe min. Breite 0,8000 mm; tatsächlich 0,5500 mm)
+    Rule: Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe; warning
+    @(84.0000 mm, 22.5000 mm): PCB text '1W-A: 3V DQ GND' on F.Silkscreen
+[text_height]: Schrifthöhe außerhalb des zulässigen Bereichs (Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe min. Breite 0,8000 mm; tatsächlich 0,5500 mm)
+    Rule: Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe; warning
+    @(104.0000 mm, 22.5000 mm): PCB text '1W-B: 3V DQ GND' on F.Silkscreen
+[text_height]: Schrifthöhe außerhalb des zulässigen Bereichs (Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe min. Breite 0,8000 mm; tatsächlich 0,5500 mm)
+    Rule: Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe; warning
+    @(108.0000 mm, 80.5000 mm): PCB text 'SERVICE' on F.Silkscreen
+[text_height]: Schrifthöhe außerhalb des zulässigen Bereichs (Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe min. Breite 0,8000 mm; tatsächlich 0,5500 mm)
+    Rule: Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe; warning
+    @(122.0000 mm, 69.0000 mm): PCB text 'TERM' on F.Silkscreen
+[text_height]: Schrifthöhe außerhalb des zulässigen Bereichs (Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe min. Breite 0,8000 mm; tatsächlich 0,5500 mm)
+    Rule: Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe; warning
+    @(126.0000 mm, 22.5000 mm): PCB text 'DI1 COM DI2' on F.Silkscreen
+[text_height]: Schrifthöhe außerhalb des zulässigen Bereichs (Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe min. Breite 0,8000 mm; tatsächlich 0,5500 mm)
+    Rule: Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe; warning
+    @(127.0000 mm, 84.0000 mm): PCB text '0-10V IN | GND' on F.Silkscreen
+[text_height]: Schrifthöhe außerhalb des zulässigen Bereichs (Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe min. Breite 0,8000 mm; tatsächlich 0,5500 mm)
+    Rule: Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe; warning
+    @(128.0000 mm, 61.0000 mm): PCB text 'A B COM SH' on F.Silkscreen
+[text_height]: Schrifthöhe außerhalb des zulässigen Bereichs (Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe min. Breite 0,8000 mm; tatsächlich 0,6500 mm)
+    Rule: Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe; warning
+    @(35.0000 mm, 22.5000 mm): PCB text 'by Xerolux | xerolux.de | REV B-ES3-C6 | 2026' on F.Silkscreen
+[text_height]: Schrifthöhe außerhalb des zulässigen Bereichs (Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe min. Breite 0,8000 mm; tatsächlich 0,6500 mm)
+    Rule: Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe; warning
+    @(40.0000 mm, 84.0000 mm): PCB text '43 TEMP | 42 +24V | 41 GND | 40 RH' on F.Silkscreen
+[text_height]: Schrifthöhe außerhalb des zulässigen Bereichs (Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe min. Breite 0,8000 mm; tatsächlich 0,6500 mm)
+    Rule: Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe; warning
+    @(75.0000 mm, 82.0000 mm): PCB text 'USB-C FLASH / POWER' on F.Silkscreen
+[text_height]: Schrifthöhe außerhalb des zulässigen Bereichs (Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe min. Breite 0,8000 mm; tatsächlich 0,6500 mm)
+    Rule: Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe; warning
+    @(108.0000 mm, 35.0000 mm): PCB text 'PUSH-IN FIELD I/O - NO USER SOLDERING' on F.Silkscreen
+[text_height]: Schrifthöhe außerhalb des zulässigen Bereichs (Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe min. Breite 0,8000 mm; tatsächlich 0,6500 mm)
+    Rule: Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe; warning
+    @(130.0000 mm, 68.0000 mm): PCB text 'RS485 ISOLATED' on F.Silkscreen
+[text_height]: Schrifthöhe außerhalb des zulässigen Bereichs (Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe min. Breite 0,8000 mm; tatsächlich 0,7000 mm)
+    Rule: Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe; warning
+    @(57.0000 mm, 33.0000 mm): PCB text 'ENGINEERING SAMPLE - BENCH TEST FIRST' on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: Einschränkungen aus Platinenkonfiguration zum Bestückungsdruck; warning
+    @(104.0000 mm, 22.5000 mm): PCB text '1W-B: 3V DQ GND' on F.Silkscreen
+    @(108.0000 mm, 23.1500 mm): Reference field of TVS3
+[silk_overlap]: Silkscreen clearance
+    Rule: Einschränkungen aus Platinenkonfiguration zum Bestückungsdruck; warning
+    @(128.0000 mm, 23.1500 mm): Reference field of TVS4
+    @(126.0000 mm, 22.5000 mm): PCB text 'DI1 COM DI2' on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: Einschränkungen aus Platinenkonfiguration zum Bestückungsdruck; warning
+    @(124.0000 mm, 73.5700 mm): Reference field of R21
+    @(125.1500 mm, 75.0000 mm): Reference field of TVS5
+[silk_overlap]: Silkscreen clearance
+    Rule: Einschränkungen aus Platinenkonfiguration zum Bestückungsdruck; warning
+    @(130.0000 mm, 68.0000 mm): PCB text 'RS485 ISOLATED' on F.Silkscreen
+    @(130.8800 mm, 78.1200 mm): Segment of J8 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: Einschränkungen aus Platinenkonfiguration zum Bestückungsdruck; warning
+    @(75.0000 mm, 81.5550 mm): Reference field of J3
+    @(75.0000 mm, 82.0000 mm): PCB text 'USB-C FLASH / POWER' on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: Einschränkungen aus Platinenkonfiguration zum Bestückungsdruck; warning
+    @(77.7627 mm, 40.5225 mm): Segment of R13 on F.Silkscreen
+    @(77.0000 mm, 40.5000 mm): Reference field of SW2
+[silk_overlap]: Silkscreen clearance
+    Rule: Einschränkungen aus Platinenkonfiguration zum Bestückungsdruck; warning
+    @(66.3000 mm, 67.1000 mm): Segment of L1 on F.Silkscreen
+    @(66.5700 mm, 67.0000 mm): Reference field of R4
+[silk_overlap]: Silkscreen clearance
+    Rule: Einschränkungen aus Platinenkonfiguration zum Bestückungsdruck; warning
+    @(75.0000 mm, 65.6000 mm): Reference field of ESD1
+    @(73.5500 mm, 66.4900 mm): Polygon of ESD1 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: Einschränkungen aus Platinenkonfiguration zum Bestückungsdruck; warning
+    @(68.5225 mm, 67.2373 mm): Segment of R4 on F.Silkscreen
+    @(69.0700 mm, 67.0000 mm): Reference field of R5
+[silk_overlap]: Silkscreen clearance
+    Rule: Einschränkungen aus Platinenkonfiguration zum Bestückungsdruck; warning
+    @(95.7387 mm, 53.2350 mm): Segment of C16 on F.Silkscreen
+    @(96.0000 mm, 53.8200 mm): Reference field of C14
+[silk_overlap]: Silkscreen clearance
+    Rule: Einschränkungen aus Platinenkonfiguration zum Bestückungsdruck; warning
+    @(96.0000 mm, 50.8200 mm): Reference field of C16
+    @(95.7627 mm, 50.5225 mm): Segment of R9 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: Einschränkungen aus Platinenkonfiguration zum Bestückungsdruck; warning
+    @(99.0000 mm, 44.5700 mm): Reference field of R11
+    @(100.5700 mm, 46.0000 mm): Reference field of C13
+[silk_overlap]: Silkscreen clearance
+    Rule: Einschränkungen aus Platinenkonfiguration zum Bestückungsdruck; warning
+    @(94.0000 mm, 40.5700 mm): Reference field of C12
+    @(93.5150 mm, 40.7350 mm): Segment of LED2 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: Einschränkungen aus Platinenkonfiguration zum Bestückungsdruck; warning
+    @(112.7387 mm, 54.7350 mm): Segment of C17 on F.Silkscreen
+    @(113.0000 mm, 55.3200 mm): Reference field of C18
+[silk_overlap]: Silkscreen clearance
+    Rule: Einschränkungen aus Platinenkonfiguration zum Bestückungsdruck; warning
+    @(94.0000 mm, 31.0000 mm): Circle of TP10 on F.Silkscreen
+    @(91.0000 mm, 32.5020 mm): Reference field of TP12
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(35.0000 mm, 22.5000 mm): PCB text 'by Xerolux | xerolux.de | REV B-ES3-C6 | 2026' on F.Silkscreen
+    @(46.2500 mm, 22.5750 mm): Pad 5 [EXP_GPIO5] of U3 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(57.0000 mm, 33.0000 mm): PCB text 'ENGINEERING SAMPLE - BENCH TEST FIRST' on F.Silkscreen
+    @(46.2500 mm, 32.7350 mm): Pad 13 [USB_D-] of U3 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(57.0000 mm, 33.0000 mm): PCB text 'ENGINEERING SAMPLE - BENCH TEST FIRST' on F.Silkscreen
+    @(63.7500 mm, 32.7350 mm): Pad 16 [CONTACT1] of U3 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(125.1500 mm, 75.0000 mm): Reference field of TVS5
+    @(124.8250 mm, 75.0000 mm): Pad 2 [GND] of R21 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(113.0000 mm, 55.3200 mm): Reference field of C18
+    @(113.9500 mm, 54.0000 mm): Pad 2 [RS485_COM] of C17 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(77.0000 mm, 40.5000 mm): Reference field of SW2
+    @(77.1750 mm, 40.0000 mm): Pad 1 [STATUS_LED] of R13 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(66.5700 mm, 67.0000 mm): Reference field of R4
+    @(65.1500 mm, 65.0000 mm): Pad 2 [5V_BUCK] of L1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(69.0700 mm, 67.0000 mm): Reference field of R5
+    @(68.0000 mm, 67.8250 mm): Pad 1 [USB_CC1] of R4 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(69.0700 mm, 67.0000 mm): Reference field of R5
+    @(68.0000 mm, 66.1750 mm): Pad 2 [GND] of R4 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(96.0000 mm, 53.8200 mm): Reference field of C14
+    @(95.0500 mm, 52.5000 mm): Pad 1 [+3V3] of C16 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(96.0000 mm, 50.8200 mm): Reference field of C16
+    @(95.1750 mm, 50.0000 mm): Pad 1 [OPAMP_OUT] of R9 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(100.5700 mm, 46.0000 mm): Reference field of C13
+    @(99.8250 mm, 46.0000 mm): Pad 2 [RH_OUT] of R11 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(96.0000 mm, 50.8200 mm): Reference field of C16
+    @(96.8250 mm, 50.0000 mm): Pad 2 [OPAMP_FB] of R9 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(94.0000 mm, 40.5700 mm): Reference field of C12
+    @(94.2125 mm, 40.0000 mm): Pad 1 [PWR24_LED_R] of LED2 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(96.0000 mm, 53.8200 mm): Reference field of C14
+    @(96.9500 mm, 52.5000 mm): Pad 2 [GND] of C16 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(113.0000 mm, 55.3200 mm): Reference field of C18
+    @(112.0500 mm, 54.0000 mm): Pad 1 [VISO] of C17 on F.Cu
+
+** Found 0 unconnected pads **
+
+** Found 436 Footprint errors **
+[footprint_symbol_mismatch]: C_1210_3225Metric stimmt nicht mit dem Footprint des Symbols (Capacitor_SMD:C_1210_3225Metric) überein.
+    Local override; warning
+    @(41.0000 mm, 56.0000 mm): Footprint C1
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(41.0000 mm, 56.0000 mm): Footprint C1
+[net_conflict]: Das Pad-Netz (24V_PROT) stimmt nicht mit dem im Schaltplan (/24V_PROT) angegebenen Netz überein.
+    Local override; warning
+    @(39.5250 mm, 56.0000 mm): Pad 1 [24V_PROT] of C1 on F.Cu
+[net_conflict]: Das Pad-Netz (GND) stimmt nicht mit dem im Schaltplan (/GND) angegebenen Netz überein.
+    Local override; warning
+    @(42.4750 mm, 56.0000 mm): Pad 2 [GND] of C1 on F.Cu
+[footprint_symbol_mismatch]: C_0805_2012Metric stimmt nicht mit dem Footprint des Symbols (Capacitor_SMD:C_0805_2012Metric) überein.
+    Local override; warning
+    @(45.0000 mm, 53.0000 mm): Footprint C2
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(45.0000 mm, 53.0000 mm): Footprint C2
+[net_conflict]: Das Pad-Netz (24V_PROT) stimmt nicht mit dem im Schaltplan (/24V_PROT) angegebenen Netz überein.
+    Local override; warning
+    @(44.0500 mm, 53.0000 mm): Pad 1 [24V_PROT] of C2 on F.Cu
+[net_conflict]: Das Pad-Netz (GND) stimmt nicht mit dem im Schaltplan (/GND) angegebenen Netz überein.
+    Local override; warning
+    @(45.9500 mm, 53.0000 mm): Pad 2 [GND] of C2 on F.Cu
+[footprint_symbol_mismatch]: Wert (C3) stimmt nicht mit Symbolwert (1u) überein.
+    Local override; warning
+    @(47.0000 mm, 72.0000 mm): Footprint C3
+[footprint_symbol_mismatch]: C_0805_2012Metric stimmt nicht mit dem Footprint des Symbols (Capacitor_SMD:C_0805_2012Metric) überein.
+    Local override; warning
+    @(47.0000 mm, 72.0000 mm): Footprint C3
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(47.0000 mm, 72.0000 mm): Footprint C3
+[net_conflict]: Das Pad-Netz (VCC_BYP) stimmt nicht mit dem im Schaltplan (/VCC_BYP) angegebenen Netz überein.
+    Local override; warning
+    @(46.0500 mm, 72.0000 mm): Pad 1 [VCC_BYP] of C3 on F.Cu
+[net_conflict]: Das Pad-Netz (GND) stimmt nicht mit dem im Schaltplan (/GND) angegebenen Netz überein.
+    Local override; warning
+    @(47.9500 mm, 72.0000 mm): Pad 2 [GND] of C3 on F.Cu
+[footprint_symbol_mismatch]: Wert (C4) stimmt nicht mit Symbolwert (100n) überein.
+    Local override; warning
+    @(54.0000 mm, 58.0000 mm): Footprint C4
+[footprint_symbol_mismatch]: C_0603_1608Metric stimmt nicht mit dem Footprint des Symbols (Capacitor_SMD:C_0603_1608Metric) überein.
+    Local override; warning
+    @(54.0000 mm, 58.0000 mm): Footprint C4
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(54.0000 mm, 58.0000 mm): Footprint C4
+[net_conflict]: Das Pad-Netz (BOOT) stimmt nicht mit dem im Schaltplan (/BOOT) angegebenen Netz überein.
+    Local override; warning
+    @(53.2250 mm, 58.0000 mm): Pad 1 [BOOT] of C4 on F.Cu
+[net_conflict]: Das Pad-Netz (SW) stimmt nicht mit dem im Schaltplan (/SW) angegebenen Netz überein.
+    Local override; warning
+    @(54.7750 mm, 58.0000 mm): Pad 2 [SW] of C4 on F.Cu
+[footprint_symbol_mismatch]: Wert (C5) stimmt nicht mit Symbolwert (47u) überein.
+    Local override; warning
+    @(71.0000 mm, 59.0000 mm): Footprint C5
+[footprint_symbol_mismatch]: C_1206_3216Metric stimmt nicht mit dem Footprint des Symbols (Capacitor_SMD:C_1206_3216Metric) überein.
+    Local override; warning
+    @(71.0000 mm, 59.0000 mm): Footprint C5
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(71.0000 mm, 59.0000 mm): Footprint C5
+[net_conflict]: Das Pad-Netz (5V_BUCK) stimmt nicht mit dem im Schaltplan (/5V_BUCK) angegebenen Netz überein.
+    Local override; warning
+    @(69.5250 mm, 59.0000 mm): Pad 1 [5V_BUCK] of C5 on F.Cu
+[net_conflict]: Das Pad-Netz (GND) stimmt nicht mit dem im Schaltplan (/GND) angegebenen Netz überein.
+    Local override; warning
+    @(72.4750 mm, 59.0000 mm): Pad 2 [GND] of C5 on F.Cu
+[footprint_symbol_mismatch]: Wert (C6) stimmt nicht mit Symbolwert (47u) überein.
+    Local override; warning
+    @(71.0000 mm, 64.0000 mm): Footprint C6
+[footprint_symbol_mismatch]: C_1206_3216Metric stimmt nicht mit dem Footprint des Symbols (Capacitor_SMD:C_1206_3216Metric) überein.
+    Local override; warning
+    @(71.0000 mm, 64.0000 mm): Footprint C6
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(71.0000 mm, 64.0000 mm): Footprint C6
+[net_conflict]: Das Pad-Netz (5V_BUCK) stimmt nicht mit dem im Schaltplan (/5V_BUCK) angegebenen Netz überein.
+    Local override; warning
+    @(69.5250 mm, 64.0000 mm): Pad 1 [5V_BUCK] of C6 on F.Cu
+[net_conflict]: Das Pad-Netz (GND) stimmt nicht mit dem im Schaltplan (/GND) angegebenen Netz überein.
+    Local override; warning
+    @(72.4750 mm, 64.0000 mm): Pad 2 [GND] of C6 on F.Cu
+[footprint_symbol_mismatch]: Wert (C7) stimmt nicht mit Symbolwert (10u) überein.
+    Local override; warning
+    @(77.0000 mm, 59.0000 mm): Footprint C7
+[footprint_symbol_mismatch]: C_0805_2012Metric stimmt nicht mit dem Footprint des Symbols (Capacitor_SMD:C_0805_2012Metric) überein.
+    Local override; warning
+    @(77.0000 mm, 59.0000 mm): Footprint C7
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(77.0000 mm, 59.0000 mm): Footprint C7
+[net_conflict]: Das Pad-Netz (SYS_5V) stimmt nicht mit dem im Schaltplan (/SYS_5V) angegebenen Netz überein.
+    Local override; warning
+    @(76.0500 mm, 59.0000 mm): Pad 1 [SYS_5V] of C7 on F.Cu
+[net_conflict]: Das Pad-Netz (GND) stimmt nicht mit dem im Schaltplan (/GND) angegebenen Netz überein.
+    Local override; warning
+    @(77.9500 mm, 59.0000 mm): Pad 2 [GND] of C7 on F.Cu
+[footprint_symbol_mismatch]: Wert (C8) stimmt nicht mit Symbolwert (22u) überein.
+    Local override; warning
+    @(84.0000 mm, 59.0000 mm): Footprint C8
+[footprint_symbol_mismatch]: C_0805_2012Metric stimmt nicht mit dem Footprint des Symbols (Capacitor_SMD:C_0805_2012Metric) überein.
+    Local override; warning
+    @(84.0000 mm, 59.0000 mm): Footprint C8
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(84.0000 mm, 59.0000 mm): Footprint C8
+[net_conflict]: Das Pad-Netz (+3V3) stimmt nicht mit dem im Schaltplan (/+3V3) angegebenen Netz überein.
+    Local override; warning
+    @(83.0500 mm, 59.0000 mm): Pad 1 [+3V3] of C8 on F.Cu
+[net_conflict]: Das Pad-Netz (GND) stimmt nicht mit dem im Schaltplan (/GND) angegebenen Netz überein.
+    Local override; warning
+    @(84.9500 mm, 59.0000 mm): Pad 2 [GND] of C8 on F.Cu
+[footprint_symbol_mismatch]: C_0603_1608Metric stimmt nicht mit dem Footprint des Symbols (Capacitor_SMD:C_0603_1608Metric) überein.
+    Local override; warning
+    @(65.0000 mm, 46.0000 mm): Footprint C9
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(65.0000 mm, 46.0000 mm): Footprint C9
+[net_conflict]: Das Pad-Netz (C6_EN) stimmt nicht mit dem im Schaltplan (/C6_EN) angegebenen Netz überein.
+    Local override; warning
+    @(64.2250 mm, 46.0000 mm): Pad 1 [C6_EN] of C9 on F.Cu
+[net_conflict]: Das Pad-Netz (GND) stimmt nicht mit dem im Schaltplan (/GND) angegebenen Netz überein.
+    Local override; warning
+    @(65.7750 mm, 46.0000 mm): Pad 2 [GND] of C9 on F.Cu
+[footprint_symbol_mismatch]: C_0603_1608Metric stimmt nicht mit dem Footprint des Symbols (Capacitor_SMD:C_0603_1608Metric) überein.
+    Local override; warning
+    @(78.0000 mm, 20.0000 mm): Footprint C10
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(78.0000 mm, 20.0000 mm): Footprint C10
+[net_conflict]: Das Pad-Netz (+3V3) stimmt nicht mit dem im Schaltplan (/+3V3) angegebenen Netz überein.
+    Local override; warning
+    @(78.0000 mm, 20.7750 mm): Pad 1 [+3V3] of C10 on F.Cu
+[net_conflict]: Das Pad-Netz (GND) stimmt nicht mit dem im Schaltplan (/GND) angegebenen Netz überein.
+    Local override; warning
+    @(78.0000 mm, 19.2250 mm): Pad 2 [GND] of C10 on F.Cu
+[footprint_symbol_mismatch]: C_0603_1608Metric stimmt nicht mit dem Footprint des Symbols (Capacitor_SMD:C_0603_1608Metric) überein.
+    Local override; warning
+    @(81.0000 mm, 50.0000 mm): Footprint C11
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(81.0000 mm, 50.0000 mm): Footprint C11
+[net_conflict]: Das Pad-Netz (+3V3) stimmt nicht mit dem im Schaltplan (/+3V3) angegebenen Netz überein.
+    Local override; warning
+    @(80.2250 mm, 50.0000 mm): Pad 1 [+3V3] of C11 on F.Cu
+[net_conflict]: Das Pad-Netz (GND) stimmt nicht mit dem im Schaltplan (/GND) angegebenen Netz überein.
+    Local override; warning
+    @(81.7750 mm, 50.0000 mm): Pad 2 [GND] of C11 on F.Cu
+[footprint_symbol_mismatch]: C_0603_1608Metric stimmt nicht mit dem Footprint des Symbols (Capacitor_SMD:C_0603_1608Metric) überein.
+    Local override; warning
+    @(94.0000 mm, 42.0000 mm): Footprint C12
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(94.0000 mm, 42.0000 mm): Footprint C12
+[net_conflict]: Das Pad-Netz (24V_PROT) stimmt nicht mit dem im Schaltplan (/24V_PROT) angegebenen Netz überein.
+    Local override; warning
+    @(93.2250 mm, 42.0000 mm): Pad 1 [24V_PROT] of C12 on F.Cu
+[net_conflict]: Das Pad-Netz (GND) stimmt nicht mit dem im Schaltplan (/GND) angegebenen Netz überein.
+    Local override; warning
+    @(94.7750 mm, 42.0000 mm): Pad 2 [GND] of C12 on F.Cu
+[footprint_symbol_mismatch]: C_0603_1608Metric stimmt nicht mit dem Footprint des Symbols (Capacitor_SMD:C_0603_1608Metric) überein.
+    Local override; warning
+    @(102.0000 mm, 46.0000 mm): Footprint C13
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(102.0000 mm, 46.0000 mm): Footprint C13
+[net_conflict]: Das Pad-Netz (RH_OUT) stimmt nicht mit dem im Schaltplan (/RH_OUT) angegebenen Netz überein.
+    Local override; warning
+    @(102.0000 mm, 46.7750 mm): Pad 1 [RH_OUT] of C13 on F.Cu
+[net_conflict]: Das Pad-Netz (GND) stimmt nicht mit dem im Schaltplan (/GND) angegebenen Netz überein.
+    Local override; warning
+    @(102.0000 mm, 45.2250 mm): Pad 2 [GND] of C13 on F.Cu
+[footprint_symbol_mismatch]: C_0805_2012Metric stimmt nicht mit dem Footprint des Symbols (Capacitor_SMD:C_0805_2012Metric) überein.
+    Local override; warning
+    @(96.0000 mm, 55.5000 mm): Footprint C14
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(96.0000 mm, 55.5000 mm): Footprint C14
+[net_conflict]: Das Pad-Netz (+3V3) stimmt nicht mit dem im Schaltplan (/+3V3) angegebenen Netz überein.
+    Local override; warning
+    @(95.0500 mm, 55.5000 mm): Pad 1 [+3V3] of C14 on F.Cu
+[net_conflict]: Das Pad-Netz (GND) stimmt nicht mit dem im Schaltplan (/GND) angegebenen Netz überein.
+    Local override; warning
+    @(96.9500 mm, 55.5000 mm): Pad 2 [GND] of C14 on F.Cu
+[footprint_symbol_mismatch]: C_0805_2012Metric stimmt nicht mit dem Footprint des Symbols (Capacitor_SMD:C_0805_2012Metric) überein.
+    Local override; warning
+    @(96.0000 mm, 52.5000 mm): Footprint C16
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(96.0000 mm, 52.5000 mm): Footprint C16
+[net_conflict]: Das Pad-Netz (+3V3) stimmt nicht mit dem im Schaltplan (/+3V3) angegebenen Netz überein.
+    Local override; warning
+    @(95.0500 mm, 52.5000 mm): Pad 1 [+3V3] of C16 on F.Cu
+[net_conflict]: Das Pad-Netz (GND) stimmt nicht mit dem im Schaltplan (/GND) angegebenen Netz überein.
+    Local override; warning
+    @(96.9500 mm, 52.5000 mm): Pad 2 [GND] of C16 on F.Cu
+[footprint_symbol_mismatch]: C_0805_2012Metric stimmt nicht mit dem Footprint des Symbols (Capacitor_SMD:C_0805_2012Metric) überein.
+    Local override; warning
+    @(113.0000 mm, 54.0000 mm): Footprint C17
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(113.0000 mm, 54.0000 mm): Footprint C17
+[net_conflict]: Das Pad-Netz (VISO) stimmt nicht mit dem im Schaltplan (/VISO) angegebenen Netz überein.
+    Local override; warning
+    @(112.0500 mm, 54.0000 mm): Pad 1 [VISO] of C17 on F.Cu
+[net_conflict]: Das Pad-Netz (RS485_COM) stimmt nicht mit dem im Schaltplan (/RS485_COM) angegebenen Netz überein.
+    Local override; warning
+    @(113.9500 mm, 54.0000 mm): Pad 2 [RS485_COM] of C17 on F.Cu
+[footprint_symbol_mismatch]: C_0805_2012Metric stimmt nicht mit dem Footprint des Symbols (Capacitor_SMD:C_0805_2012Metric) überein.
+    Local override; warning
+    @(113.0000 mm, 57.0000 mm): Footprint C18
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(113.0000 mm, 57.0000 mm): Footprint C18
+[net_conflict]: Das Pad-Netz (VISO) stimmt nicht mit dem im Schaltplan (/VISO) angegebenen Netz überein.
+    Local override; warning
+    @(112.0500 mm, 57.0000 mm): Pad 1 [VISO] of C18 on F.Cu
+[net_conflict]: Das Pad-Netz (RS485_COM) stimmt nicht mit dem im Schaltplan (/RS485_COM) angegebenen Netz überein.
+    Local override; warning
+    @(113.9500 mm, 57.0000 mm): Pad 2 [RS485_COM] of C18 on F.Cu
+[footprint_symbol_mismatch]: C_0603_1608Metric stimmt nicht mit dem Footprint des Symbols (Capacitor_SMD:C_0603_1608Metric) überein.
+    Local override; warning
+    @(112.0000 mm, 31.0000 mm): Footprint C19
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(112.0000 mm, 31.0000 mm): Footprint C19
+[net_conflict]: Das Pad-Netz (CONTACT1) stimmt nicht mit dem im Schaltplan (/CONTACT1) angegebenen Netz überein.
+    Local override; warning
+    @(111.2250 mm, 31.0000 mm): Pad 1 [CONTACT1] of C19 on F.Cu
+[net_conflict]: Das Pad-Netz (GND) stimmt nicht mit dem im Schaltplan (/GND) angegebenen Netz überein.
+    Local override; warning
+    @(112.7750 mm, 31.0000 mm): Pad 2 [GND] of C19 on F.Cu
+[footprint_symbol_mismatch]: C_0603_1608Metric stimmt nicht mit dem Footprint des Symbols (Capacitor_SMD:C_0603_1608Metric) überein.
+    Local override; warning
+    @(124.0000 mm, 31.0000 mm): Footprint C20
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(124.0000 mm, 31.0000 mm): Footprint C20
+[net_conflict]: Das Pad-Netz (CONTACT2) stimmt nicht mit dem im Schaltplan (/CONTACT2) angegebenen Netz überein.
+    Local override; warning
+    @(123.2250 mm, 31.0000 mm): Pad 1 [CONTACT2] of C20 on F.Cu
+[net_conflict]: Das Pad-Netz (GND) stimmt nicht mit dem im Schaltplan (/GND) angegebenen Netz überein.
+    Local override; warning
+    @(124.7750 mm, 31.0000 mm): Pad 2 [GND] of C20 on F.Cu
+[footprint_symbol_mismatch]: C_0603_1608Metric stimmt nicht mit dem Footprint des Symbols (Capacitor_SMD:C_0603_1608Metric) überein.
+    Local override; warning
+    @(120.0000 mm, 75.0000 mm): Footprint C21
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(120.0000 mm, 75.0000 mm): Footprint C21
+[net_conflict]: Das Pad-Netz (ADC_0_10) stimmt nicht mit dem im Schaltplan (/ADC_0_10) angegebenen Netz überein.
+    Local override; warning
+    @(119.2250 mm, 75.0000 mm): Pad 1 [ADC_0_10] of C21 on F.Cu
+[net_conflict]: Das Pad-Netz (GND) stimmt nicht mit dem im Schaltplan (/GND) angegebenen Netz überein.
+    Local override; warning
+    @(120.7750 mm, 75.0000 mm): Pad 2 [GND] of C21 on F.Cu
+[footprint_symbol_mismatch]: Wert (D1) stimmt nicht mit Symbolwert (SS16) überein.
+    Local override; warning
+    @(38.0000 mm, 66.0000 mm): Footprint D1
+[footprint_symbol_mismatch]: D_SMA stimmt nicht mit dem Footprint des Symbols (Diode_SMD:D_SMA) überein.
+    Local override; warning
+    @(38.0000 mm, 66.0000 mm): Footprint D1
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(38.0000 mm, 66.0000 mm): Footprint D1
+[net_conflict]: Das Pad-Netz (24V_PROT) stimmt nicht mit dem im Schaltplan (/24V_PROT) angegebenen Netz überein.
+    Local override; warning
+    @(36.0000 mm, 66.0000 mm): Pad 1 [24V_PROT] of D1 on F.Cu
+[net_conflict]: Das Pad-Netz (24V_FUSED) stimmt nicht mit dem im Schaltplan (/24V_FUSED) angegebenen Netz überein.
+    Local override; warning
+    @(40.0000 mm, 66.0000 mm): Pad 2 [24V_FUSED] of D1 on F.Cu
+[footprint_symbol_mismatch]: D_SMA stimmt nicht mit dem Footprint des Symbols (Diode_SMD:D_SMA) überein.
+    Local override; warning
+    @(74.0000 mm, 54.0000 mm): Footprint D2
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(74.0000 mm, 54.0000 mm): Footprint D2
+[net_conflict]: Das Pad-Netz (SYS_5V) stimmt nicht mit dem im Schaltplan (/SYS_5V) angegebenen Netz überein.
+    Local override; warning
+    @(72.0000 mm, 54.0000 mm): Pad 1 [SYS_5V] of D2 on F.Cu
+[net_conflict]: Das Pad-Netz (5V_BUCK) stimmt nicht mit dem im Schaltplan (/5V_BUCK) angegebenen Netz überein.
+    Local override; warning
+    @(76.0000 mm, 54.0000 mm): Pad 2 [5V_BUCK] of D2 on F.Cu
+[footprint_symbol_mismatch]: D_SMA stimmt nicht mit dem Footprint des Symbols (Diode_SMD:D_SMA) überein.
+    Local override; warning
+    @(61.0000 mm, 75.0000 mm): Footprint D3
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(61.0000 mm, 75.0000 mm): Footprint D3
+[net_conflict]: Das Pad-Netz (SYS_5V) stimmt nicht mit dem im Schaltplan (/SYS_5V) angegebenen Netz überein.
+    Local override; warning
+    @(59.0000 mm, 75.0000 mm): Pad 1 [SYS_5V] of D3 on F.Cu
+[net_conflict]: Das Pad-Netz (USB_5V) stimmt nicht mit dem im Schaltplan (/USB_5V) angegebenen Netz überein.
+    Local override; warning
+    @(63.0000 mm, 75.0000 mm): Pad 2 [USB_5V] of D3 on F.Cu
+[footprint_symbol_mismatch]: Wert (D4) stimmt nicht mit Symbolwert (BAT54S) überein.
+    Local override; warning
+    @(116.0000 mm, 74.0000 mm): Footprint D4
+[footprint_symbol_mismatch]: SOT-23 stimmt nicht mit dem Footprint des Symbols (Package_TO_SOT_SMD:SOT-23) überein.
+    Local override; warning
+    @(116.0000 mm, 74.0000 mm): Footprint D4
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(116.0000 mm, 74.0000 mm): Footprint D4
+[net_conflict]: Das Pad-Netz (GND) stimmt nicht mit dem im Schaltplan (/GND) angegebenen Netz überein.
+    Local override; warning
+    @(115.0625 mm, 73.0500 mm): Pad 1 [GND] of D4 on F.Cu
+[net_conflict]: Das Pad-Netz (+3V3) stimmt nicht mit dem im Schaltplan (/+3V3) angegebenen Netz überein.
+    Local override; warning
+    @(115.0625 mm, 74.9500 mm): Pad 2 [+3V3] of D4 on F.Cu
+[net_conflict]: Das Pad-Netz (ADC_0_10) stimmt nicht mit dem im Schaltplan (/ADC_0_10) angegebenen Netz überein.
+    Local override; warning
+    @(116.9375 mm, 74.0000 mm): Pad 3 [ADC_0_10] of D4 on F.Cu
+[footprint_symbol_mismatch]: SOT-23-6 stimmt nicht mit dem Footprint des Symbols (Package_TO_SOT_SMD:SOT-23-6) überein.
+    Local override; warning
+    @(75.0000 mm, 68.0000 mm): Footprint ESD1
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(75.0000 mm, 68.0000 mm): Footprint ESD1
+[net_conflict]: Das Pad-Netz (USB_D-) stimmt nicht mit dem im Schaltplan (/USB_D-) angegebenen Netz überein.
+    Local override; warning
+    @(73.8625 mm, 67.0500 mm): Pad 1 [USB_D-] of ESD1 on F.Cu
+[net_conflict]: Das Pad-Netz (GND) stimmt nicht mit dem im Schaltplan (/GND) angegebenen Netz überein.
+    Local override; warning
+    @(73.8625 mm, 68.0000 mm): Pad 2 [GND] of ESD1 on F.Cu
+[net_conflict]: Das Pad-Netz (USB_D+) stimmt nicht mit dem im Schaltplan (/USB_D+) angegebenen Netz überein.
+    Local override; warning
+    @(73.8625 mm, 68.9500 mm): Pad 3 [USB_D+] of ESD1 on F.Cu
+[net_conflict]: Das Pad-Netz (USB_D+) stimmt nicht mit dem im Schaltplan (/USB_D+) angegebenen Netz überein.
+    Local override; warning
+    @(76.1375 mm, 68.9500 mm): Pad 4 [USB_D+] of ESD1 on F.Cu
+[net_conflict]: Das Pad-Netz (USB_5V) stimmt nicht mit dem im Schaltplan (/USB_5V) angegebenen Netz überein.
+    Local override; warning
+    @(76.1375 mm, 68.0000 mm): Pad 5 [USB_5V] of ESD1 on F.Cu
+[net_conflict]: Das Pad-Netz (USB_D-) stimmt nicht mit dem im Schaltplan (/USB_D-) angegebenen Netz überein.
+    Local override; warning
+    @(76.1375 mm, 67.0500 mm): Pad 6 [USB_D-] of ESD1 on F.Cu
+[footprint_symbol_mismatch]: Wert (F1) stimmt nicht mit Symbolwert (1812L050/30PR) überein.
+    Local override; warning
+    @(29.0000 mm, 66.0000 mm): Footprint F1
+[footprint_symbol_mismatch]: Fuse_1812_4532Metric stimmt nicht mit dem Footprint des Symbols (Fuse:Fuse_1812_4532Metric) überein.
+    Local override; warning
+    @(29.0000 mm, 66.0000 mm): Footprint F1
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(29.0000 mm, 66.0000 mm): Footprint F1
+[net_conflict]: Das Pad-Netz (24V_RAW) stimmt nicht mit dem im Schaltplan (/24V_RAW) angegebenen Netz überein.
+    Local override; warning
+    @(26.8625 mm, 66.0000 mm): Pad 1 [24V_RAW] of F1 on F.Cu
+[net_conflict]: Das Pad-Netz (24V_FUSED) stimmt nicht mit dem im Schaltplan (/24V_FUSED) angegebenen Netz überein.
+    Local override; warning
+    @(31.1375 mm, 66.0000 mm): Pad 2 [24V_FUSED] of F1 on F.Cu
+[footprint_symbol_mismatch]: Wert (J1) stimmt nicht mit Symbolwert (MX205R PUSH-IN 43/42/41/40) überein.
+    Local override; warning
+    @(16.0000 mm, 66.0000 mm): Footprint J1
+[footprint_symbol_mismatch]: TerminalBlock_MaiXu_MX126-5.0-04P_1x04_P5.00mm stimmt nicht mit dem Footprint des Symbols (TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-04P_1x04_P5.00mm) überein.
+    Local override; warning
+    @(16.0000 mm, 66.0000 mm): Footprint J1
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(16.0000 mm, 66.0000 mm): Footprint J1
+[net_conflict]: Das Pad-Netz (TEMP_KTY) stimmt nicht mit dem im Schaltplan (/TEMP_KTY) angegebenen Netz überein.
+    Local override; warning
+    @(16.0000 mm, 66.0000 mm): PTH pad 1 [TEMP_KTY] of J1
+[net_conflict]: Das Pad-Netz (24V_RAW) stimmt nicht mit dem im Schaltplan (/24V_RAW) angegebenen Netz überein.
+    Local override; warning
+    @(16.0000 mm, 61.0000 mm): PTH pad 2 [24V_RAW] of J1
+[net_conflict]: Das Pad-Netz (GND) stimmt nicht mit dem im Schaltplan (/GND) angegebenen Netz überein.
+    Local override; warning
+    @(16.0000 mm, 56.0000 mm): PTH pad 3 [GND] of J1
+[net_conflict]: Das Pad-Netz (RH_OUT) stimmt nicht mit dem im Schaltplan (/RH_OUT) angegebenen Netz überein.
+    Local override; warning
+    @(16.0000 mm, 51.0000 mm): PTH pad 4 [RH_OUT] of J1
+[footprint_symbol_mismatch]: Wert (J2) stimmt nicht mit Symbolwert (MX205R PUSH-IN RS485 A/B/COM/SH) überein.
+    Local override; warning
+    @(135.0000 mm, 48.0000 mm): Footprint J2
+[footprint_symbol_mismatch]: TerminalBlock_MaiXu_MX126-5.0-04P_1x04_P5.00mm stimmt nicht mit dem Footprint des Symbols (TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-04P_1x04_P5.00mm) überein.
+    Local override; warning
+    @(135.0000 mm, 48.0000 mm): Footprint J2
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(135.0000 mm, 48.0000 mm): Footprint J2
+[net_conflict]: Das Pad-Netz (RS485_A) stimmt nicht mit dem im Schaltplan (/RS485_A) angegebenen Netz überein.
+    Local override; warning
+    @(135.0000 mm, 48.0000 mm): PTH pad 1 [RS485_A] of J2
+[net_conflict]: Das Pad-Netz (RS485_B) stimmt nicht mit dem im Schaltplan (/RS485_B) angegebenen Netz überein.
+    Local override; warning
+    @(135.0000 mm, 43.0000 mm): PTH pad 2 [RS485_B] of J2
+[net_conflict]: Das Pad-Netz (RS485_COM) stimmt nicht mit dem im Schaltplan (/RS485_COM) angegebenen Netz überein.
+    Local override; warning
+    @(135.0000 mm, 38.0000 mm): PTH pad 3 [RS485_COM] of J2
+[net_conflict]: Das Pad-Netz (RS485_SHIELD) stimmt nicht mit dem im Schaltplan (/RS485_SHIELD) angegebenen Netz überein.
+    Local override; warning
+    @(135.0000 mm, 33.0000 mm): PTH pad 4 [RS485_SHIELD] of J2
+[footprint_symbol_mismatch]: Wert (J3) stimmt nicht mit Symbolwert (USB-C) überein.
+    Local override; warning
+    @(75.0000 mm, 87.2000 mm): Footprint J3
+[footprint_symbol_mismatch]: USB_C_Receptacle_HRO_TYPE-C-31-M-12 stimmt nicht mit dem Footprint des Symbols (Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-12) überein.
+    Local override; warning
+    @(75.0000 mm, 87.2000 mm): Footprint J3
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(75.0000 mm, 87.2000 mm): Footprint J3
+[net_conflict]: Das Pad-Netz (GND) stimmt nicht mit dem im Schaltplan (/GND) angegebenen Netz überein.
+    Local override; warning
+    @(71.7500 mm, 83.1550 mm): Pad A1 [GND] of J3 on F.Cu
+[net_conflict]: Das Pad-Netz (USB_5V) stimmt nicht mit dem im Schaltplan (/USB_5V) angegebenen Netz überein.
+    Local override; warning
+    @(72.5500 mm, 83.1550 mm): Pad A4 [USB_5V] of J3 on F.Cu
+[net_conflict]: Das Pad-Netz (USB_CC1) stimmt nicht mit dem im Schaltplan (/USB_CC1) angegebenen Netz überein.
+    Local override; warning
+    @(73.7500 mm, 83.1550 mm): Pad A5 [USB_CC1] of J3 on F.Cu
+[net_conflict]: Das Pad-Netz (USB_D+) stimmt nicht mit dem im Schaltplan (/USB_D+) angegebenen Netz überein.
+    Local override; warning
+    @(74.7500 mm, 83.1550 mm): Pad A6 [USB_D+] of J3 on F.Cu
+[net_conflict]: Das Pad-Netz (USB_D-) stimmt nicht mit dem im Schaltplan (/USB_D-) angegebenen Netz überein.
+    Local override; warning
+    @(75.2500 mm, 83.1550 mm): Pad A7 [USB_D-] of J3 on F.Cu
+[net_conflict]: Das Pad-Netz (USB_5V) stimmt nicht mit dem im Schaltplan (/USB_5V) angegebenen Netz überein.
+    Local override; warning
+    @(77.4500 mm, 83.1550 mm): Pad A9 [USB_5V] of J3 on F.Cu
+[net_conflict]: Das Pad-Netz (GND) stimmt nicht mit dem im Schaltplan (/GND) angegebenen Netz überein.
+    Local override; warning
+    @(78.2500 mm, 83.1550 mm): Pad A12 [GND] of J3 on F.Cu
+[net_conflict]: Das Pad-Netz (GND) stimmt nicht mit dem im Schaltplan (/GND) angegebenen Netz überein.
+    Local override; warning
+    @(78.2500 mm, 83.1550 mm): Pad B1 [GND] of J3 on F.Cu
+[net_conflict]: Das Pad-Netz (USB_5V) stimmt nicht mit dem im Schaltplan (/USB_5V) angegebenen Netz überein.
+    Local override; warning
+    @(77.4500 mm, 83.1550 mm): Pad B4 [USB_5V] of J3 on F.Cu
+[net_conflict]: Das Pad-Netz (USB_CC2) stimmt nicht mit dem im Schaltplan (/USB_CC2) angegebenen Netz überein.
+    Local override; warning
+    @(76.7500 mm, 83.1550 mm): Pad B5 [USB_CC2] of J3 on F.Cu
+[net_conflict]: Das Pad-Netz (USB_D+) stimmt nicht mit dem im Schaltplan (/USB_D+) angegebenen Netz überein.
+    Local override; warning
+    @(75.7500 mm, 83.1550 mm): Pad B6 [USB_D+] of J3 on F.Cu
+[net_conflict]: Das Pad-Netz (USB_D-) stimmt nicht mit dem im Schaltplan (/USB_D-) angegebenen Netz überein.
+    Local override; warning
+    @(74.2500 mm, 83.1550 mm): Pad B7 [USB_D-] of J3 on F.Cu
+[net_conflict]: Das Pad-Netz (USB_5V) stimmt nicht mit dem im Schaltplan (/USB_5V) angegebenen Netz überein.
+    Local override; warning
+    @(72.5500 mm, 83.1550 mm): Pad B9 [USB_5V] of J3 on F.Cu
+[net_conflict]: Das Pad-Netz (GND) stimmt nicht mit dem im Schaltplan (/GND) angegebenen Netz überein.
+    Local override; warning
+    @(71.7500 mm, 83.1550 mm): Pad B12 [GND] of J3 on F.Cu
+[net_conflict]: Das Pad-Netz (GND) stimmt nicht mit dem im Schaltplan (/GND) angegebenen Netz überein.
+    Local override; warning
+    @(70.6800 mm, 84.0700 mm): PTH pad SH [GND] of J3
+[net_conflict]: Das Pad-Netz (GND) stimmt nicht mit dem im Schaltplan (/GND) angegebenen Netz überein.
+    Local override; warning
+    @(70.6800 mm, 88.2500 mm): PTH pad SH [GND] of J3
+[net_conflict]: Das Pad-Netz (GND) stimmt nicht mit dem im Schaltplan (/GND) angegebenen Netz überein.
+    Local override; warning
+    @(79.3200 mm, 84.0700 mm): PTH pad SH [GND] of J3
+[net_conflict]: Das Pad-Netz (GND) stimmt nicht mit dem im Schaltplan (/GND) angegebenen Netz überein.
+    Local override; warning
+    @(79.3200 mm, 88.2500 mm): PTH pad SH [GND] of J3
+[footprint_symbol_mismatch]: JST_SH_SM08B-SRSS-TB_1x08-1MP_P1.00mm_Horizontal stimmt nicht mit dem Footprint des Symbols (Connector_JST:JST_SH_SM08B-SRSS-TB_1x08-1MP_P1.00mm_Horizontal) überein.
+    Local override; warning
+    @(88.0000 mm, 86.5000 mm): Footprint J4
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(88.0000 mm, 86.5000 mm): Footprint J4
+[net_conflict]: Das Pad-Netz (+3V3) stimmt nicht mit dem im Schaltplan (/+3V3) angegebenen Netz überein.
+    Local override; warning
+    @(84.5000 mm, 84.5000 mm): Pad 1 [+3V3] of J4 on F.Cu
+[net_conflict]: Das Pad-Netz (GND) stimmt nicht mit dem im Schaltplan (/GND) angegebenen Netz überein.
+    Local override; warning
+    @(85.5000 mm, 84.5000 mm): Pad 2 [GND] of J4 on F.Cu
+[net_conflict]: Das Pad-Netz (I2C_SDA) stimmt nicht mit dem im Schaltplan (/I2C_SDA) angegebenen Netz überein.
+    Local override; warning
+    @(86.5000 mm, 84.5000 mm): Pad 3 [I2C_SDA] of J4 on F.Cu
+[net_conflict]: Das Pad-Netz (I2C_SCL) stimmt nicht mit dem im Schaltplan (/I2C_SCL) angegebenen Netz überein.
+    Local override; warning
+    @(87.5000 mm, 84.5000 mm): Pad 4 [I2C_SCL] of J4 on F.Cu
+[net_conflict]: Das Pad-Netz (ONEWIRE) stimmt nicht mit dem im Schaltplan (/ONEWIRE) angegebenen Netz überein.
+    Local override; warning
+    @(88.5000 mm, 84.5000 mm): Pad 5 [ONEWIRE] of J4 on F.Cu
+[net_conflict]: Das Pad-Netz (EXP_GPIO4) stimmt nicht mit dem im Schaltplan (/EXP_GPIO4) angegebenen Netz überein.
+    Local override; warning
+    @(89.5000 mm, 84.5000 mm): Pad 6 [EXP_GPIO4] of J4 on F.Cu
+[net_conflict]: Das Pad-Netz (EXP_GPIO5) stimmt nicht mit dem im Schaltplan (/EXP_GPIO5) angegebenen Netz überein.
+    Local override; warning
+    @(90.5000 mm, 84.5000 mm): Pad 7 [EXP_GPIO5] of J4 on F.Cu
+[net_conflict]: Das Pad-Netz (SYS_5V) stimmt nicht mit dem im Schaltplan (/SYS_5V) angegebenen Netz überein.
+    Local override; warning
+    @(91.5000 mm, 84.5000 mm): Pad 8 [SYS_5V] of J4 on F.Cu
+[footprint_symbol_mismatch]: Wert (J5) stimmt nicht mit Symbolwert (1WIRE A 3V/DQ/GND) überein.
+    Local override; warning
+    @(84.0000 mm, 15.0000 mm): Footprint J5
+[footprint_symbol_mismatch]: TerminalBlock_MaiXu_MX126-5.0-03P_1x03_P5.00mm stimmt nicht mit dem Footprint des Symbols (TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-03P_1x03_P5.00mm) überein.
+    Local override; warning
+    @(84.0000 mm, 15.0000 mm): Footprint J5
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(84.0000 mm, 15.0000 mm): Footprint J5
+[net_conflict]: Das Pad-Netz (+3V3) stimmt nicht mit dem im Schaltplan (/+3V3) angegebenen Netz überein.
+    Local override; warning
+    @(84.0000 mm, 15.0000 mm): PTH pad 1 [+3V3] of J5
+[net_conflict]: Das Pad-Netz (ONEWIRE_EXT) stimmt nicht mit dem im Schaltplan (/ONEWIRE_EXT) angegebenen Netz überein.
+    Local override; warning
+    @(89.0000 mm, 15.0000 mm): PTH pad 2 [ONEWIRE_EXT] of J5
+[net_conflict]: Das Pad-Netz (GND) stimmt nicht mit dem im Schaltplan (/GND) angegebenen Netz überein.
+    Local override; warning
+    @(94.0000 mm, 15.0000 mm): PTH pad 3 [GND] of J5
+[footprint_symbol_mismatch]: Wert (J6) stimmt nicht mit Symbolwert (1WIRE B 3V/DQ/GND) überein.
+    Local override; warning
+    @(104.0000 mm, 15.0000 mm): Footprint J6
+[footprint_symbol_mismatch]: TerminalBlock_MaiXu_MX126-5.0-03P_1x03_P5.00mm stimmt nicht mit dem Footprint des Symbols (TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-03P_1x03_P5.00mm) überein.
+    Local override; warning
+    @(104.0000 mm, 15.0000 mm): Footprint J6
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(104.0000 mm, 15.0000 mm): Footprint J6
+[net_conflict]: Das Pad-Netz (+3V3) stimmt nicht mit dem im Schaltplan (/+3V3) angegebenen Netz überein.
+    Local override; warning
+    @(104.0000 mm, 15.0000 mm): PTH pad 1 [+3V3] of J6
+[net_conflict]: Das Pad-Netz (ONEWIRE_EXT) stimmt nicht mit dem im Schaltplan (/ONEWIRE_EXT) angegebenen Netz überein.
+    Local override; warning
+    @(109.0000 mm, 15.0000 mm): PTH pad 2 [ONEWIRE_EXT] of J6
+[net_conflict]: Das Pad-Netz (GND) stimmt nicht mit dem im Schaltplan (/GND) angegebenen Netz überein.
+    Local override; warning
+    @(114.0000 mm, 15.0000 mm): PTH pad 3 [GND] of J6
+[footprint_symbol_mismatch]: Wert (J7) stimmt nicht mit Symbolwert (CONTACT 1/COM/2) überein.
+    Local override; warning
+    @(126.0000 mm, 15.0000 mm): Footprint J7
+[footprint_symbol_mismatch]: TerminalBlock_MaiXu_MX126-5.0-03P_1x03_P5.00mm stimmt nicht mit dem Footprint des Symbols (TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-03P_1x03_P5.00mm) überein.
+    Local override; warning
+    @(126.0000 mm, 15.0000 mm): Footprint J7
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(126.0000 mm, 15.0000 mm): Footprint J7
+[net_conflict]: Das Pad-Netz (CONTACT1_EXT) stimmt nicht mit dem im Schaltplan (/CONTACT1_EXT) angegebenen Netz überein.
+    Local override; warning
+    @(126.0000 mm, 15.0000 mm): PTH pad 1 [CONTACT1_EXT] of J7
+[net_conflict]: Das Pad-Netz (GND) stimmt nicht mit dem im Schaltplan (/GND) angegebenen Netz überein.
+    Local override; warning
+    @(131.0000 mm, 15.0000 mm): PTH pad 2 [GND] of J7
+[net_conflict]: Das Pad-Netz (CONTACT2_EXT) stimmt nicht mit dem im Schaltplan (/CONTACT2_EXT) angegebenen Netz überein.
+    Local override; warning
+    @(136.0000 mm, 15.0000 mm): PTH pad 3 [CONTACT2_EXT] of J7
+[footprint_symbol_mismatch]: Wert (J8) stimmt nicht mit Symbolwert (0-10V IN/GND) überein.
+    Local override; warning
+    @(135.0000 mm, 75.0000 mm): Footprint J8
+[footprint_symbol_mismatch]: TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm stimmt nicht mit dem Footprint des Symbols (TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm) überein.
+    Local override; warning
+    @(135.0000 mm, 75.0000 mm): Footprint J8
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(135.0000 mm, 75.0000 mm): Footprint J8
+[net_conflict]: Das Pad-Netz (AIN_0_10_RAW) stimmt nicht mit dem im Schaltplan (/AIN_0_10_RAW) angegebenen Netz überein.
+    Local override; warning
+    @(135.0000 mm, 75.0000 mm): PTH pad 1 [AIN_0_10_RAW] of J8
+[net_conflict]: Das Pad-Netz (GND) stimmt nicht mit dem im Schaltplan (/GND) angegebenen Netz überein.
+    Local override; warning
+    @(135.0000 mm, 70.0000 mm): PTH pad 2 [GND] of J8
+[footprint_symbol_mismatch]: Wert (L1) stimmt nicht mit Symbolwert (SRP1038A-330M) überein.
+    Local override; warning
+    @(61.0000 mm, 65.0000 mm): Footprint L1
+[footprint_symbol_mismatch]: L_10.4x10.4_H4.8 stimmt nicht mit dem Footprint des Symbols (Inductor_SMD:L_10.4x10.4_H4.8) überein.
+    Local override; warning
+    @(61.0000 mm, 65.0000 mm): Footprint L1
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(61.0000 mm, 65.0000 mm): Footprint L1
+[net_conflict]: Das Pad-Netz (SW) stimmt nicht mit dem im Schaltplan (/SW) angegebenen Netz überein.
+    Local override; warning
+    @(56.8500 mm, 65.0000 mm): Pad 1 [SW] of L1 on F.Cu
+[net_conflict]: Das Pad-Netz (5V_BUCK) stimmt nicht mit dem im Schaltplan (/5V_BUCK) angegebenen Netz überein.
+    Local override; warning
+    @(65.1500 mm, 65.0000 mm): Pad 2 [5V_BUCK] of L1 on F.Cu
+[footprint_symbol_mismatch]: Wert (LED1) stimmt nicht mit Symbolwert (STATUS) überein.
+    Local override; warning
+    @(82.0000 mm, 40.0000 mm): Footprint LED1
+[footprint_symbol_mismatch]: LED_0603_1608Metric stimmt nicht mit dem Footprint des Symbols (LED_SMD:LED_0603_1608Metric) überein.
+    Local override; warning
+    @(82.0000 mm, 40.0000 mm): Footprint LED1
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "Sim.Pins" in Footprint
+    Local override; warning
+    @(82.0000 mm, 40.0000 mm): Footprint LED1
+[net_conflict]: Das Pad-Netz (STATUS_LED_R) stimmt nicht mit dem im Schaltplan (/STATUS_LED_R) angegebenen Netz überein.
+    Local override; warning
+    @(81.2125 mm, 40.0000 mm): Pad 1 [STATUS_LED_R] of LED1 on F.Cu
+[net_conflict]: Das Pad-Netz (GND) stimmt nicht mit dem im Schaltplan (/GND) angegebenen Netz überein.
+    Local override; warning
+    @(82.7875 mm, 40.0000 mm): Pad 2 [GND] of LED1 on F.Cu
+[footprint_symbol_mismatch]: Wert (LED2) stimmt nicht mit Symbolwert (24V) überein.
+    Local override; warning
+    @(95.0000 mm, 40.0000 mm): Footprint LED2
+[footprint_symbol_mismatch]: LED_0603_1608Metric stimmt nicht mit dem Footprint des Symbols (LED_SMD:LED_0603_1608Metric) überein.
+    Local override; warning
+    @(95.0000 mm, 40.0000 mm): Footprint LED2
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "Sim.Pins" in Footprint
+    Local override; warning
+    @(95.0000 mm, 40.0000 mm): Footprint LED2
+[net_conflict]: Das Pad-Netz (PWR24_LED_R) stimmt nicht mit dem im Schaltplan (/PWR24_LED_R) angegebenen Netz überein.
+    Local override; warning
+    @(94.2125 mm, 40.0000 mm): Pad 1 [PWR24_LED_R] of LED2 on F.Cu
+[net_conflict]: Das Pad-Netz (GND) stimmt nicht mit dem im Schaltplan (/GND) angegebenen Netz überein.
+    Local override; warning
+    @(95.7875 mm, 40.0000 mm): Pad 2 [GND] of LED2 on F.Cu
+[footprint_symbol_mismatch]: LED_0603_1608Metric stimmt nicht mit dem Footprint des Symbols (LED_SMD:LED_0603_1608Metric) überein.
+    Local override; warning
+    @(104.0000 mm, 40.0000 mm): Footprint LED3
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "Sim.Pins" in Footprint
+    Local override; warning
+    @(104.0000 mm, 40.0000 mm): Footprint LED3
+[net_conflict]: Das Pad-Netz (BUS_LED_R) stimmt nicht mit dem im Schaltplan (/BUS_LED_R) angegebenen Netz überein.
+    Local override; warning
+    @(103.2125 mm, 40.0000 mm): Pad 1 [BUS_LED_R] of LED3 on F.Cu
+[net_conflict]: Das Pad-Netz (GND) stimmt nicht mit dem im Schaltplan (/GND) angegebenen Netz überein.
+    Local override; warning
+    @(104.7875 mm, 40.0000 mm): Pad 2 [GND] of LED3 on F.Cu
+[footprint_symbol_mismatch]: Wert (R1) stimmt nicht mit Symbolwert (100k) überein.
+    Local override; warning
+    @(55.0000 mm, 73.0000 mm): Footprint R1
+[footprint_symbol_mismatch]: R_0603_1608Metric stimmt nicht mit dem Footprint des Symbols (Resistor_SMD:R_0603_1608Metric) überein.
+    Local override; warning
+    @(55.0000 mm, 73.0000 mm): Footprint R1
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(55.0000 mm, 73.0000 mm): Footprint R1
+[net_conflict]: Das Pad-Netz (5V_BUCK) stimmt nicht mit dem im Schaltplan (/5V_BUCK) angegebenen Netz überein.
+    Local override; warning
+    @(54.1750 mm, 73.0000 mm): Pad 1 [5V_BUCK] of R1 on F.Cu
+[net_conflict]: Das Pad-Netz (BUCK_FB) stimmt nicht mit dem im Schaltplan (/BUCK_FB) angegebenen Netz überein.
+    Local override; warning
+    @(55.8250 mm, 73.0000 mm): Pad 2 [BUCK_FB] of R1 on F.Cu
+[footprint_symbol_mismatch]: Wert (R2) stimmt nicht mit Symbolwert (24.9k) überein.
+    Local override; warning
+    @(55.0000 mm, 76.0000 mm): Footprint R2
+[footprint_symbol_mismatch]: R_0603_1608Metric stimmt nicht mit dem Footprint des Symbols (Resistor_SMD:R_0603_1608Metric) überein.
+    Local override; warning
+    @(55.0000 mm, 76.0000 mm): Footprint R2
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(55.0000 mm, 76.0000 mm): Footprint R2
+[net_conflict]: Das Pad-Netz (BUCK_FB) stimmt nicht mit dem im Schaltplan (/BUCK_FB) angegebenen Netz überein.
+    Local override; warning
+    @(54.1750 mm, 76.0000 mm): Pad 1 [BUCK_FB] of R2 on F.Cu
+[net_conflict]: Das Pad-Netz (GND) stimmt nicht mit dem im Schaltplan (/GND) angegebenen Netz überein.
+    Local override; warning
+    @(55.8250 mm, 76.0000 mm): Pad 2 [GND] of R2 on F.Cu
+[footprint_symbol_mismatch]: R_0603_1608Metric stimmt nicht mit dem Footprint des Symbols (Resistor_SMD:R_0603_1608Metric) überein.
+    Local override; warning
+    @(50.0000 mm, 57.0000 mm): Footprint R3
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(50.0000 mm, 57.0000 mm): Footprint R3
+[net_conflict]: Das Pad-Netz (PWR_GOOD) stimmt nicht mit dem im Schaltplan (/PWR_GOOD) angegebenen Netz überein.
+    Local override; warning
+    @(50.0000 mm, 57.8250 mm): Pad 1 [PWR_GOOD] of R3 on F.Cu
+[net_conflict]: Das Pad-Netz (5V_BUCK) stimmt nicht mit dem im Schaltplan (/5V_BUCK) angegebenen Netz überein.
+    Local override; warning
+    @(50.0000 mm, 56.1750 mm): Pad 2 [5V_BUCK] of R3 on F.Cu
+[footprint_symbol_mismatch]: Wert (R4) stimmt nicht mit Symbolwert (5.1k) überein.
+    Local override; warning
+    @(68.0000 mm, 67.0000 mm): Footprint R4
+[footprint_symbol_mismatch]: R_0603_1608Metric stimmt nicht mit dem Footprint des Symbols (Resistor_SMD:R_0603_1608Metric) überein.
+    Local override; warning
+    @(68.0000 mm, 67.0000 mm): Footprint R4
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(68.0000 mm, 67.0000 mm): Footprint R4
+[net_conflict]: Das Pad-Netz (USB_CC1) stimmt nicht mit dem im Schaltplan (/USB_CC1) angegebenen Netz überein.
+    Local override; warning
+    @(68.0000 mm, 67.8250 mm): Pad 1 [USB_CC1] of R4 on F.Cu
+[net_conflict]: Das Pad-Netz (GND) stimmt nicht mit dem im Schaltplan (/GND) angegebenen Netz überein.
+    Local override; warning
+    @(68.0000 mm, 66.1750 mm): Pad 2 [GND] of R4 on F.Cu
+[footprint_symbol_mismatch]: Wert (R5) stimmt nicht mit Symbolwert (5.1k) überein.
+    Local override; warning
+    @(70.5000 mm, 67.0000 mm): Footprint R5
+[footprint_symbol_mismatch]: R_0603_1608Metric stimmt nicht mit dem Footprint des Symbols (Resistor_SMD:R_0603_1608Metric) überein.
+    Local override; warning
+    @(70.5000 mm, 67.0000 mm): Footprint R5
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(70.5000 mm, 67.0000 mm): Footprint R5
+[net_conflict]: Das Pad-Netz (USB_CC2) stimmt nicht mit dem im Schaltplan (/USB_CC2) angegebenen Netz überein.
+    Local override; warning
+    @(70.5000 mm, 67.8250 mm): Pad 1 [USB_CC2] of R5 on F.Cu
+[net_conflict]: Das Pad-Netz (GND) stimmt nicht mit dem im Schaltplan (/GND) angegebenen Netz überein.
+    Local override; warning
+    @(70.5000 mm, 66.1750 mm): Pad 2 [GND] of R5 on F.Cu
+[footprint_symbol_mismatch]: R_0603_1608Metric stimmt nicht mit dem Footprint des Symbols (Resistor_SMD:R_0603_1608Metric) überein.
+    Local override; warning
+    @(65.0000 mm, 43.0000 mm): Footprint R6
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(65.0000 mm, 43.0000 mm): Footprint R6
+[net_conflict]: Das Pad-Netz (+3V3) stimmt nicht mit dem im Schaltplan (/+3V3) angegebenen Netz überein.
+    Local override; warning
+    @(64.1750 mm, 43.0000 mm): Pad 1 [+3V3] of R6 on F.Cu
+[net_conflict]: Das Pad-Netz (C6_EN) stimmt nicht mit dem im Schaltplan (/C6_EN) angegebenen Netz überein.
+    Local override; warning
+    @(65.8250 mm, 43.0000 mm): Pad 2 [C6_EN] of R6 on F.Cu
+[footprint_symbol_mismatch]: R_0603_1608Metric stimmt nicht mit dem Footprint des Symbols (Resistor_SMD:R_0603_1608Metric) überein.
+    Local override; warning
+    @(69.0000 mm, 18.0000 mm): Footprint R7
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(69.0000 mm, 18.0000 mm): Footprint R7
+[net_conflict]: Das Pad-Netz (+3V3) stimmt nicht mit dem im Schaltplan (/+3V3) angegebenen Netz überein.
+    Local override; warning
+    @(68.1750 mm, 18.0000 mm): Pad 1 [+3V3] of R7 on F.Cu
+[net_conflict]: Das Pad-Netz (I2C_SDA) stimmt nicht mit dem im Schaltplan (/I2C_SDA) angegebenen Netz überein.
+    Local override; warning
+    @(69.8250 mm, 18.0000 mm): Pad 2 [I2C_SDA] of R7 on F.Cu
+[footprint_symbol_mismatch]: R_0603_1608Metric stimmt nicht mit dem Footprint des Symbols (Resistor_SMD:R_0603_1608Metric) überein.
+    Local override; warning
+    @(69.0000 mm, 21.0000 mm): Footprint R8
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(69.0000 mm, 21.0000 mm): Footprint R8
+[net_conflict]: Das Pad-Netz (+3V3) stimmt nicht mit dem im Schaltplan (/+3V3) angegebenen Netz überein.
+    Local override; warning
+    @(68.1750 mm, 21.0000 mm): Pad 1 [+3V3] of R8 on F.Cu
+[net_conflict]: Das Pad-Netz (I2C_SCL) stimmt nicht mit dem im Schaltplan (/I2C_SCL) angegebenen Netz überein.
+    Local override; warning
+    @(69.8250 mm, 21.0000 mm): Pad 2 [I2C_SCL] of R8 on F.Cu
+[footprint_symbol_mismatch]: R_0603_1608Metric stimmt nicht mit dem Footprint des Symbols (Resistor_SMD:R_0603_1608Metric) überein.
+    Local override; warning
+    @(96.0000 mm, 50.0000 mm): Footprint R9
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(96.0000 mm, 50.0000 mm): Footprint R9
+[net_conflict]: Das Pad-Netz (OPAMP_OUT) stimmt nicht mit dem im Schaltplan (/OPAMP_OUT) angegebenen Netz überein.
+    Local override; warning
+    @(95.1750 mm, 50.0000 mm): Pad 1 [OPAMP_OUT] of R9 on F.Cu
+[net_conflict]: Das Pad-Netz (OPAMP_FB) stimmt nicht mit dem im Schaltplan (/OPAMP_FB) angegebenen Netz überein.
+    Local override; warning
+    @(96.8250 mm, 50.0000 mm): Pad 2 [OPAMP_FB] of R9 on F.Cu
+[footprint_symbol_mismatch]: Wert (R10) stimmt nicht mit Symbolwert (10k) überein.
+    Local override; warning
+    @(91.0000 mm, 52.0000 mm): Footprint R10
+[footprint_symbol_mismatch]: R_0603_1608Metric stimmt nicht mit dem Footprint des Symbols (Resistor_SMD:R_0603_1608Metric) überein.
+    Local override; warning
+    @(91.0000 mm, 52.0000 mm): Footprint R10
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(91.0000 mm, 52.0000 mm): Footprint R10
+[net_conflict]: Das Pad-Netz (OPAMP_FB) stimmt nicht mit dem im Schaltplan (/OPAMP_FB) angegebenen Netz überein.
+    Local override; warning
+    @(90.1750 mm, 52.0000 mm): Pad 1 [OPAMP_FB] of R10 on F.Cu
+[net_conflict]: Das Pad-Netz (GND) stimmt nicht mit dem im Schaltplan (/GND) angegebenen Netz überein.
+    Local override; warning
+    @(91.8250 mm, 52.0000 mm): Pad 2 [GND] of R10 on F.Cu
+[footprint_symbol_mismatch]: R_0603_1608Metric stimmt nicht mit dem Footprint des Symbols (Resistor_SMD:R_0603_1608Metric) überein.
+    Local override; warning
+    @(99.0000 mm, 46.0000 mm): Footprint R11
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(99.0000 mm, 46.0000 mm): Footprint R11
+[net_conflict]: Das Pad-Netz (OPAMP_OUT) stimmt nicht mit dem im Schaltplan (/OPAMP_OUT) angegebenen Netz überein.
+    Local override; warning
+    @(98.1750 mm, 46.0000 mm): Pad 1 [OPAMP_OUT] of R11 on F.Cu
+[net_conflict]: Das Pad-Netz (RH_OUT) stimmt nicht mit dem im Schaltplan (/RH_OUT) angegebenen Netz überein.
+    Local override; warning
+    @(99.8250 mm, 46.0000 mm): Pad 2 [RH_OUT] of R11 on F.Cu
+[footprint_symbol_mismatch]: Wert (R12) stimmt nicht mit Symbolwert (120R) überein.
+    Local override; warning
+    @(116.0000 mm, 63.0000 mm): Footprint R12
+[footprint_symbol_mismatch]: R_1206_3216Metric stimmt nicht mit dem Footprint des Symbols (Resistor_SMD:R_1206_3216Metric) überein.
+    Local override; warning
+    @(116.0000 mm, 63.0000 mm): Footprint R12
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(116.0000 mm, 63.0000 mm): Footprint R12
+[net_conflict]: Das Pad-Netz (RS485_A) stimmt nicht mit dem im Schaltplan (/RS485_A) angegebenen Netz überein.
+    Local override; warning
+    @(116.0000 mm, 64.4625 mm): Pad 1 [RS485_A] of R12 on F.Cu
+[net_conflict]: Das Pad-Netz (RS485_TERM) stimmt nicht mit dem im Schaltplan (/RS485_TERM) angegebenen Netz überein.
+    Local override; warning
+    @(116.0000 mm, 61.5375 mm): Pad 2 [RS485_TERM] of R12 on F.Cu
+[footprint_symbol_mismatch]: R_0603_1608Metric stimmt nicht mit dem Footprint des Symbols (Resistor_SMD:R_0603_1608Metric) überein.
+    Local override; warning
+    @(78.0000 mm, 40.0000 mm): Footprint R13
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(78.0000 mm, 40.0000 mm): Footprint R13
+[net_conflict]: Das Pad-Netz (STATUS_LED) stimmt nicht mit dem im Schaltplan (/STATUS_LED) angegebenen Netz überein.
+    Local override; warning
+    @(77.1750 mm, 40.0000 mm): Pad 1 [STATUS_LED] of R13 on F.Cu
+[net_conflict]: Das Pad-Netz (STATUS_LED_R) stimmt nicht mit dem im Schaltplan (/STATUS_LED_R) angegebenen Netz überein.
+    Local override; warning
+    @(78.8250 mm, 40.0000 mm): Pad 2 [STATUS_LED_R] of R13 on F.Cu
+[footprint_symbol_mismatch]: R_0603_1608Metric stimmt nicht mit dem Footprint des Symbols (Resistor_SMD:R_0603_1608Metric) überein.
+    Local override; warning
+    @(87.0000 mm, 25.0000 mm): Footprint R14
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(87.0000 mm, 25.0000 mm): Footprint R14
+[net_conflict]: Das Pad-Netz (ONEWIRE) stimmt nicht mit dem im Schaltplan (/ONEWIRE) angegebenen Netz überein.
+    Local override; warning
+    @(86.1750 mm, 25.0000 mm): Pad 1 [ONEWIRE] of R14 on F.Cu
+[net_conflict]: Das Pad-Netz (ONEWIRE_EXT) stimmt nicht mit dem im Schaltplan (/ONEWIRE_EXT) angegebenen Netz überein.
+    Local override; warning
+    @(87.8250 mm, 25.0000 mm): Pad 2 [ONEWIRE_EXT] of R14 on F.Cu
+[footprint_symbol_mismatch]: R_0603_1608Metric stimmt nicht mit dem Footprint des Symbols (Resistor_SMD:R_0603_1608Metric) überein.
+    Local override; warning
+    @(92.0000 mm, 25.0000 mm): Footprint R15
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(92.0000 mm, 25.0000 mm): Footprint R15
+[net_conflict]: Das Pad-Netz (+3V3) stimmt nicht mit dem im Schaltplan (/+3V3) angegebenen Netz überein.
+    Local override; warning
+    @(91.1750 mm, 25.0000 mm): Pad 1 [+3V3] of R15 on F.Cu
+[net_conflict]: Das Pad-Netz (ONEWIRE_EXT) stimmt nicht mit dem im Schaltplan (/ONEWIRE_EXT) angegebenen Netz überein.
+    Local override; warning
+    @(92.8250 mm, 25.0000 mm): Pad 2 [ONEWIRE_EXT] of R15 on F.Cu
+[footprint_symbol_mismatch]: R_0603_1608Metric stimmt nicht mit dem Footprint des Symbols (Resistor_SMD:R_0603_1608Metric) überein.
+    Local override; warning
+    @(112.0000 mm, 25.0000 mm): Footprint R16
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(112.0000 mm, 25.0000 mm): Footprint R16
+[net_conflict]: Das Pad-Netz (CONTACT1_EXT) stimmt nicht mit dem im Schaltplan (/CONTACT1_EXT) angegebenen Netz überein.
+    Local override; warning
+    @(111.1750 mm, 25.0000 mm): Pad 1 [CONTACT1_EXT] of R16 on F.Cu
+[net_conflict]: Das Pad-Netz (CONTACT1) stimmt nicht mit dem im Schaltplan (/CONTACT1) angegebenen Netz überein.
+    Local override; warning
+    @(112.8250 mm, 25.0000 mm): Pad 2 [CONTACT1] of R16 on F.Cu
+[footprint_symbol_mismatch]: R_0603_1608Metric stimmt nicht mit dem Footprint des Symbols (Resistor_SMD:R_0603_1608Metric) überein.
+    Local override; warning
+    @(124.0000 mm, 25.0000 mm): Footprint R17
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(124.0000 mm, 25.0000 mm): Footprint R17
+[net_conflict]: Das Pad-Netz (CONTACT2_EXT) stimmt nicht mit dem im Schaltplan (/CONTACT2_EXT) angegebenen Netz überein.
+    Local override; warning
+    @(123.1750 mm, 25.0000 mm): Pad 1 [CONTACT2_EXT] of R17 on F.Cu
+[net_conflict]: Das Pad-Netz (CONTACT2) stimmt nicht mit dem im Schaltplan (/CONTACT2) angegebenen Netz überein.
+    Local override; warning
+    @(124.8250 mm, 25.0000 mm): Pad 2 [CONTACT2] of R17 on F.Cu
+[footprint_symbol_mismatch]: R_0603_1608Metric stimmt nicht mit dem Footprint des Symbols (Resistor_SMD:R_0603_1608Metric) überein.
+    Local override; warning
+    @(109.0000 mm, 28.0000 mm): Footprint R18
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(109.0000 mm, 28.0000 mm): Footprint R18
+[net_conflict]: Das Pad-Netz (+3V3) stimmt nicht mit dem im Schaltplan (/+3V3) angegebenen Netz überein.
+    Local override; warning
+    @(108.1750 mm, 28.0000 mm): Pad 1 [+3V3] of R18 on F.Cu
+[net_conflict]: Das Pad-Netz (CONTACT1) stimmt nicht mit dem im Schaltplan (/CONTACT1) angegebenen Netz überein.
+    Local override; warning
+    @(109.8250 mm, 28.0000 mm): Pad 2 [CONTACT1] of R18 on F.Cu
+[footprint_symbol_mismatch]: R_0603_1608Metric stimmt nicht mit dem Footprint des Symbols (Resistor_SMD:R_0603_1608Metric) überein.
+    Local override; warning
+    @(127.0000 mm, 28.0000 mm): Footprint R19
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(127.0000 mm, 28.0000 mm): Footprint R19
+[net_conflict]: Das Pad-Netz (+3V3) stimmt nicht mit dem im Schaltplan (/+3V3) angegebenen Netz überein.
+    Local override; warning
+    @(126.1750 mm, 28.0000 mm): Pad 1 [+3V3] of R19 on F.Cu
+[net_conflict]: Das Pad-Netz (CONTACT2) stimmt nicht mit dem im Schaltplan (/CONTACT2) angegebenen Netz überein.
+    Local override; warning
+    @(127.8250 mm, 28.0000 mm): Pad 2 [CONTACT2] of R19 on F.Cu
+[footprint_symbol_mismatch]: Wert (R20) stimmt nicht mit Symbolwert (33k) überein.
+    Local override; warning
+    @(124.0000 mm, 72.0000 mm): Footprint R20
+[footprint_symbol_mismatch]: R_0603_1608Metric stimmt nicht mit dem Footprint des Symbols (Resistor_SMD:R_0603_1608Metric) überein.
+    Local override; warning
+    @(124.0000 mm, 72.0000 mm): Footprint R20
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(124.0000 mm, 72.0000 mm): Footprint R20
+[net_conflict]: Das Pad-Netz (AIN_0_10_RAW) stimmt nicht mit dem im Schaltplan (/AIN_0_10_RAW) angegebenen Netz überein.
+    Local override; warning
+    @(123.1750 mm, 72.0000 mm): Pad 1 [AIN_0_10_RAW] of R20 on F.Cu
+[net_conflict]: Das Pad-Netz (AIN_DIV) stimmt nicht mit dem im Schaltplan (/AIN_DIV) angegebenen Netz überein.
+    Local override; warning
+    @(124.8250 mm, 72.0000 mm): Pad 2 [AIN_DIV] of R20 on F.Cu
+[footprint_symbol_mismatch]: Wert (R21) stimmt nicht mit Symbolwert (10k) überein.
+    Local override; warning
+    @(124.0000 mm, 75.0000 mm): Footprint R21
+[footprint_symbol_mismatch]: R_0603_1608Metric stimmt nicht mit dem Footprint des Symbols (Resistor_SMD:R_0603_1608Metric) überein.
+    Local override; warning
+    @(124.0000 mm, 75.0000 mm): Footprint R21
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(124.0000 mm, 75.0000 mm): Footprint R21
+[net_conflict]: Das Pad-Netz (AIN_DIV) stimmt nicht mit dem im Schaltplan (/AIN_DIV) angegebenen Netz überein.
+    Local override; warning
+    @(123.1750 mm, 75.0000 mm): Pad 1 [AIN_DIV] of R21 on F.Cu
+[net_conflict]: Das Pad-Netz (GND) stimmt nicht mit dem im Schaltplan (/GND) angegebenen Netz überein.
+    Local override; warning
+    @(124.8250 mm, 75.0000 mm): Pad 2 [GND] of R21 on F.Cu
+[footprint_symbol_mismatch]: R_0603_1608Metric stimmt nicht mit dem Footprint des Symbols (Resistor_SMD:R_0603_1608Metric) überein.
+    Local override; warning
+    @(120.0000 mm, 72.0000 mm): Footprint R22
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(120.0000 mm, 72.0000 mm): Footprint R22
+[net_conflict]: Das Pad-Netz (AIN_DIV) stimmt nicht mit dem im Schaltplan (/AIN_DIV) angegebenen Netz überein.
+    Local override; warning
+    @(119.1750 mm, 72.0000 mm): Pad 1 [AIN_DIV] of R22 on F.Cu
+[net_conflict]: Das Pad-Netz (ADC_0_10) stimmt nicht mit dem im Schaltplan (/ADC_0_10) angegebenen Netz überein.
+    Local override; warning
+    @(120.8250 mm, 72.0000 mm): Pad 2 [ADC_0_10] of R22 on F.Cu
+[footprint_symbol_mismatch]: R_0603_1608Metric stimmt nicht mit dem Footprint des Symbols (Resistor_SMD:R_0603_1608Metric) überein.
+    Local override; warning
+    @(103.0000 mm, 85.0000 mm): Footprint R23
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(103.0000 mm, 85.0000 mm): Footprint R23
+[net_conflict]: Das Pad-Netz (+3V3) stimmt nicht mit dem im Schaltplan (/+3V3) angegebenen Netz überein.
+    Local override; warning
+    @(102.1750 mm, 85.0000 mm): Pad 1 [+3V3] of R23 on F.Cu
+[net_conflict]: Das Pad-Netz (SERVICE_BUTTON) stimmt nicht mit dem im Schaltplan (/SERVICE_BUTTON) angegebenen Netz überein.
+    Local override; warning
+    @(103.8250 mm, 85.0000 mm): Pad 2 [SERVICE_BUTTON] of R23 on F.Cu
+[footprint_symbol_mismatch]: R_0603_1608Metric stimmt nicht mit dem Footprint des Symbols (Resistor_SMD:R_0603_1608Metric) überein.
+    Local override; warning
+    @(91.0000 mm, 40.0000 mm): Footprint R24
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(91.0000 mm, 40.0000 mm): Footprint R24
+[net_conflict]: Das Pad-Netz (24V_PROT) stimmt nicht mit dem im Schaltplan (/24V_PROT) angegebenen Netz überein.
+    Local override; warning
+    @(90.1750 mm, 40.0000 mm): Pad 1 [24V_PROT] of R24 on F.Cu
+[net_conflict]: Das Pad-Netz (PWR24_LED_R) stimmt nicht mit dem im Schaltplan (/PWR24_LED_R) angegebenen Netz überein.
+    Local override; warning
+    @(91.8250 mm, 40.0000 mm): Pad 2 [PWR24_LED_R] of R24 on F.Cu
+[footprint_symbol_mismatch]: R_0603_1608Metric stimmt nicht mit dem Footprint des Symbols (Resistor_SMD:R_0603_1608Metric) überein.
+    Local override; warning
+    @(100.0000 mm, 40.0000 mm): Footprint R25
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(100.0000 mm, 40.0000 mm): Footprint R25
+[net_conflict]: Das Pad-Netz (BUS_LED) stimmt nicht mit dem im Schaltplan (/BUS_LED) angegebenen Netz überein.
+    Local override; warning
+    @(99.1750 mm, 40.0000 mm): Pad 1 [BUS_LED] of R25 on F.Cu
+[net_conflict]: Das Pad-Netz (BUS_LED_R) stimmt nicht mit dem im Schaltplan (/BUS_LED_R) angegebenen Netz überein.
+    Local override; warning
+    @(100.8250 mm, 40.0000 mm): Pad 2 [BUS_LED_R] of R25 on F.Cu
+[footprint_symbol_mismatch]: TO-92_Inline stimmt nicht mit dem Footprint des Symbols (Package_TO_SOT_THT:TO-92_Inline) überein.
+    Local override; warning
+    @(27.0000 mm, 46.0000 mm): Footprint RTH1
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(27.0000 mm, 46.0000 mm): Footprint RTH1
+[net_conflict]: Das Pad-Netz (TEMP_KTY) stimmt nicht mit dem im Schaltplan (/TEMP_KTY) angegebenen Netz überein.
+    Local override; warning
+    @(27.0000 mm, 46.0000 mm): PTH pad 1 [TEMP_KTY] of RTH1
+[net_conflict]: Das Pad-Netz (GND) stimmt nicht mit dem im Schaltplan (/GND) angegebenen Netz überein.
+    Local override; warning
+    @(28.2700 mm, 46.0000 mm): PTH pad 2 [GND] of RTH1
+[footprint_symbol_mismatch]: SW_SPST_B3U-1000P stimmt nicht mit dem Footprint des Symbols (Button_Switch_SMD:SW_SPST_B3U-1000P) überein.
+    Local override; warning
+    @(70.0000 mm, 43.0000 mm): Footprint SW1
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(70.0000 mm, 43.0000 mm): Footprint SW1
+[net_conflict]: Das Pad-Netz (C6_EN) stimmt nicht mit dem im Schaltplan (/C6_EN) angegebenen Netz überein.
+    Local override; warning
+    @(68.3000 mm, 43.0000 mm): Pad 1 [C6_EN] of SW1 on F.Cu
+[net_conflict]: Das Pad-Netz (GND) stimmt nicht mit dem im Schaltplan (/GND) angegebenen Netz überein.
+    Local override; warning
+    @(71.7000 mm, 43.0000 mm): Pad 2 [GND] of SW1 on F.Cu
+[footprint_symbol_mismatch]: SW_SPST_B3U-1000P stimmt nicht mit dem Footprint des Symbols (Button_Switch_SMD:SW_SPST_B3U-1000P) überein.
+    Local override; warning
+    @(77.0000 mm, 43.0000 mm): Footprint SW2
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(77.0000 mm, 43.0000 mm): Footprint SW2
+[net_conflict]: Das Pad-Netz (C6_BOOT) stimmt nicht mit dem im Schaltplan (/C6_BOOT) angegebenen Netz überein.
+    Local override; warning
+    @(75.3000 mm, 43.0000 mm): Pad 1 [C6_BOOT] of SW2 on F.Cu
+[net_conflict]: Das Pad-Netz (GND) stimmt nicht mit dem im Schaltplan (/GND) angegebenen Netz überein.
+    Local override; warning
+    @(78.7000 mm, 43.0000 mm): Pad 2 [GND] of SW2 on F.Cu
+[footprint_symbol_mismatch]: Wert (SW3) stimmt nicht mit Symbolwert (TERM ON/OFF) überein.
+    Local override; warning
+    @(122.0000 mm, 63.0000 mm): Footprint SW3
+[footprint_symbol_mismatch]: SW_DIP_SPSTx01_Slide_Copal_CHS-01B_W7.62mm_P1.27mm stimmt nicht mit dem Footprint des Symbols (Button_Switch_SMD:SW_DIP_SPSTx01_Slide_Copal_CHS-01B_W7.62mm_P1.27mm) überein.
+    Local override; warning
+    @(122.0000 mm, 63.0000 mm): Footprint SW3
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(122.0000 mm, 63.0000 mm): Footprint SW3
+[net_conflict]: Das Pad-Netz (RS485_TERM) stimmt nicht mit dem im Schaltplan (/RS485_TERM) angegebenen Netz überein.
+    Local override; warning
+    @(122.0000 mm, 66.8100 mm): Pad 1 [RS485_TERM] of SW3 on F.Cu
+[net_conflict]: Das Pad-Netz (RS485_B) stimmt nicht mit dem im Schaltplan (/RS485_B) angegebenen Netz überein.
+    Local override; warning
+    @(122.0000 mm, 59.1900 mm): Pad 2 [RS485_B] of SW3 on F.Cu
+[footprint_symbol_mismatch]: Wert (SW4) stimmt nicht mit Symbolwert (SERVICE) überein.
+    Local override; warning
+    @(108.0000 mm, 85.0000 mm): Footprint SW4
+[footprint_symbol_mismatch]: SW_SPST_B3U-1000P stimmt nicht mit dem Footprint des Symbols (Button_Switch_SMD:SW_SPST_B3U-1000P) überein.
+    Local override; warning
+    @(108.0000 mm, 85.0000 mm): Footprint SW4
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(108.0000 mm, 85.0000 mm): Footprint SW4
+[net_conflict]: Das Pad-Netz (SERVICE_BUTTON) stimmt nicht mit dem im Schaltplan (/SERVICE_BUTTON) angegebenen Netz überein.
+    Local override; warning
+    @(106.3000 mm, 85.0000 mm): Pad 1 [SERVICE_BUTTON] of SW4 on F.Cu
+[net_conflict]: Das Pad-Netz (GND) stimmt nicht mit dem im Schaltplan (/GND) angegebenen Netz überein.
+    Local override; warning
+    @(109.7000 mm, 85.0000 mm): Pad 2 [GND] of SW4 on F.Cu
+[footprint_symbol_mismatch]: TestPoint_Plated_Hole_D2.0mm stimmt nicht mit dem Footprint des Symbols (TestPoint:TestPoint_Plated_Hole_D2.0mm) überein.
+    Local override; warning
+    @(22.0000 mm, 38.0000 mm): Footprint TP1
+[footprint_symbol_mismatch]: Footprintattribute stimmen nicht mit denen des Symbols überein: "Von Stückliste ausschließen" Einstellungen weichen ab.
+    Local override; warning
+    @(22.0000 mm, 38.0000 mm): Footprint TP1
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(22.0000 mm, 38.0000 mm): Footprint TP1
+[net_conflict]: Das Pad-Netz (24V_RAW) stimmt nicht mit dem im Schaltplan (/24V_RAW) angegebenen Netz überein.
+    Local override; warning
+    @(22.0000 mm, 38.0000 mm): PTH pad 1 [24V_RAW] of TP1
+[footprint_symbol_mismatch]: TestPoint_Plated_Hole_D2.0mm stimmt nicht mit dem Footprint des Symbols (TestPoint:TestPoint_Plated_Hole_D2.0mm) überein.
+    Local override; warning
+    @(30.0000 mm, 38.0000 mm): Footprint TP2
+[footprint_symbol_mismatch]: Footprintattribute stimmen nicht mit denen des Symbols überein: "Von Stückliste ausschließen" Einstellungen weichen ab.
+    Local override; warning
+    @(30.0000 mm, 38.0000 mm): Footprint TP2
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(30.0000 mm, 38.0000 mm): Footprint TP2
+[net_conflict]: Das Pad-Netz (24V_PROT) stimmt nicht mit dem im Schaltplan (/24V_PROT) angegebenen Netz überein.
+    Local override; warning
+    @(30.0000 mm, 38.0000 mm): PTH pad 1 [24V_PROT] of TP2
+[footprint_symbol_mismatch]: TestPoint_Plated_Hole_D2.0mm stimmt nicht mit dem Footprint des Symbols (TestPoint:TestPoint_Plated_Hole_D2.0mm) überein.
+    Local override; warning
+    @(38.0000 mm, 38.0000 mm): Footprint TP3
+[footprint_symbol_mismatch]: Footprintattribute stimmen nicht mit denen des Symbols überein: "Von Stückliste ausschließen" Einstellungen weichen ab.
+    Local override; warning
+    @(38.0000 mm, 38.0000 mm): Footprint TP3
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(38.0000 mm, 38.0000 mm): Footprint TP3
+[net_conflict]: Das Pad-Netz (SYS_5V) stimmt nicht mit dem im Schaltplan (/SYS_5V) angegebenen Netz überein.
+    Local override; warning
+    @(38.0000 mm, 38.0000 mm): PTH pad 1 [SYS_5V] of TP3
+[footprint_symbol_mismatch]: TestPoint_Plated_Hole_D2.0mm stimmt nicht mit dem Footprint des Symbols (TestPoint:TestPoint_Plated_Hole_D2.0mm) überein.
+    Local override; warning
+    @(46.0000 mm, 39.0000 mm): Footprint TP4
+[footprint_symbol_mismatch]: Footprintattribute stimmen nicht mit denen des Symbols überein: "Von Stückliste ausschließen" Einstellungen weichen ab.
+    Local override; warning
+    @(46.0000 mm, 39.0000 mm): Footprint TP4
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(46.0000 mm, 39.0000 mm): Footprint TP4
+[net_conflict]: Das Pad-Netz (+3V3) stimmt nicht mit dem im Schaltplan (/+3V3) angegebenen Netz überein.
+    Local override; warning
+    @(46.0000 mm, 39.0000 mm): PTH pad 1 [+3V3] of TP4
+[footprint_symbol_mismatch]: TestPoint_Plated_Hole_D2.0mm stimmt nicht mit dem Footprint des Symbols (TestPoint:TestPoint_Plated_Hole_D2.0mm) überein.
+    Local override; warning
+    @(54.0000 mm, 40.0000 mm): Footprint TP5
+[footprint_symbol_mismatch]: Footprintattribute stimmen nicht mit denen des Symbols überein: "Von Stückliste ausschließen" Einstellungen weichen ab.
+    Local override; warning
+    @(54.0000 mm, 40.0000 mm): Footprint TP5
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(54.0000 mm, 40.0000 mm): Footprint TP5
+[net_conflict]: Das Pad-Netz (I2C_SDA) stimmt nicht mit dem im Schaltplan (/I2C_SDA) angegebenen Netz überein.
+    Local override; warning
+    @(54.0000 mm, 40.0000 mm): PTH pad 1 [I2C_SDA] of TP5
+[footprint_symbol_mismatch]: TestPoint_Plated_Hole_D2.0mm stimmt nicht mit dem Footprint des Symbols (TestPoint:TestPoint_Plated_Hole_D2.0mm) überein.
+    Local override; warning
+    @(62.0000 mm, 40.0000 mm): Footprint TP6
+[footprint_symbol_mismatch]: Footprintattribute stimmen nicht mit denen des Symbols überein: "Von Stückliste ausschließen" Einstellungen weichen ab.
+    Local override; warning
+    @(62.0000 mm, 40.0000 mm): Footprint TP6
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(62.0000 mm, 40.0000 mm): Footprint TP6
+[net_conflict]: Das Pad-Netz (I2C_SCL) stimmt nicht mit dem im Schaltplan (/I2C_SCL) angegebenen Netz überein.
+    Local override; warning
+    @(62.0000 mm, 40.0000 mm): PTH pad 1 [I2C_SCL] of TP6
+[footprint_symbol_mismatch]: TestPoint_Plated_Hole_D2.0mm stimmt nicht mit dem Footprint des Symbols (TestPoint:TestPoint_Plated_Hole_D2.0mm) überein.
+    Local override; warning
+    @(70.0000 mm, 38.0000 mm): Footprint TP7
+[footprint_symbol_mismatch]: Footprintattribute stimmen nicht mit denen des Symbols überein: "Von Stückliste ausschließen" Einstellungen weichen ab.
+    Local override; warning
+    @(70.0000 mm, 38.0000 mm): Footprint TP7
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(70.0000 mm, 38.0000 mm): Footprint TP7
+[net_conflict]: Das Pad-Netz (RH_OUT) stimmt nicht mit dem im Schaltplan (/RH_OUT) angegebenen Netz überein.
+    Local override; warning
+    @(70.0000 mm, 38.0000 mm): PTH pad 1 [RH_OUT] of TP7
+[footprint_symbol_mismatch]: TestPoint_Plated_Hole_D2.0mm stimmt nicht mit dem Footprint des Symbols (TestPoint:TestPoint_Plated_Hole_D2.0mm) überein.
+    Local override; warning
+    @(83.0000 mm, 35.0000 mm): Footprint TP8
+[footprint_symbol_mismatch]: Footprintattribute stimmen nicht mit denen des Symbols überein: "Von Stückliste ausschließen" Einstellungen weichen ab.
+    Local override; warning
+    @(83.0000 mm, 35.0000 mm): Footprint TP8
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(83.0000 mm, 35.0000 mm): Footprint TP8
+[net_conflict]: Das Pad-Netz (TEMP_KTY) stimmt nicht mit dem im Schaltplan (/TEMP_KTY) angegebenen Netz überein.
+    Local override; warning
+    @(83.0000 mm, 35.0000 mm): PTH pad 1 [TEMP_KTY] of TP8
+[footprint_symbol_mismatch]: TestPoint_Plated_Hole_D2.0mm stimmt nicht mit dem Footprint des Symbols (TestPoint:TestPoint_Plated_Hole_D2.0mm) überein.
+    Local override; warning
+    @(86.0000 mm, 31.0000 mm): Footprint TP9
+[footprint_symbol_mismatch]: Footprintattribute stimmen nicht mit denen des Symbols überein: "Von Stückliste ausschließen" Einstellungen weichen ab.
+    Local override; warning
+    @(86.0000 mm, 31.0000 mm): Footprint TP9
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(86.0000 mm, 31.0000 mm): Footprint TP9
+[net_conflict]: Das Pad-Netz (RS485_A) stimmt nicht mit dem im Schaltplan (/RS485_A) angegebenen Netz überein.
+    Local override; warning
+    @(86.0000 mm, 31.0000 mm): PTH pad 1 [RS485_A] of TP9
+[footprint_symbol_mismatch]: TestPoint_Plated_Hole_D2.0mm stimmt nicht mit dem Footprint des Symbols (TestPoint:TestPoint_Plated_Hole_D2.0mm) überein.
+    Local override; warning
+    @(94.0000 mm, 31.0000 mm): Footprint TP10
+[footprint_symbol_mismatch]: Footprintattribute stimmen nicht mit denen des Symbols überein: "Von Stückliste ausschließen" Einstellungen weichen ab.
+    Local override; warning
+    @(94.0000 mm, 31.0000 mm): Footprint TP10
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(94.0000 mm, 31.0000 mm): Footprint TP10
+[net_conflict]: Das Pad-Netz (RS485_B) stimmt nicht mit dem im Schaltplan (/RS485_B) angegebenen Netz überein.
+    Local override; warning
+    @(94.0000 mm, 31.0000 mm): PTH pad 1 [RS485_B] of TP10
+[footprint_symbol_mismatch]: TestPoint_Plated_Hole_D2.0mm stimmt nicht mit dem Footprint des Symbols (TestPoint:TestPoint_Plated_Hole_D2.0mm) überein.
+    Local override; warning
+    @(102.0000 mm, 31.0000 mm): Footprint TP11
+[footprint_symbol_mismatch]: Footprintattribute stimmen nicht mit denen des Symbols überein: "Von Stückliste ausschließen" Einstellungen weichen ab.
+    Local override; warning
+    @(102.0000 mm, 31.0000 mm): Footprint TP11
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(102.0000 mm, 31.0000 mm): Footprint TP11
+[net_conflict]: Das Pad-Netz (RS485_COM) stimmt nicht mit dem im Schaltplan (/RS485_COM) angegebenen Netz überein.
+    Local override; warning
+    @(102.0000 mm, 31.0000 mm): PTH pad 1 [RS485_COM] of TP11
+[footprint_symbol_mismatch]: TestPoint_Plated_Hole_D2.0mm stimmt nicht mit dem Footprint des Symbols (TestPoint:TestPoint_Plated_Hole_D2.0mm) überein.
+    Local override; warning
+    @(91.0000 mm, 35.0000 mm): Footprint TP12
+[footprint_symbol_mismatch]: Footprintattribute stimmen nicht mit denen des Symbols überein: "Von Stückliste ausschließen" Einstellungen weichen ab.
+    Local override; warning
+    @(91.0000 mm, 35.0000 mm): Footprint TP12
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(91.0000 mm, 35.0000 mm): Footprint TP12
+[net_conflict]: Das Pad-Netz (GND) stimmt nicht mit dem im Schaltplan (/GND) angegebenen Netz überein.
+    Local override; warning
+    @(91.0000 mm, 35.0000 mm): PTH pad 1 [GND] of TP12
+[footprint_symbol_mismatch]: D_SMB stimmt nicht mit dem Footprint des Symbols (Diode_SMD:D_SMB) überein.
+    Local override; warning
+    @(38.0000 mm, 73.0000 mm): Footprint TVS1
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(38.0000 mm, 73.0000 mm): Footprint TVS1
+[net_conflict]: Das Pad-Netz (GND) stimmt nicht mit dem im Schaltplan (/GND) angegebenen Netz überein.
+    Local override; warning
+    @(38.0000 mm, 75.1500 mm): Pad 1 [GND] of TVS1 on F.Cu
+[net_conflict]: Das Pad-Netz (24V_PROT) stimmt nicht mit dem im Schaltplan (/24V_PROT) angegebenen Netz überein.
+    Local override; warning
+    @(38.0000 mm, 70.8500 mm): Pad 2 [24V_PROT] of TVS1 on F.Cu
+[footprint_symbol_mismatch]: Wert (TVS2) stimmt nicht mit Symbolwert (3V3 ESD) überein.
+    Local override; warning
+    @(97.0000 mm, 25.0000 mm): Footprint TVS2
+[footprint_symbol_mismatch]: D_SOD-323 stimmt nicht mit dem Footprint des Symbols (Diode_SMD:D_SOD-323) überein.
+    Local override; warning
+    @(97.0000 mm, 25.0000 mm): Footprint TVS2
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(97.0000 mm, 25.0000 mm): Footprint TVS2
+[net_conflict]: Das Pad-Netz (GND) stimmt nicht mit dem im Schaltplan (/GND) angegebenen Netz überein.
+    Local override; warning
+    @(95.9500 mm, 25.0000 mm): Pad 1 [GND] of TVS2 on F.Cu
+[net_conflict]: Das Pad-Netz (ONEWIRE_EXT) stimmt nicht mit dem im Schaltplan (/ONEWIRE_EXT) angegebenen Netz überein.
+    Local override; warning
+    @(98.0500 mm, 25.0000 mm): Pad 2 [ONEWIRE_EXT] of TVS2 on F.Cu
+[footprint_symbol_mismatch]: Wert (TVS3) stimmt nicht mit Symbolwert (3V3 ESD) überein.
+    Local override; warning
+    @(108.0000 mm, 25.0000 mm): Footprint TVS3
+[footprint_symbol_mismatch]: D_SOD-323 stimmt nicht mit dem Footprint des Symbols (Diode_SMD:D_SOD-323) überein.
+    Local override; warning
+    @(108.0000 mm, 25.0000 mm): Footprint TVS3
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(108.0000 mm, 25.0000 mm): Footprint TVS3
+[net_conflict]: Das Pad-Netz (GND) stimmt nicht mit dem im Schaltplan (/GND) angegebenen Netz überein.
+    Local override; warning
+    @(106.9500 mm, 25.0000 mm): Pad 1 [GND] of TVS3 on F.Cu
+[net_conflict]: Das Pad-Netz (CONTACT1_EXT) stimmt nicht mit dem im Schaltplan (/CONTACT1_EXT) angegebenen Netz überein.
+    Local override; warning
+    @(109.0500 mm, 25.0000 mm): Pad 2 [CONTACT1_EXT] of TVS3 on F.Cu
+[footprint_symbol_mismatch]: Wert (TVS4) stimmt nicht mit Symbolwert (3V3 ESD) überein.
+    Local override; warning
+    @(128.0000 mm, 25.0000 mm): Footprint TVS4
+[footprint_symbol_mismatch]: D_SOD-323 stimmt nicht mit dem Footprint des Symbols (Diode_SMD:D_SOD-323) überein.
+    Local override; warning
+    @(128.0000 mm, 25.0000 mm): Footprint TVS4
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(128.0000 mm, 25.0000 mm): Footprint TVS4
+[net_conflict]: Das Pad-Netz (GND) stimmt nicht mit dem im Schaltplan (/GND) angegebenen Netz überein.
+    Local override; warning
+    @(126.9500 mm, 25.0000 mm): Pad 1 [GND] of TVS4 on F.Cu
+[net_conflict]: Das Pad-Netz (CONTACT2_EXT) stimmt nicht mit dem im Schaltplan (/CONTACT2_EXT) angegebenen Netz überein.
+    Local override; warning
+    @(129.0500 mm, 25.0000 mm): Pad 2 [CONTACT2_EXT] of TVS4 on F.Cu
+[footprint_symbol_mismatch]: Wert (TVS5) stimmt nicht mit Symbolwert (12V ESD) überein.
+    Local override; warning
+    @(127.0000 mm, 75.0000 mm): Footprint TVS5
+[footprint_symbol_mismatch]: D_SOD-323 stimmt nicht mit dem Footprint des Symbols (Diode_SMD:D_SOD-323) überein.
+    Local override; warning
+    @(127.0000 mm, 75.0000 mm): Footprint TVS5
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(127.0000 mm, 75.0000 mm): Footprint TVS5
+[net_conflict]: Das Pad-Netz (GND) stimmt nicht mit dem im Schaltplan (/GND) angegebenen Netz überein.
+    Local override; warning
+    @(127.0000 mm, 76.0500 mm): Pad 1 [GND] of TVS5 on F.Cu
+[net_conflict]: Das Pad-Netz (AIN_0_10_RAW) stimmt nicht mit dem im Schaltplan (/AIN_0_10_RAW) angegebenen Netz überein.
+    Local override; warning
+    @(127.0000 mm, 73.9500 mm): Pad 2 [AIN_0_10_RAW] of TVS5 on F.Cu
+[footprint_symbol_mismatch]: Wert (U1) stimmt nicht mit Symbolwert (LMR36510ADDAR) überein.
+    Local override; warning
+    @(49.0000 mm, 65.0000 mm): Footprint U1
+[footprint_symbol_mismatch]: TI_SO-PowerPAD-8_ThermalVias stimmt nicht mit dem Footprint des Symbols (Package_SO:TI_SO-PowerPAD-8_ThermalVias) überein.
+    Local override; warning
+    @(49.0000 mm, 65.0000 mm): Footprint U1
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(49.0000 mm, 65.0000 mm): Footprint U1
+[net_conflict]: Das Pad-Netz (GND) stimmt nicht mit dem im Schaltplan (/GND) angegebenen Netz überein.
+    Local override; warning
+    @(46.3000 mm, 63.0950 mm): Pad 1 [GND] of U1 on F.Cu
+[net_conflict]: Das Pad-Netz (24V_PROT) stimmt nicht mit dem im Schaltplan (/24V_PROT) angegebenen Netz überein.
+    Local override; warning
+    @(46.3000 mm, 64.3650 mm): Pad 2 [24V_PROT] of U1 on F.Cu
+[net_conflict]: Das Pad-Netz (24V_PROT) stimmt nicht mit dem im Schaltplan (/24V_PROT) angegebenen Netz überein.
+    Local override; warning
+    @(46.3000 mm, 65.6350 mm): Pad 3 [24V_PROT] of U1 on F.Cu
+[net_conflict]: Das Pad-Netz (PWR_GOOD) stimmt nicht mit dem im Schaltplan (/PWR_GOOD) angegebenen Netz überein.
+    Local override; warning
+    @(46.3000 mm, 66.9050 mm): Pad 4 [PWR_GOOD] of U1 on F.Cu
+[net_conflict]: Das Pad-Netz (BUCK_FB) stimmt nicht mit dem im Schaltplan (/BUCK_FB) angegebenen Netz überein.
+    Local override; warning
+    @(51.7000 mm, 66.9050 mm): Pad 5 [BUCK_FB] of U1 on F.Cu
+[net_conflict]: Das Pad-Netz (VCC_BYP) stimmt nicht mit dem im Schaltplan (/VCC_BYP) angegebenen Netz überein.
+    Local override; warning
+    @(51.7000 mm, 65.6350 mm): Pad 6 [VCC_BYP] of U1 on F.Cu
+[net_conflict]: Das Pad-Netz (BOOT) stimmt nicht mit dem im Schaltplan (/BOOT) angegebenen Netz überein.
+    Local override; warning
+    @(51.7000 mm, 64.3650 mm): Pad 7 [BOOT] of U1 on F.Cu
+[footprint_symbol_mismatch]: Wert (U2) stimmt nicht mit Symbolwert (AP2112K-3.3) überein.
+    Local override; warning
+    @(80.0000 mm, 64.0000 mm): Footprint U2
+[footprint_symbol_mismatch]: SOT-23-5 stimmt nicht mit dem Footprint des Symbols (Package_TO_SOT_SMD:SOT-23-5) überein.
+    Local override; warning
+    @(80.0000 mm, 64.0000 mm): Footprint U2
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(80.0000 mm, 64.0000 mm): Footprint U2
+[footprint_symbol_mismatch]: Wert (U3) stimmt nicht mit Symbolwert (ESP32-C6-WROOM-1-N16) überein.
+    Local override; warning
+    @(55.0000 mm, 22.7500 mm): Footprint U3
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(55.0000 mm, 22.7500 mm): Footprint U3
+[footprint_symbol_mismatch]: Wert (U4) stimmt nicht mit Symbolwert (SHT45) überein.
+    Local override; warning
+    @(74.0000 mm, 20.0000 mm): Footprint U4
+[footprint_symbol_mismatch]: Sensirion_DFN-4_1.5x1.5mm_P0.8mm_SHT4x_NoCentralPad stimmt nicht mit dem Footprint des Symbols (Sensor_Humidity:Sensirion_DFN-4_1.5x1.5mm_P0.8mm_SHT4x_NoCentralPad) überein.
+    Local override; warning
+    @(74.0000 mm, 20.0000 mm): Footprint U4
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(74.0000 mm, 20.0000 mm): Footprint U4
+[footprint_symbol_mismatch]: Wert (U5) stimmt nicht mit Symbolwert (MCP4725A0T) überein.
+    Local override; warning
+    @(83.0000 mm, 46.0000 mm): Footprint U5
+[footprint_symbol_mismatch]: SOT-23-6 stimmt nicht mit dem Footprint des Symbols (Package_TO_SOT_SMD:SOT-23-6) überein.
+    Local override; warning
+    @(83.0000 mm, 46.0000 mm): Footprint U5
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(83.0000 mm, 46.0000 mm): Footprint U5
+[footprint_symbol_mismatch]: SOT-23-5 stimmt nicht mit dem Footprint des Symbols (Package_TO_SOT_SMD:SOT-23-5) überein.
+    Local override; warning
+    @(92.0000 mm, 46.0000 mm): Footprint U6
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(92.0000 mm, 46.0000 mm): Footprint U6
+[footprint_symbol_mismatch]: SOIC-16W_7.5x10.3mm_P1.27mm stimmt nicht mit dem Footprint des Symbols (Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm) überein.
+    Local override; warning
+    @(105.0000 mm, 60.0000 mm): Footprint U7
+[footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
+    Local override; warning
+    @(105.0000 mm, 60.0000 mm): Footprint U7
+[extra_footprint]: Extra footprint
+    Local override; warning
+    @(14.0000 mm, 14.0000 mm): Footprint H1
+[extra_footprint]: Extra footprint
+    Local override; warning
+    @(115.0000 mm, 35.0000 mm): Footprint H2
+[extra_footprint]: Extra footprint
+    Local override; warning
+    @(14.0000 mm, 86.0000 mm): Footprint H3
+[extra_footprint]: Extra footprint
+    Local override; warning
+    @(136.0000 mm, 86.0000 mm): Footprint H4
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **

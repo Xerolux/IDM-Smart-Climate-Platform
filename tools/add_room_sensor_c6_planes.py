@@ -22,7 +22,7 @@ def add_zone(board, net_name: str, coordinates: tuple[tuple[float, float], ...])
     zone.SetLayer(pcbnew.In2_Cu)
     zone.SetNet(board.FindNet(net_name))
     zone.SetLocalClearance(mm(0.25))
-    zone.SetPadConnection(pcbnew.ZONE_CONNECTION_THERMAL)
+    zone.SetPadConnection(pcbnew.ZONE_CONNECTION_FULL)
     zone.SetMinThickness(mm(0.2))
     zone.SetIslandRemovalMode(pcbnew.ISLAND_REMOVAL_MODE_ALWAYS)
     outline = zone.Outline()
@@ -37,6 +37,7 @@ def main() -> None:
     parser.add_argument("board", type=Path)
     args = parser.parse_args()
     board = pcbnew.LoadBoard(str(args.board))
+    extended = pcbnew.ToMM(board.GetBoardEdgesBoundingBox().GetWidth()) > 120
 
     # Idempotent when rerun on the released board.
     for zone in list(board.Zones()):
@@ -45,20 +46,23 @@ def main() -> None:
 
     # Logic ground covers the board except the isolated RS-485 region.  It may
     # extend to the SHT45 at the upper-right without entering the bus island.
-    add_zone(
-        board,
-        "GND",
+    logic_outline = (
+        ((10.5, 10.5), (139.5, 10.5), (139.5, 34.0), (103.5, 34.0),
+         (103.5, 70.0), (139.5, 70.0), (139.5, 89.5), (10.5, 89.5))
+        if extended else
         ((10.5, 10.5), (119.5, 10.5), (119.5, 34.0),
-         (103.5, 34.0), (103.5, 79.5), (10.5, 79.5)),
+         (103.5, 34.0), (103.5, 79.5), (10.5, 79.5))
     )
+    add_zone(board, "GND", logic_outline)
     add_zone(
         board,
         "RS485_COM",
-        ((106.5, 35.0), (119.5, 35.0), (119.5, 70.0), (106.5, 70.0)),
+        ((106.5, 35.0), (139.5 if extended else 119.5, 35.0),
+         (139.5 if extended else 119.5, 70.0), (106.5, 70.0)),
     )
     pcbnew.ZONE_FILLER(board).Fill(board.Zones())
     pcbnew.SaveBoard(str(args.board), board)
-    print("Added split B-ES2-C6 reference planes")
+    print("Added split C6 reference planes")
 
 
 if __name__ == "__main__":

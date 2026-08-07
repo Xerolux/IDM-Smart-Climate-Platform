@@ -1,6 +1,10 @@
 # IDM Room Sensor ESP
 
-The newest manufacturing revision is **B-ES2-C6**, a four-layer engineering
+The newest manufacturing revision is **B-ES3-C6**, a four-layer engineering
+sample with push-in field terminals, protected 1-Wire, dry-contact and 0-10 V
+inputs, user-switchable RS-485 termination and diagnostic controls.
+
+Revision **B-ES2-C6** is the smaller baseline engineering
 sample using an ESP32-C6-WROOM-1-N16, native USB-C, SHT45, MCP4725/OPA197
 0-10 V output and isolated CA-IS3092W RS-485. It accepts protected 24 V field
 power and USB power simultaneously through separate Schottky OR-ing diodes.
@@ -9,6 +13,10 @@ Revision **B-ES1** remains the simpler ESP32-C3-DevKitM-1 bench-test version.
 
 ## Order files
 
+- B-ES3-C6 order instructions: `manufacturing/B-ES3-C6/README.md`
+- B-ES3-C6 PCB source: `IDM-RoomSensor-ESP-B-ES3-C6.kicad_pcb`
+- B-ES3-C6 schematic: `IDM-RoomSensor-ESP-B-ES3-C6.kicad_sch`
+- B-ES3-C6 pin map: `B-ES3-C6-PINMAP.md`
 - B-ES2-C6 order instructions: `manufacturing/B-ES2-C6/README.md`
 - B-ES2-C6 PCB source: `IDM-RoomSensor-ESP-B-ES2-C6.kicad_pcb`
 - B-ES2-C6 schematic: `IDM-RoomSensor-ESP-B-ES2-C6.kicad_sch`

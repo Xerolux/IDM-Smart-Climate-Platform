@@ -53,10 +53,16 @@ def add_passive(builder: Builder, ref: str, kind: str, center, value: str,
         value=value, footprint=footprint, datasheet=datasheet, nets=nets)
 
 
-def build():
+def build(revision: str = "B-ES2-C6"):
+    extended = revision == "B-ES3-C6"
+    terminal = lambda pins: (
+        f"TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-{pins:02d}P_1x{pins:02d}_P5.00mm"
+        if extended else
+        f"TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-{pins}-3.5-H_1x{pins:02d}_P3.50mm_Horizontal"
+    )
     b = C6Builder()
     b.sch.titleBlock = TitleBlock(
-        title="IDM Room Sensor B-ES2-C6 - USB-C / RS-485 / 0-10 V",
+        title=f"IDM Room Sensor {revision} - USB-C / RS-485 / 0-10 V",
         date="2026-08-07", revision="B-ES2-C6",
         company="IDM Smart Climate Platform",
         comments={
@@ -65,14 +71,15 @@ def build():
             3: "SHT45 room sensing; passive KTY81/210; active 0-10 V humidity output",
         },
     )
-    title(b, "B-ES2-C6 MULTIPROTOCOL ROOM SENSOR", 90, 17, 2.0)
+    b.sch.titleBlock.revision = revision
+    title(b, f"{revision} MULTIPROTOCOL ROOM SENSOR", 90, 17, 2.0)
     title(b, "24 V / IDM interface and protected 5 V supply", 35, 35)
     title(b, "ESP32-C6, USB-C and local sensing", 145, 35)
     title(b, "0-10 V and isolated RS-485", 245, 35)
 
     b.add(reference="J1", nickname="Connector_Generic", entry="Conn_01x04",
         center=(25, 58), value="1-2834011-4 / IDM 43 TEMP / 42 +24V / 41 GND / 40 RH",
-        footprint="TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-4-3.5-H_1x04_P3.50mm_Horizontal",
+        footprint=terminal(4),
         datasheet="https://www.te.com/usa-en/product-1-2834011-4.html",
         nets={"1":"TEMP_KTY", "2":"24V_RAW", "3":"GND", "4":"RH_OUT"})
     b.add(reference="RTH1", nickname="Sensor_Temperature", entry="KTY81",
@@ -113,6 +120,9 @@ def build():
         "6":"I2C_SDA","7":"I2C_SCL","10":"STATUS_LED","13":"USB_D-","14":"USB_D+",
         "15":"C6_BOOT","21":"ONEWIRE","24":"RS485_RX","25":"RS485_TX","27":"RS485_DE",
         "28":"GND","29":"GND"}
+    if extended:
+        c6_nets.update({"8":"ADC_0_10", "16":"CONTACT1", "17":"CONTACT2",
+                        "18":"SERVICE_BUTTON", "20":"BUS_LED"})
     c6_nc={str(n) for n in range(1,31)}-set(c6_nets)
     b.add(reference="U3", nickname="Connector_Generic", entry="Conn_02x15_Odd_Even",
         center=(150,125), value="ESP32-C6-WROOM-1-N16 (pins per Espressif datasheet)",
@@ -170,17 +180,67 @@ def build():
         ("C18",(285,145),"10u",{"1":"VISO","2":"RS485_COM"}),
     ]: add_passive(b,ref,"C",center,value,"Capacitor_SMD:C_0805_2012Metric",nets)
     b.add(reference="J2",nickname="Connector_Generic",entry="Conn_01x04",center=(305,130),value="1-2834011-4 / RS485 A / B / COM / SHIELD",
-        footprint="TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-4-3.5-H_1x04_P3.50mm_Horizontal",datasheet="https://www.te.com/usa-en/product-1-2834011-4.html",
+        footprint=terminal(4),datasheet="https://www.lcsc.com/product-detail/C7471336.html" if extended else "https://www.te.com/usa-en/product-1-2834011-4.html",
         nets={"1":"RS485_A","2":"RS485_B","3":"RS485_COM","4":"RS485_SHIELD"})
     add_passive(b,"R12","R",(300,155),"120R termination","Resistor_SMD:R_1206_3216Metric",{"1":"RS485_A","2":"RS485_TERM"})
-    b.add(reference="JP1",nickname="Jumper",entry="Jumper_2_Open",center=(315,155),value="RS485 TERM ENABLE",
-        footprint="Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm",datasheet="~",nets={"1":"RS485_TERM","2":"RS485_B"})
+    if extended:
+        b.add(reference="SW3",nickname="Switch",entry="SW_DIP_x01",center=(315,155),value="RS485 TERM ON/OFF",
+            footprint="Button_Switch_SMD:SW_DIP_SPSTx01_Slide_Copal_CHS-01B_W7.62mm_P1.27mm",datasheet="https://jlcpcb.com/partdetail/BIWIN-SOP01/C3294660",nets={"1":"RS485_TERM","2":"RS485_B"})
+    else:
+        b.add(reference="JP1",nickname="Jumper",entry="Jumper_2_Open",center=(315,155),value="RS485 TERM ENABLE",
+            footprint="Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm",datasheet="~",nets={"1":"RS485_TERM","2":"RS485_B"})
 
     b.add(reference="J4",nickname="Connector_Generic",entry="Conn_01x08",center=(145,180),value="EXPANSION",
         footprint="Connector_JST:JST_SH_SM08B-SRSS-TB_1x08-1MP_P1.00mm_Horizontal",datasheet="~",
         nets={"1":"+3V3","2":"GND","3":"I2C_SDA","4":"I2C_SCL","5":"ONEWIRE","6":"EXP_GPIO4","7":"EXP_GPIO5","8":"SYS_5V"})
     add_passive(b,"LED1","LED",(195,180),"STATUS GREEN","LED_SMD:LED_0603_1608Metric",{"1":"STATUS_LED_R","2":"GND"})
     add_passive(b,"R13","R",(180,180),"1k","Resistor_SMD:R_0603_1608Metric",{"1":"STATUS_LED","2":"STATUS_LED_R"})
+
+    if extended:
+        title(b, "Field I/O: push-in terminals, protected 1-Wire, dry contacts and 0-10 V input", 220, 175)
+        for ref, center in (("J5", (215,190)), ("J6", (250,190))):
+            b.add(reference=ref,nickname="Connector_Generic",entry="Conn_01x03",center=center,
+                value="MX205R PUSH-IN / 3V3 / 1-WIRE / GND",footprint=terminal(3),
+                datasheet="https://www.lcsc.com/product-detail/C7471335.html",
+                nets={"1":"+3V3","2":"ONEWIRE_EXT","3":"GND"})
+        add_passive(b,"R14","R",(205,210),"100R","Resistor_SMD:R_0603_1608Metric",{"1":"ONEWIRE","2":"ONEWIRE_EXT"})
+        add_passive(b,"R15","R",(225,210),"4.7k","Resistor_SMD:R_0603_1608Metric",{"1":"+3V3","2":"ONEWIRE_EXT"})
+        add_passive(b,"TVS2","D_TVS",(245,210),"PCESD3V3D3","Diode_SMD:D_SOD-323",{"1":"GND","2":"ONEWIRE_EXT"})
+
+        b.add(reference="J7",nickname="Connector_Generic",entry="Conn_01x03",center=(285,190),
+            value="MX205R PUSH-IN / CONTACT1 / COM / CONTACT2",footprint=terminal(3),
+            datasheet="https://www.lcsc.com/product-detail/C7471335.html",
+            nets={"1":"CONTACT1_EXT","2":"GND","3":"CONTACT2_EXT"})
+        for ref, center, external, gpio in (
+            ("R16",(270,210),"CONTACT1_EXT","CONTACT1"),
+            ("R17",(290,210),"CONTACT2_EXT","CONTACT2"),
+        ): add_passive(b,ref,"R",center,"1k","Resistor_SMD:R_0603_1608Metric",{"1":external,"2":gpio})
+        for ref, center, gpio in (("R18",(270,225),"CONTACT1"),("R19",(290,225),"CONTACT2")):
+            add_passive(b,ref,"R",center,"10k","Resistor_SMD:R_0603_1608Metric",{"1":"+3V3","2":gpio})
+        for ref, center, gpio in (("C19",(270,240),"CONTACT1"),("C20",(290,240),"CONTACT2")):
+            add_passive(b,ref,"C",center,"100n","Capacitor_SMD:C_0603_1608Metric",{"1":gpio,"2":"GND"})
+        for ref, center, external in (("TVS3",(270,255),"CONTACT1_EXT"),("TVS4",(290,255),"CONTACT2_EXT")):
+            add_passive(b,ref,"D_TVS",center,"PCESD3V3D3","Diode_SMD:D_SOD-323",{"1":"GND","2":external})
+
+        b.add(reference="J8",nickname="Connector_Generic",entry="Conn_01x02",center=(320,190),
+            value="MX205R PUSH-IN / 0-10V IN / GND",footprint=terminal(2),
+            datasheet="https://www.lcsc.com/product-detail/C7471334.html",nets={"1":"AIN_0_10_RAW","2":"GND"})
+        add_passive(b,"TVS5","D_TVS",(315,210),"PESD12VL1BA","Diode_SMD:D_SOD-323",{"1":"GND","2":"AIN_0_10_RAW"})
+        add_passive(b,"R20","R",(315,225),"33k 1%","Resistor_SMD:R_0603_1608Metric",{"1":"AIN_0_10_RAW","2":"AIN_DIV"})
+        add_passive(b,"R21","R",(315,240),"10k 1%","Resistor_SMD:R_0603_1608Metric",{"1":"AIN_DIV","2":"GND"})
+        add_passive(b,"R22","R",(315,255),"1k","Resistor_SMD:R_0603_1608Metric",{"1":"AIN_DIV","2":"ADC_0_10"})
+        add_passive(b,"C21","C",(315,270),"100n","Capacitor_SMD:C_0603_1608Metric",{"1":"ADC_0_10","2":"GND"})
+        b.add(reference="D4",nickname="Connector_Generic",entry="Conn_01x03",center=(315,285),value="BAT54S dual Schottky clamp",
+            footprint="Package_TO_SOT_SMD:SOT-23",datasheet="https://jlcpcb.com/partdetail/IDCHIP-BAT54S/C2848194",
+            nets={"1":"GND","2":"+3V3","3":"ADC_0_10"})
+
+        b.add(reference="SW4",nickname="Switch",entry="SW_Push",center=(205,235),value="SERVICE / IDENTIFY",
+            footprint="Button_Switch_SMD:SW_SPST_B3U-1000P",datasheet="~",nets={"1":"SERVICE_BUTTON","2":"GND"})
+        add_passive(b,"R23","R",(225,235),"10k","Resistor_SMD:R_0603_1608Metric",{"1":"+3V3","2":"SERVICE_BUTTON"})
+        add_passive(b,"R24","R",(205,255),"12k","Resistor_SMD:R_0603_1608Metric",{"1":"24V_PROT","2":"PWR24_LED_R"})
+        add_passive(b,"LED2","LED",(225,255),"24V GREEN","LED_SMD:LED_0603_1608Metric",{"1":"PWR24_LED_R","2":"GND"})
+        add_passive(b,"R25","R",(205,270),"1k","Resistor_SMD:R_0603_1608Metric",{"1":"BUS_LED","2":"BUS_LED_R"})
+        add_passive(b,"LED3","LED",(225,270),"BUS GREEN","LED_SMD:LED_0603_1608Metric",{"1":"BUS_LED_R","2":"GND"})
 
     for idx,net in enumerate(("24V_RAW","24V_PROT","SYS_5V","+3V3","I2C_SDA","I2C_SCL","RH_OUT","TEMP_KTY","RS485_A","RS485_B","RS485_COM","GND"),1):
         b.add(reference=f"TP{idx}",nickname="Connector_Generic",entry="Conn_01x01",center=(20+idx*22,205),value=net,
@@ -192,8 +252,9 @@ def build():
 
 
 def main() -> None:
-    parser=argparse.ArgumentParser(); parser.add_argument("output",type=Path); args=parser.parse_args()
-    args.output.parent.mkdir(parents=True,exist_ok=True); build().to_file(args.output,encoding="utf-8")
+    parser=argparse.ArgumentParser(); parser.add_argument("output",type=Path)
+    parser.add_argument("--revision",choices=("B-ES2-C6","B-ES3-C6"),default="B-ES2-C6"); args=parser.parse_args()
+    args.output.parent.mkdir(parents=True,exist_ok=True); build(args.revision).to_file(args.output,encoding="utf-8")
 
 
 if __name__ == "__main__": main()

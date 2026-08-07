@@ -51,6 +51,24 @@ PARTS = [
     ("R13", "Yageo", "RC0603FR-071KL", "1 kohm 1%", "0603", "C21190"),
 ]
 
+ES3_PARTS = [
+    ("SW3", "BIWIN", "SOP01", "user-accessible RS-485 termination switch", "SMD DIP SPST", "C3294660"),
+    ("J5,J6,J7", "MAX", "MX205R-5.0-03P-GN01-Cu-A", "3-way push-in spring terminal", "THT P5.00mm 1x03", "C7471335"),
+    ("J8", "MAX", "MX205R-5.0-02P-GN01-Cu-A", "2-way push-in spring terminal", "THT P5.00mm 1x02", "C7471334"),
+    ("R14", "UNI-ROYAL", "0603WAF1000T5E", "100 ohm 1% 1-Wire series resistor", "0603", "C22775"),
+    ("R15", "Yageo", "RC0603FR-074K7L", "4.7 kohm 1% 1-Wire pull-up", "0603", "C99782"),
+    ("TVS2,TVS3,TVS4", "TECH PUBLIC", "PCESD3V3D3", "3.3 V field-interface ESD protection", "SOD-323", "C2928727"),
+    ("R16,R17,R22,R25", "UNI-ROYAL", "0603WAF1001T5E", "1 kohm 1%", "0603", "C21190"),
+    ("R18,R19,R21,R23", "UNI-ROYAL", "0603WAF1002T5E", "10 kohm 1%", "0603", "C25804"),
+    ("C19,C20,C21", "Murata", "GRM188R71H104KA93D", "100 nF 50 V X7R", "0603", "C77055"),
+    ("TVS5", "ElecSuper", "PESD12VL1BA-ES", "12 V bidirectional 0-10 V input protection", "SOD-323", "C5180221"),
+    ("R20", "UNI-ROYAL", "0603WAF3302T5E", "33 kohm 1% 0-10 V divider", "0603", "C4216"),
+    ("D4", "IDCHIP", "BAT54S", "dual Schottky ADC rail clamp", "SOT-23", "C2848194"),
+    ("SW4", "Omron", "B3U-1000P", "service and identify button", "SMD", "C231329"),
+    ("R24", "UNI-ROYAL", "0603WAF1202T5E", "12 kohm 1% 24 V LED resistor", "0603", "C22790"),
+    ("LED2,LED3", "MEIHUA", "MHT192CGCT", "green diagnostic LED", "0603", "C389518"),
+]
+
 
 def refs(text: str) -> list[str]:
     return [item.strip() for item in text.split(",")]
@@ -64,23 +82,23 @@ def write_csv(path: Path, fieldnames: list[str], rows: list[dict[str, str]]) -> 
         writer.writerows(rows)
 
 
-def write_archives(release: Path) -> None:
+def write_archives(release: Path, revision: str) -> None:
     gerbers = release / "gerbers"
-    fabrication = release / "IDM-RoomSensor-ESP-B-ES2-C6-fabrication.zip"
+    fabrication = release / f"IDM-RoomSensor-ESP-{revision}-fabrication.zip"
     if gerbers.is_dir() and any(gerbers.iterdir()):
         with zipfile.ZipFile(fabrication, "w", zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
             for path in sorted(gerbers.iterdir()):
                 if path.is_file():
                     archive.write(path, path.name)
 
-    order = release / "IDM-RoomSensor-ESP-B-ES2-C6-JLCPCB-order-package.zip"
+    order = release / f"IDM-RoomSensor-ESP-{revision}-JLCPCB-order-package.zip"
     package_files = [
         fabrication,
         release / "JLCPCB/JLCPCB_BOM.csv",
         release / "JLCPCB/JLCPCB_CPL.csv",
         release / "README.md",
-        release / "B-ES2-C6-BOM.csv",
-        release / "IDM-RoomSensor-ESP-B-ES2-C6-schematic.pdf",
+        release / f"{revision}-BOM.csv",
+        release / f"IDM-RoomSensor-ESP-{revision}-schematic.pdf",
     ]
     if all(path.is_file() for path in package_files):
         with zipfile.ZipFile(order, "w", zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
@@ -92,18 +110,23 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("positions", type=Path)
     parser.add_argument("release", type=Path)
+    parser.add_argument("--revision", choices=("B-ES2-C6", "B-ES3-C6"), default="B-ES2-C6")
     args = parser.parse_args()
     with args.positions.open(newline="", encoding="utf-8-sig") as handle:
         positions = {row["Ref"]: row for row in csv.DictReader(handle)}
 
-    all_refs = [ref for row in PARTS for ref in refs(row[0])]
+    parts = list(PARTS)
+    if args.revision == "B-ES3-C6":
+        parts[0] = ("J1,J2", "MAX", "MX205R-5.0-04P-GN01-Cu-A", "4-way push-in spring terminal", "THT P5.00mm 1x04", "C7471336")
+        parts.extend(ES3_PARTS)
+    all_refs = [ref for row in parts for ref in refs(row[0])]
     missing = sorted(set(all_refs) - set(positions))
     if missing:
         raise SystemExit(f"Missing placement rows: {missing}")
 
     full_rows = []
     bom_rows = []
-    for designators, maker, mpn, description, footprint, lcsc in PARTS:
+    for designators, maker, mpn, description, footprint, lcsc in parts:
         full_rows.append({
             "Designator": designators,
             "Quantity": str(len(refs(designators))),
@@ -132,7 +155,7 @@ def main() -> None:
             "Layer": row["Side"].title(),
         })
 
-    write_csv(args.release / "B-ES2-C6-BOM.csv",
+    write_csv(args.release / f"{args.revision}-BOM.csv",
               ["Designator", "Quantity", "Manufacturer", "Manufacturer Part Number",
                "Description", "Footprint", "LCSC Part Number", "Assembly"], full_rows)
     jlc = args.release / "JLCPCB"
@@ -140,7 +163,7 @@ def main() -> None:
               ["Comment", "Designator", "Footprint", "JLCPCB Part #"], bom_rows)
     write_csv(jlc / "JLCPCB_CPL.csv",
               ["Designator", "Mid X", "Mid Y", "Rotation", "Layer"], cpl_rows)
-    write_archives(args.release)
+    write_archives(args.release, args.revision)
     print(f"Generated {len(full_rows)} BOM lines and {len(cpl_rows)} placed parts")
 
 
