@@ -13,6 +13,7 @@ Revision **B-ES1** remains the simpler ESP32-C3-DevKitM-1 bench-test version.
 - B-ES2-C6 PCB source: `IDM-RoomSensor-ESP-B-ES2-C6.kicad_pcb`
 - B-ES2-C6 schematic: `IDM-RoomSensor-ESP-B-ES2-C6.kicad_sch`
 - B-ES2-C6 pin map: `B-ES2-C6-PINMAP.md`
+- Next-revision hardware requirements: `B-ES3-TODO.md`
 - B-ES1 legacy order package: `manufacturing/B-ES1/`
 
 The original Rev-A files are incomplete design-history artifacts and must not
