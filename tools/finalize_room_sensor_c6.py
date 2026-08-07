@@ -57,7 +57,7 @@ def main() -> None:
     routes = [
         ("4", (109.7, 19.6), pcbnew.In1_Cu, (111.2453, 18.4703)),
         ("1", (106.2, 19.6), pcbnew.In1_Cu, (104.5633, 17.2617)),
-        ("2", (106.2, 20.8), pcbnew.In1_Cu, (98.0001, 28.3073)),
+        ("2", (106.2, 20.8), pcbnew.In1_Cu, (104.5662, 21.7412)),
     ]
     for pin, via_xy, layer, target_xy in routes:
         source = pad(board, "U4", pin)
@@ -72,12 +72,7 @@ def main() -> None:
 
     # Remove optimizer escape vias which DRC identifies as connected on only
     # one layer. They are not part of any completed connection.
-    dangling = {
-        (52.9963, 62.8754),
-        (74.6426, 55.3574),
-        (52.9846, 67.1129),
-        (108.8477, 66.5173),
-    }
+    dangling = {(68.7641, 68.5891)}
     for item in list(board.GetTracks()):
         if not isinstance(item, pcbnew.PCB_VIA):
             continue
@@ -85,6 +80,25 @@ def main() -> None:
         y = round(pcbnew.ToMM(item.GetPosition().y), 4)
         if (x, y) in dangling:
             board.RemoveNative(item)
+
+    # Give U5 pin 1 a straight escape before turning toward its existing via.
+    # The autorouter's diagonal segment otherwise clips adjacent pin 2.
+    for item in list(board.GetTracks()):
+        if isinstance(item, pcbnew.PCB_VIA) or item.GetNetname() != "DAC_RAW":
+            continue
+        if item.GetLayer() != pcbnew.F_Cu:
+            continue
+        start = item.GetStart()
+        end = item.GetEnd()
+        points = {
+            (round(pcbnew.ToMM(start.x), 4), round(pcbnew.ToMM(start.y), 4)),
+            (round(pcbnew.ToMM(end.x), 4), round(pcbnew.ToMM(end.y), 4)),
+        }
+        if any(80.6 <= x <= 81.9 and 45.0 <= y <= 45.5 for x, y in points):
+            board.RemoveNative(item)
+    dac = pad(board, "U5", "1")
+    add_track(board, dac.GetNet(), dac.GetPosition(), point(80.5, 45.05))
+    add_track(board, dac.GetNet(), point(80.5, 45.05), point(80.6915, 45.4155))
 
     pcbnew.SaveBoard(str(args.board), board)
     print("Finalized B-ES2-C6 routing")

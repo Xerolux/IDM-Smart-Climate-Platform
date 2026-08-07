@@ -74,7 +74,7 @@ def build():
     b=pcbnew.BOARD(); b.SetCopperLayerCount(4); add_outline(b)
     names=["GND","24V_RAW","24V_FUSED","24V_PROT","PWR_GOOD","BUCK_FB","VCC_BYP","BOOT","SW","5V_BUCK","USB_5V","SYS_5V","+3V3",
            "TEMP_KTY","RH_OUT","DAC_RAW","OPAMP_OUT","OPAMP_FB","I2C_SDA","I2C_SCL","C6_EN","C6_BOOT","USB_D-","USB_D+","USB_CC1","USB_CC2",
-           "STATUS_LED","STATUS_LED_R","ONEWIRE","EXP_GPIO4","EXP_GPIO5","RS485_RX","RS485_TX","RS485_DE","ISO_GND_PWR","VISO","RS485_A","RS485_B","RS485_COM","RS485_SHIELD","RS485_TERM"]
+           "STATUS_LED","STATUS_LED_R","ONEWIRE","EXP_GPIO4","EXP_GPIO5","RS485_RX","RS485_TX","RS485_DE","VISO","RS485_A","RS485_B","RS485_COM","RS485_SHIELD","RS485_TERM"]
     nets={}
     for n in names:
         ni=pcbnew.NETINFO_ITEM(b,n); b.Add(ni); nets[n]=ni
@@ -107,9 +107,8 @@ def build():
     p("U6","OPA197IDBVR","Package_TO_SOT_SMD","SOT-23-5",92,46,0,{1:"OPAMP_OUT",2:"GND",3:"DAC_RAW",4:"OPAMP_FB",5:"24V_PROT"})
     p("R9","21k 1% CAL","Resistor_SMD","R_0603_1608Metric",96,50,0,{1:"OPAMP_OUT",2:"OPAMP_FB"}); p("R10","10k","Resistor_SMD","R_0603_1608Metric",91,52,0,{1:"OPAMP_FB",2:"GND"}); p("R11","220R","Resistor_SMD","R_0603_1608Metric",99,46,0,{1:"OPAMP_OUT",2:"RH_OUT"})
     p("C11","100n","Capacitor_SMD","C_0603_1608Metric",81,50,0,{1:"+3V3",2:"GND"}); p("C12","100n 50V","Capacitor_SMD","C_0603_1608Metric",94,42,0,{1:"24V_PROT",2:"GND"}); p("C13","100n 50V","Capacitor_SMD","C_0603_1608Metric",102,46,90,{1:"RH_OUT",2:"GND"})
-    p("U7","ADM2587EBRWZ","Package_SO","SOIC-20W_7.5x12.8mm_P1.27mm",105,60,0,{1:"GND",2:"+3V3",3:"GND",4:"RS485_RX",5:"RS485_DE",6:"RS485_DE",7:"RS485_TX",8:"+3V3",9:"GND",10:"GND",11:"ISO_GND_PWR",12:"VISO",13:"RS485_A",14:"ISO_GND_PWR",15:"RS485_B",16:"RS485_COM",17:"RS485_B",18:"RS485_A",19:"VISO",20:"RS485_COM"})
-    p("FB1","600R","Inductor_SMD","L_0805_2012Metric",106,71,0,{1:"ISO_GND_PWR",2:"RS485_COM"})
-    for ref,val,x,y,pins in [("C14","100n",96,58,{1:"+3V3",2:"GND"}),("C15","10n",96,61,{1:"+3V3",2:"GND"}),("C16","10u",96,64,{1:"+3V3",2:"GND"}),("C17","100n",113,54,{1:"VISO",2:"RS485_COM"}),("C18","10u",113,57,{1:"VISO",2:"RS485_COM"})]: p(ref,val,"Capacitor_SMD","C_0805_2012Metric",x,y,0,pins)
+    p("U7","CA-IS3092W","Package_SO","SOIC-16W_7.5x10.3mm_P1.27mm",105,60,0,{1:"+3V3",2:"GND",3:"RS485_RX",4:"RS485_DE",5:"RS485_DE",6:"RS485_TX",8:"GND",9:"RS485_COM",10:"RS485_COM",12:"RS485_A",13:"RS485_B",15:"RS485_COM",16:"VISO"})
+    for ref,val,x,y,pins in [("C14","100n",96,55.5,{1:"+3V3",2:"GND"}),("C16","10u",96,52.5,{1:"+3V3",2:"GND"}),("C17","100n",113,54,{1:"VISO",2:"RS485_COM"}),("C18","10u",113,57,{1:"VISO",2:"RS485_COM"})]: p(ref,val,"Capacitor_SMD","C_0805_2012Metric",x,y,0,pins)
     p("J2","RS485 A/B/COM/SH","TerminalBlock_Phoenix","TerminalBlock_Phoenix_PT-1,5-4-3.5-H_1x04_P3.50mm_Horizontal",115,43,90,{1:"RS485_A",2:"RS485_B",3:"RS485_COM",4:"RS485_SHIELD"})
     p("R12","120R","Resistor_SMD","R_1206_3216Metric",113,63,90,{1:"RS485_A",2:"RS485_TERM"}); p("JP1","TERM","Jumper","SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm",116,63,90,{1:"RS485_TERM",2:"RS485_B"})
     p("J4","EXPANSION","Connector_JST","JST_SH_SM08B-SRSS-TB_1x08-1MP_P1.00mm_Horizontal",88,76.5,0,{1:"+3V3",2:"GND",3:"I2C_SDA",4:"I2C_SCL",5:"ONEWIRE",6:"EXP_GPIO4",7:"EXP_GPIO5",8:"SYS_5V"})

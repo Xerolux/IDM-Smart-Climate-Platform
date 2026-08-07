@@ -1,5 +1,5 @@
 ** Drc report for IDM-RoomSensor-ESP-B-ES2-C6.kicad_pcb **
-** Created on 2026-08-07T15:12:20 **
+** Created on 2026-08-07T19:42:57 **
 ** Report includes: Errors **
 
 ** Found 0 DRC violations **

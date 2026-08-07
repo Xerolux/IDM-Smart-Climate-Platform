@@ -34,8 +34,8 @@ def main() -> int:
         assert row["JLCPCB Part #"].startswith("C"), row
         assert "TBD" not in ",".join(row.values()).upper(), row
     cpl_refs = {row["Designator"] for row in cpl}
-    assert len(bom) == 40, len(bom)
-    assert len(cpl) == 54, len(cpl)
+    assert len(bom) == 38, len(bom)
+    assert len(cpl) == 52, len(cpl)
     assert bom_refs == cpl_refs, (sorted(bom_refs - cpl_refs), sorted(cpl_refs - bom_refs))
 
     for row in cpl:
@@ -47,10 +47,10 @@ def main() -> int:
 
     critical = {row["Designator"]: row["JLCPCB Part #"] for row in bom}
     expected = {
-        "U3": "C5445014", "U7": "C5119494", "U4": "C5221601",
+        "U3": "C5445014", "U7": "C2890051", "U4": "C5221601",
         "U1": "C1858393", "J3": "C165948", "J1,J2": "C589905",
         "R2": "C25962", "R12": "C114928", "SW1,SW2": "C231329",
-        "FB1": "C2661425", "LED1": "C389518",
+        "LED1": "C389518",
     }
     for designator, part in expected.items():
         assert critical[designator] == part, (designator, critical[designator])

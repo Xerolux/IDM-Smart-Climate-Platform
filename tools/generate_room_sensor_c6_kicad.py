@@ -158,14 +158,13 @@ def build():
     add_passive(b,"C12","C",(270,95),"100n 50V","Capacitor_SMD:C_0603_1608Metric",{"1":"24V_PROT","2":"GND"})
     add_passive(b,"C13","C",(290,82),"100n 50V","Capacitor_SMD:C_0603_1608Metric",{"1":"RH_OUT","2":"GND"})
 
-    b.add(reference="U7",nickname="Interface_UART",entry="ADM2587E",center=(245,130),value="ADM2587EBRWZ",
-        footprint="Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm",datasheet="https://www.analog.com/media/en/technical-documentation/data-sheets/adm2582e-2587e.pdf",
-        nets={"1":"GND","2":"+3V3","3":"GND","4":"RS485_RX","5":"RS485_DE","6":"RS485_DE","7":"RS485_TX","8":"+3V3","9":"GND","10":"GND",
-              "11":"ISO_GND_PWR","12":"VISO","13":"RS485_A","14":"ISO_GND_PWR","15":"RS485_B","16":"RS485_COM","17":"RS485_B","18":"RS485_A","19":"VISO","20":"RS485_COM"})
-    add_passive(b,"FB1","L",(275,125),"600R@100MHz ferrite","Inductor_SMD:L_0805_2012Metric",{"1":"ISO_GND_PWR","2":"RS485_COM"})
+    b.add(reference="U7",nickname="Connector_Generic",entry="Conn_02x08_Odd_Even",center=(245,130),value="CA-IS3092W",
+        footprint="Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm",datasheet="https://e.chipanalog.com/Public/Uploads/uploadfile/files/20250818/CAIS30923098datasheetVersion1.13en202412162.pdf",
+        nets={"1":"+3V3","2":"GND","3":"RS485_RX","4":"RS485_DE","5":"RS485_DE","6":"RS485_TX","8":"GND",
+              "9":"RS485_COM","10":"RS485_COM","12":"RS485_A","13":"RS485_B","15":"RS485_COM","16":"VISO"},
+        no_connect={"7","11","14"})
     for ref,center,value,nets in [
         ("C14",(235,160),"100n",{"1":"+3V3","2":"GND"}),
-        ("C15",(245,160),"10n",{"1":"+3V3","2":"GND"}),
         ("C16",(255,160),"10u",{"1":"+3V3","2":"GND"}),
         ("C17",(270,145),"100n",{"1":"VISO","2":"RS485_COM"}),
         ("C18",(285,145),"10u",{"1":"VISO","2":"RS485_COM"}),
@@ -186,7 +185,7 @@ def build():
     for idx,net in enumerate(("24V_RAW","24V_PROT","SYS_5V","+3V3","I2C_SDA","I2C_SCL","RH_OUT","TEMP_KTY","RS485_A","RS485_B","RS485_COM","GND"),1):
         b.add(reference=f"TP{idx}",nickname="Connector_Generic",entry="Conn_01x01",center=(20+idx*22,205),value=net,
             footprint="TestPoint:TestPoint_Plated_Hole_D2.0mm",datasheet="~",nets={"1":net})
-    for idx,net in enumerate(("24V_PROT","SYS_5V","GND","ISO_GND_PWR","RS485_COM"),1):
+    for idx,net in enumerate(("24V_PROT","SYS_5V","GND","RS485_COM"),1):
         b.add(reference=f"#FLG0{idx}",nickname="power",entry="PWR_FLAG",center=(40+idx*18,220),value="PWR_FLAG",
             footprint="",datasheet="~",nets={"1":net},in_bom=False,on_board=False)
     return b.sch

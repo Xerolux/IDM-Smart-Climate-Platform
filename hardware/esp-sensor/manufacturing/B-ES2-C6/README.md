@@ -45,8 +45,8 @@ operation, particularly the 0-10 V output. The first assembled unit must pass:
 
 - KiCad 10 ERC errors: 0 (`ERC-KICAD10.txt`)
 - KiCad 10 DRC errors: 0; unconnected items: 0 (`DRC-KICAD10.txt`)
-- Schematic/PCB netlist: 200 connected pins matched
-- Complete BOM: 40 lines / 54 fitted placements
+- Schematic/PCB netlist: 189 connected pins matched
+- Complete BOM: 38 lines / 52 fitted placements
 
 The `*-all.txt` reports retain non-electrical documentation warnings such as
 silkscreen overlap, the embedded custom ESP module footprint, intentional

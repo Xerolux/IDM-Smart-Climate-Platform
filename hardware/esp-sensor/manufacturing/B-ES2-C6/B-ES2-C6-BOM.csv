@@ -31,10 +31,8 @@ U6,1,Texas Instruments,OPA197IDBVR,36 V precision rail-to-rail op amp,SOT-23-5,C
 R9,1,TyoHM,RMC060321K1%N,21 kohm 1%; calibrated gain headroom,0603,C269418,JLCPCB Standard PCBA
 R10,1,Yageo,RT0603BRD0710KL,10 kohm 0.1% thin film,0603,C95204,JLCPCB Standard PCBA
 R11,1,Yageo,RC0603FR-07220RL,220 ohm 1%,0603,C107696,JLCPCB Standard PCBA
-U7,1,Analog Devices,ADM2587EBRWZ,isolated 500 kbps RS-485 with isoPower,SOIC-20W,C5119494,JLCPCB Standard PCBA
-FB1,1,Wurth Elektronik,74279220601,600 ohm at 100 MHz 2.1 A ferrite,0805,C2661425,JLCPCB Standard PCBA
+U7,1,Chipanalog,CA-IS3092W,isolated 500 kbps RS-485 with integrated isolated power,SOIC-16W,C2890051,JLCPCB Standard PCBA
 "C14,C17",2,Samsung Electro-Mechanics,CL21B104KBCNNNC,100 nF 50 V X7R,0805,C49678,JLCPCB Standard PCBA
-C15,1,Fenghua,0805B103K500NT,10 nF 50 V X7R,0805,C1710,JLCPCB Standard PCBA
 R12,1,Yageo,RC1206FR-07120RL,120 ohm 1% RS-485 termination,1206,C114928,JLCPCB Standard PCBA
 J4,1,JST,SM08B-SRSS-TB(LF)(SN),8-way 1 mm expansion connector,SMD right angle,C160407,JLCPCB Standard PCBA
 LED1,1,MEIHUA,MHT192CGCT,green status LED,0603,C389518,JLCPCB Standard PCBA

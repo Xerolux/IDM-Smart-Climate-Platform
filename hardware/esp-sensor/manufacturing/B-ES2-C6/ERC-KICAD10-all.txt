@@ -1,21 +1,15 @@
-ERC report (2026-08-07T14:37:11, Encoding UTF8)
+ERC report (2026-08-07T19:42:54, Encoding UTF8)
 Report includes: Errors, Warnings, Exclusions
 
 ***** Sheet /
 [footprint_link_issues]: Die aktuelle Konfiguration enthält die Footprint-Bibliothek "Custom" nicht
     ; warning
     @(149.86 mm, 124.46 mm): Symbol U3 [Conn_02x15_Odd_Even]
-[ground_pin_not_ground]: Pin GND2 nicht mit dem Erdungsnetz verbunden
-    ; warning
-    @(260.35 mm, 139.70 mm): Symbol U7 Pin 16 [GND2, Power input, Line]
-[ground_pin_not_ground]: Pin GND2 nicht mit dem Erdungsnetz verbunden
-    ; warning
-    @(260.35 mm, 142.24 mm): Symbol U7 Pin 20 [GND2, Power input, Line]
 [isolated_pin_label]: Label connected to only one pin
     ; warning
     @(299.72 mm, 134.62 mm): Label 'RS485_SHIELD'
 
- ** ERC messages: 4  Errors 0  Warnings 4
+ ** ERC messages: 2  Errors 0  Warnings 2
 
  ** Ignored checks:
     - Global label only appears once in the schematic

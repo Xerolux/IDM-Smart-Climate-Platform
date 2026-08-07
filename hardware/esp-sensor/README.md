@@ -2,7 +2,7 @@
 
 The newest manufacturing revision is **B-ES2-C6**, a four-layer engineering
 sample using an ESP32-C6-WROOM-1-N16, native USB-C, SHT45, MCP4725/OPA197
-0-10 V output and isolated ADM2587E RS-485. It accepts protected 24 V field
+0-10 V output and isolated CA-IS3092W RS-485. It accepts protected 24 V field
 power and USB power simultaneously through separate Schottky OR-ing diodes.
 
 Revision **B-ES1** remains the simpler ESP32-C3-DevKitM-1 bench-test version.

@@ -2,7 +2,7 @@
 	(version "E")
 	(design
 		(source "C:\\Users\\Basti\\Documents\\GitHub\\IDM-Smart-Climate-Platform\\hardware\\esp-sensor\\IDM-RoomSensor-ESP-B-ES2-C6.kicad_sch")
-		(date "2026-08-07T15:12:15")
+		(date "2026-08-07T19:42:49")
 		(tool "Eeschema 10.0.5")
 		(sheet
 			(number "1")
@@ -105,7 +105,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "201c2a41-2875-4855-89c8-08a626fe5ef2")
+			(tstamps "d7ebebfd-639f-420f-961b-2e2b4a9988aa")
 			(units
 				(unit
 					(name "A")
@@ -171,7 +171,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "825124d2-dca1-48d8-a5af-bf821ddccf37")
+			(tstamps "568adaf4-eb07-4698-8ec3-f8471e8bea5e")
 			(units
 				(unit
 					(name "A")
@@ -237,7 +237,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "4c3a0f0e-8757-416d-b0c0-3c5855f51a3f")
+			(tstamps "5a3a78cd-c745-4b9a-ac24-75a7fa230f3b")
 			(units
 				(unit
 					(name "A")
@@ -303,7 +303,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "f0700a8d-f18d-472e-8588-e3516cd2a060")
+			(tstamps "f49d5cb5-b982-4164-836e-ee1cb248479f")
 			(units
 				(unit
 					(name "A")
@@ -369,7 +369,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "69b4f6ea-cd35-4680-8b77-9229557c47d6")
+			(tstamps "c235512c-3fe7-49b7-8fbd-cc65bb159727")
 			(units
 				(unit
 					(name "A")
@@ -435,7 +435,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "63978fc5-6eeb-4788-a800-1b535e6196e1")
+			(tstamps "f3a7e180-7035-4316-ac63-9d0c75a0b9b4")
 			(units
 				(unit
 					(name "A")
@@ -501,7 +501,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "70f9fc22-4d2a-4d04-8f3b-e93bcdc5110e")
+			(tstamps "627717cc-e2b6-40e1-be0c-2d79b6c38d61")
 			(units
 				(unit
 					(name "A")
@@ -567,7 +567,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "f4481ba8-443c-49ab-8657-9bff7a3e43e8")
+			(tstamps "7a21f0a5-0560-41cd-a5cc-05925a7adea2")
 			(units
 				(unit
 					(name "A")
@@ -633,7 +633,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "162b2d91-6279-4ddc-adf3-269f79870200")
+			(tstamps "55567d30-efcb-4f60-a85c-002a1c2d1afe")
 			(units
 				(unit
 					(name "A")
@@ -699,7 +699,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "eb57da17-5aa8-4b76-87c9-991b715f2658")
+			(tstamps "400d2d0c-e558-4d7b-a086-216c91b96c05")
 			(units
 				(unit
 					(name "A")
@@ -765,7 +765,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "8318a77e-1a2c-4c30-9d59-0d1b010c2f96")
+			(tstamps "8beca168-bbd9-4742-9b7f-ebcb06083b77")
 			(units
 				(unit
 					(name "A")
@@ -831,7 +831,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "f70e6ab6-6a90-4482-9057-843570624665")
+			(tstamps "71d7eb1c-8b0b-41b4-90ed-529c90e9ad2c")
 			(units
 				(unit
 					(name "A")
@@ -897,7 +897,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "e8ac0e8d-f712-4f38-ad15-67de4331de53")
+			(tstamps "5effec72-a90d-452e-9250-c89f3221320f")
 			(units
 				(unit
 					(name "A")
@@ -963,73 +963,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "703aa121-4bcf-4256-a5b1-dd87f48c2cb7")
-			(units
-				(unit
-					(name "A")
-					(pins
-						(pin
-							(num "1")
-						)
-						(pin
-							(num "2")
-						)
-					)
-				)
-			)
-		)
-		(comp
-			(ref "C15")
-			(value "10n")
-			(footprint "Capacitor_SMD:C_0805_2012Metric")
-			(description "Unpolarized capacitor")
-			(fields
-				(field
-					(name "ki_keywords") "cap capacitor")
-				(field
-					(name "ki_fp_filters") "C_*")
-				(field
-					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
-				(field
-					(name "Datasheet")
-				)
-				(field
-					(name "Description") "Unpolarized capacitor")
-			)
-			(libsource
-				(lib "Device")
-				(part "C")
-				(description "Unpolarized capacitor")
-			)
-			(property
-				(name "ki_keywords")
-				(value "cap capacitor")
-			)
-			(property
-				(name "ki_fp_filters")
-				(value "C_*")
-			)
-			(property
-				(name "Sheetname")
-				(value "IDM-RoomSensor-ESP-B-ES2-C6")
-			)
-			(property
-				(name "Sheetfile")
-				(value "IDM-RoomSensor-ESP-B-ES2-C6.kicad_sch")
-			)
-			(property
-				(name "ki_keywords")
-				(value "cap capacitor")
-			)
-			(property
-				(name "ki_fp_filters")
-				(value "C_*")
-			)
-			(sheetpath
-				(names "/")
-				(tstamps "/")
-			)
-			(tstamps "ac6f1cbf-fe96-4b6f-8f11-ac148515d441")
+			(tstamps "aedba595-99c2-42be-93e9-277173a126c6")
 			(units
 				(unit
 					(name "A")
@@ -1095,7 +1029,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "f1039164-5675-419e-be59-09b080609e73")
+			(tstamps "141c85cb-14db-4624-bb1b-09e81597289c")
 			(units
 				(unit
 					(name "A")
@@ -1161,7 +1095,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "4dde9c90-bb9b-4b73-83fb-c70d3a644ad0")
+			(tstamps "b1eacf5b-44ca-4004-b348-1903dc718faa")
 			(units
 				(unit
 					(name "A")
@@ -1227,7 +1161,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "0346ca97-460a-4f0f-8a63-780cb95cb2d0")
+			(tstamps "4ab4bc68-b39c-4183-b219-c096138891f5")
 			(units
 				(unit
 					(name "A")
@@ -1293,7 +1227,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "c45d4382-b8ec-43ae-9b5f-379c3bc68b15")
+			(tstamps "9c6ac8a4-e1d3-45dc-8051-7917ad16cecf")
 			(units
 				(unit
 					(name "A")
@@ -1359,7 +1293,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "0f20519f-558a-46cb-b44a-e6c59e1c74a3")
+			(tstamps "42308d64-e198-4c03-b18f-3063f42e3203")
 			(units
 				(unit
 					(name "A")
@@ -1425,7 +1359,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "d15c7d69-bd39-43bd-9359-079a3fd6c2f7")
+			(tstamps "791c5131-52b3-41ac-bbf4-febf9136682e")
 			(units
 				(unit
 					(name "A")
@@ -1491,7 +1425,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "b413691f-716e-440f-9745-b4e029bdaa7c")
+			(tstamps "c9763502-66ba-49d0-aae7-b2ec3e8b5e50")
 			(units
 				(unit
 					(name "A")
@@ -1569,73 +1503,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "2f7b545e-7680-4e1a-8e17-1ca9672038b2")
-			(units
-				(unit
-					(name "A")
-					(pins
-						(pin
-							(num "1")
-						)
-						(pin
-							(num "2")
-						)
-					)
-				)
-			)
-		)
-		(comp
-			(ref "FB1")
-			(value "600R@100MHz ferrite")
-			(footprint "Inductor_SMD:L_0805_2012Metric")
-			(description "Inductor")
-			(fields
-				(field
-					(name "ki_keywords") "inductor choke coil reactor magnetic")
-				(field
-					(name "ki_fp_filters") "Choke_* *Coil* Inductor_* L_*")
-				(field
-					(name "Footprint") "Inductor_SMD:L_0805_2012Metric")
-				(field
-					(name "Datasheet")
-				)
-				(field
-					(name "Description") "Inductor")
-			)
-			(libsource
-				(lib "Device")
-				(part "L")
-				(description "Inductor")
-			)
-			(property
-				(name "ki_keywords")
-				(value "inductor choke coil reactor magnetic")
-			)
-			(property
-				(name "ki_fp_filters")
-				(value "Choke_* *Coil* Inductor_* L_*")
-			)
-			(property
-				(name "Sheetname")
-				(value "IDM-RoomSensor-ESP-B-ES2-C6")
-			)
-			(property
-				(name "Sheetfile")
-				(value "IDM-RoomSensor-ESP-B-ES2-C6.kicad_sch")
-			)
-			(property
-				(name "ki_keywords")
-				(value "inductor choke coil reactor magnetic")
-			)
-			(property
-				(name "ki_fp_filters")
-				(value "Choke_* *Coil* Inductor_* L_*")
-			)
-			(sheetpath
-				(names "/")
-				(tstamps "/")
-			)
-			(tstamps "e602e806-58fe-44b6-acdc-c92ecd06c67a")
+			(tstamps "7bb60c5a-905f-4e6c-b6ab-2d8d61cb8a26")
 			(units
 				(unit
 					(name "A")
@@ -1701,7 +1569,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "9bf28a39-f076-455b-8b57-55d7ebc69dd3")
+			(tstamps "e474c9fe-3cce-4c7d-b7d2-3c128a41ec42")
 			(units
 				(unit
 					(name "A")
@@ -1773,7 +1641,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "083561f5-4d67-4291-8e60-bb8c54e11d10")
+			(tstamps "1759d0a7-eb99-48ab-95f6-65aaeb2d16e7")
 			(units
 				(unit
 					(name "A")
@@ -1845,7 +1713,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "1794565a-1ac1-4984-b37c-b23bec1a7b35")
+			(tstamps "91e58120-3346-4689-bac6-3ae8b5f8f074")
 			(units
 				(unit
 					(name "A")
@@ -1956,7 +1824,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "3be9cc83-4375-448d-a1df-682fe761e21e")
+			(tstamps "14a39be0-b905-4c9d-869b-7f223e7d9ffc")
 			(units
 				(unit
 					(name "A")
@@ -2040,7 +1908,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "ca3f35e5-55f9-401e-866d-46e36aa1188d")
+			(tstamps "f81f66e5-98d2-4421-be59-a268cf65861a")
 			(units
 				(unit
 					(name "A")
@@ -2106,7 +1974,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "6e376c31-a54b-4154-b7f8-3593b8623089")
+			(tstamps "8db38242-64f2-4a1b-9a7e-e3e19796f548")
 			(units
 				(unit
 					(name "A")
@@ -2178,7 +2046,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "be8ae64b-1aee-4786-bb79-0919bbf22951")
+			(tstamps "5fa33ccc-98af-433d-a023-eced3da39404")
 			(units
 				(unit
 					(name "A")
@@ -2244,7 +2112,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "8413c1c1-35a7-4c4e-8fae-6c75fb1b8048")
+			(tstamps "b356ea30-1478-4ae2-8ac8-0ffc1b382510")
 			(units
 				(unit
 					(name "A")
@@ -2310,7 +2178,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "dea232f0-c81e-42fd-b598-a11a1b8389be")
+			(tstamps "ae44bdc2-7089-4db2-ba61-36d07672fd95")
 			(units
 				(unit
 					(name "A")
@@ -2376,7 +2244,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "ccf81923-ff7e-4da4-8c63-79e96b82f9f1")
+			(tstamps "8f9430c4-944f-471c-a943-701eb51a4ae5")
 			(units
 				(unit
 					(name "A")
@@ -2442,7 +2310,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "3c00275d-dd42-4d81-b63e-1ca2272e6bc9")
+			(tstamps "bc266f58-597b-4f76-acd3-af4d55c2c1f1")
 			(units
 				(unit
 					(name "A")
@@ -2508,7 +2376,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "04abb4cf-d373-4c9a-8f09-38164c968fa9")
+			(tstamps "72e64355-9fe1-4929-98f6-1b68849ce325")
 			(units
 				(unit
 					(name "A")
@@ -2574,7 +2442,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "d6c3f25f-b3ab-42ab-ab41-94a4433a9e8e")
+			(tstamps "3164dfc9-6df7-49b4-b25e-0d45c773cb6a")
 			(units
 				(unit
 					(name "A")
@@ -2640,7 +2508,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "78dc829f-bfd6-4354-a082-82cc3469e7e9")
+			(tstamps "4d1af48b-b493-48bb-a99d-f3bf5d5dbd5b")
 			(units
 				(unit
 					(name "A")
@@ -2706,7 +2574,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "a75975ac-b7c6-4cee-b481-07f4bc0dc905")
+			(tstamps "09125540-b9f7-4ba1-a839-4b339633cf16")
 			(units
 				(unit
 					(name "A")
@@ -2772,7 +2640,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "efe145f0-5626-4add-a35d-ce3a05543f2b")
+			(tstamps "805d9290-a6ca-4b70-8818-1c9f7e0954c3")
 			(units
 				(unit
 					(name "A")
@@ -2838,7 +2706,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "fe4c292c-18ed-49ac-8991-dddd48267a8a")
+			(tstamps "d1c0771f-8822-45bc-817b-5531e65ce82d")
 			(units
 				(unit
 					(name "A")
@@ -2904,7 +2772,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "a03e5d81-1bfc-45d6-823c-28081e766615")
+			(tstamps "bafba246-f3b3-4ec0-a2e0-6382e0caf2be")
 			(units
 				(unit
 					(name "A")
@@ -2970,7 +2838,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "c1c9beda-4a0c-4ac7-9bf1-8fc9c9ad961b")
+			(tstamps "ec588f72-8fee-4251-9ccc-57f53a207721")
 			(units
 				(unit
 					(name "A")
@@ -3036,7 +2904,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "f0ccd556-8b7e-432f-8d78-bad28c2ecd8d")
+			(tstamps "51490e93-4c2c-45de-ad3c-3dbfffccb2c6")
 			(units
 				(unit
 					(name "A")
@@ -3102,7 +2970,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "4dc9de03-3567-4bbd-a9d6-cdd253b87e4b")
+			(tstamps "4ede4062-2bbf-4e97-9c47-45f21d5e3807")
 			(units
 				(unit
 					(name "A")
@@ -3158,7 +3026,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "e2363bd3-6a06-45bf-bd22-d6484b9fdda7")
+			(tstamps "e59a9e2d-6842-422b-9b97-15265bf09df7")
 			(units
 				(unit
 					(name "A")
@@ -3214,7 +3082,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "5fe3c1b6-b8f2-4b15-afaf-9dd00687a1ea")
+			(tstamps "b08d9e1d-9165-404f-a23c-503846920ce2")
 			(units
 				(unit
 					(name "A")
@@ -3280,7 +3148,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "4f0d7c68-9a3f-4dd2-9192-e4abf2cd1f8f")
+			(tstamps "fb88447c-1443-45ad-a4f0-8fe40287d480")
 			(units
 				(unit
 					(name "A")
@@ -3343,7 +3211,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "5f939b74-2234-4c1e-a2b0-320cf0e7082a")
+			(tstamps "61809de9-91c9-440a-8262-84af3629b316")
 			(units
 				(unit
 					(name "A")
@@ -3406,7 +3274,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "a8fe5e06-f5d2-4b7b-a268-e4ca30d73ee6")
+			(tstamps "82f64698-adcf-4efc-a68f-b4db642bd004")
 			(units
 				(unit
 					(name "A")
@@ -3469,7 +3337,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "0bc9521f-7951-4ae1-a639-3bc55a0d5806")
+			(tstamps "0ab3af08-16a7-4c18-ad72-7bf5ba135f26")
 			(units
 				(unit
 					(name "A")
@@ -3532,7 +3400,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "65f57cca-a954-43dd-b915-9b0c945de135")
+			(tstamps "1b75c7d7-98ae-454b-8311-8ce3c519afc4")
 			(units
 				(unit
 					(name "A")
@@ -3595,7 +3463,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "429b3f01-25b0-4d88-ad5a-786f4fe75c99")
+			(tstamps "d1992fca-24bd-4fec-b5ba-3f1a781326d6")
 			(units
 				(unit
 					(name "A")
@@ -3658,7 +3526,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "2ff6afc7-d096-4d02-bc8a-268ef1bfb27c")
+			(tstamps "438d482d-c829-4614-b411-84cb14c969d9")
 			(units
 				(unit
 					(name "A")
@@ -3721,7 +3589,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "4f3b35c2-c158-4ce4-915f-339b5131df11")
+			(tstamps "f289e607-6980-44a7-b751-370d4fbd28af")
 			(units
 				(unit
 					(name "A")
@@ -3784,7 +3652,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "9026b1eb-595e-4465-a444-df2d9a63ba91")
+			(tstamps "803292d6-53ca-4988-973b-a3f28a7ff50f")
 			(units
 				(unit
 					(name "A")
@@ -3847,7 +3715,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "734c1db6-d9a4-4a95-a6b5-198cb6e78b92")
+			(tstamps "0409afd2-eadc-4caa-807a-64ff6a1a6664")
 			(units
 				(unit
 					(name "A")
@@ -3910,7 +3778,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "8aa8b279-b2ea-4066-a441-9e43dd15677d")
+			(tstamps "3280cf57-ae23-49b3-bda8-7bd473531514")
 			(units
 				(unit
 					(name "A")
@@ -3973,7 +3841,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "ef689ad9-c676-41bb-b72f-493e2a4501d7")
+			(tstamps "a7ec12e0-68fa-4ce8-9158-b3434e84f66a")
 			(units
 				(unit
 					(name "A")
@@ -4036,7 +3904,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "9f5a44e5-c1ed-4fbd-a622-a01ad6157dd0")
+			(tstamps "90abc666-feea-45c3-b492-d2a6d91031ee")
 			(units
 				(unit
 					(name "A")
@@ -4102,7 +3970,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "bec33dc3-4736-4634-9d4d-17cb2706de35")
+			(tstamps "92d62fcf-de5a-4b70-9129-5a8458455a2e")
 			(units
 				(unit
 					(name "A")
@@ -4189,7 +4057,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "fe9b2096-308e-4552-880c-7b0923b4cc49")
+			(tstamps "1ffdd390-c25f-42f0-b132-fbe3071f8a4e")
 			(units
 				(unit
 					(name "A")
@@ -4264,7 +4132,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "731d10dc-c286-4199-a12a-4973f297f342")
+			(tstamps "a399bf40-c462-47e3-8c33-43cc27f0c0ba")
 			(units
 				(unit
 					(name "A")
@@ -4414,7 +4282,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "fa68b359-ab12-46dd-84a4-f5d2e34ffdac")
+			(tstamps "d02ae47e-34cc-4ea1-8170-17e9b5d7eb56")
 			(units
 				(unit
 					(name "A")
@@ -4486,7 +4354,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "0632f477-bb18-4d9d-b04a-5ccad05fc213")
+			(tstamps "f301ccfe-e863-4b28-8df1-a7437d4dd9aa")
 			(units
 				(unit
 					(name "A")
@@ -4564,7 +4432,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "31caeeef-90a3-4c75-b963-ac18ac10ba74")
+			(tstamps "3e37f401-f3ba-4e0b-b573-0101a0091b58")
 			(units
 				(unit
 					(name "A")
@@ -4590,34 +4458,34 @@
 		)
 		(comp
 			(ref "U7")
-			(value "ADM2587EBRWZ")
-			(footprint "Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm")
-			(datasheet "https://www.analog.com/media/en/technical-documentation/data-sheets/adm2582e-2587e.pdf")
-			(description "Isolated RS485/RS422 Transceiver,Integrated Isolated DC-DC Converter, 500kbps,SO-20")
+			(value "CA-IS3092W")
+			(footprint "Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm")
+			(datasheet "https://e.chipanalog.com/Public/Uploads/uploadfile/files/20250818/CAIS30923098datasheetVersion1.13en202412162.pdf")
+			(description "Generic connector, double row, 02x08, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)")
 			(fields
 				(field
-					(name "ki_keywords") "RS485 Transceiver,RS422 Transceiver")
+					(name "ki_keywords") "connector")
 				(field
-					(name "ki_fp_filters") "SOIC*7.5x12.8mm*P1.27mm*")
+					(name "ki_fp_filters") "Connector*:*_2x??_*")
 				(field
-					(name "Footprint") "Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm")
+					(name "Footprint") "Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm")
 				(field
-					(name "Datasheet") "https://www.analog.com/media/en/technical-documentation/data-sheets/adm2582e-2587e.pdf")
+					(name "Datasheet") "https://e.chipanalog.com/Public/Uploads/uploadfile/files/20250818/CAIS30923098datasheetVersion1.13en202412162.pdf")
 				(field
-					(name "Description") "Isolated RS485/RS422 Transceiver,Integrated Isolated DC-DC Converter, 500kbps,SO-20")
+					(name "Description") "Generic connector, double row, 02x08, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)")
 			)
 			(libsource
-				(lib "Interface_UART")
-				(part "ADM2587E")
-				(description "Isolated RS485/RS422 Transceiver,Integrated Isolated DC-DC Converter, 500kbps,SO-20")
+				(lib "Connector_Generic")
+				(part "Conn_02x08_Odd_Even")
+				(description "Generic connector, double row, 02x08, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)")
 			)
 			(property
 				(name "ki_keywords")
-				(value "RS485 Transceiver,RS422 Transceiver")
+				(value "connector")
 			)
 			(property
 				(name "ki_fp_filters")
-				(value "SOIC*7.5x12.8mm*P1.27mm*")
+				(value "Connector*:*_2x??_*")
 			)
 			(property
 				(name "Sheetname")
@@ -4629,39 +4497,21 @@
 			)
 			(property
 				(name "ki_keywords")
-				(value "RS485 Transceiver,RS422 Transceiver")
+				(value "connector")
 			)
 			(property
 				(name "ki_fp_filters")
-				(value "SOIC*7.5x12.8mm*P1.27mm*")
+				(value "Connector*:*_2x??_*")
 			)
 			(sheetpath
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "e0b18002-0f08-486e-bc54-771cba5973c9")
+			(tstamps "8c14b1d9-081f-48f4-a27b-4d44ae3530b4")
 			(units
 				(unit
 					(name "A")
 					(pins
-						(pin
-							(num "8")
-						)
-						(pin
-							(num "2")
-						)
-						(pin
-							(num "4")
-						)
-						(pin
-							(num "5")
-						)
-						(pin
-							(num "6")
-						)
-						(pin
-							(num "7")
-						)
 						(pin
 							(num "1")
 						)
@@ -4669,22 +4519,16 @@
 							(num "3")
 						)
 						(pin
+							(num "5")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
 							(num "9")
 						)
 						(pin
-							(num "10")
-						)
-						(pin
-							(num "12")
-						)
-						(pin
-							(num "19")
-						)
-						(pin
-							(num "18")
-						)
-						(pin
-							(num "17")
+							(num "11")
 						)
 						(pin
 							(num "13")
@@ -4693,16 +4537,28 @@
 							(num "15")
 						)
 						(pin
-							(num "11")
+							(num "2")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "12")
 						)
 						(pin
 							(num "14")
 						)
 						(pin
 							(num "16")
-						)
-						(pin
-							(num "20")
 						)
 					)
 				)
@@ -5055,6 +4911,110 @@
 				(pin
 					(num "8")
 					(name "Pin_8")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Connector_Generic")
+			(part "Conn_02x08_Odd_Even")
+			(description "Generic connector, double row, 02x08, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)")
+			(footprints
+				(fp "Connector*:*_2x??_*")
+			)
+			(fields
+				(field
+					(name "Reference") "J")
+				(field
+					(name "Value") "Conn_02x08_Odd_Even")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Generic connector, double row, 02x08, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "Pin_1")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "Pin_2")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "Pin_3")
+					(type "passive")
+				)
+				(pin
+					(num "4")
+					(name "Pin_4")
+					(type "passive")
+				)
+				(pin
+					(num "5")
+					(name "Pin_5")
+					(type "passive")
+				)
+				(pin
+					(num "6")
+					(name "Pin_6")
+					(type "passive")
+				)
+				(pin
+					(num "7")
+					(name "Pin_7")
+					(type "passive")
+				)
+				(pin
+					(num "8")
+					(name "Pin_8")
+					(type "passive")
+				)
+				(pin
+					(num "9")
+					(name "Pin_9")
+					(type "passive")
+				)
+				(pin
+					(num "10")
+					(name "Pin_10")
+					(type "passive")
+				)
+				(pin
+					(num "11")
+					(name "Pin_11")
+					(type "passive")
+				)
+				(pin
+					(num "12")
+					(name "Pin_12")
+					(type "passive")
+				)
+				(pin
+					(num "13")
+					(name "Pin_13")
+					(type "passive")
+				)
+				(pin
+					(num "14")
+					(name "Pin_14")
+					(type "passive")
+				)
+				(pin
+					(num "15")
+					(name "Pin_15")
+					(type "passive")
+				)
+				(pin
+					(num "16")
+					(name "Pin_16")
 					(type "passive")
 				)
 			)
@@ -5486,129 +5446,6 @@
 			)
 		)
 		(libpart
-			(lib "Interface_UART")
-			(part "ADM2587E")
-			(description "Isolated RS485/RS422 Transceiver,Integrated Isolated DC-DC Converter, 500kbps,SO-20")
-			(docs "www.analog.com/media/en/technical-documentation/data-sheets/ADM2582E_2587E.pdf")
-			(footprints
-				(fp "SOIC*7.5x12.8mm*P1.27mm*")
-			)
-			(fields
-				(field
-					(name "Reference") "U")
-				(field
-					(name "Value") "ADM2587E")
-				(field
-					(name "Footprint") "Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm")
-				(field
-					(name "Datasheet") "www.analog.com/media/en/technical-documentation/data-sheets/ADM2582E_2587E.pdf")
-				(field
-					(name "Description") "Isolated RS485/RS422 Transceiver,Integrated Isolated DC-DC Converter, 500kbps,SO-20")
-			)
-			(pins
-				(pin
-					(num "1")
-					(name "GND1")
-					(type "power_in")
-				)
-				(pin
-					(num "2")
-					(name "VCC")
-					(type "power_in")
-				)
-				(pin
-					(num "3")
-					(name "GND1")
-					(type "power_in")
-				)
-				(pin
-					(num "4")
-					(name "RxD")
-					(type "output")
-				)
-				(pin
-					(num "5")
-					(name "~{RE}")
-					(type "input")
-				)
-				(pin
-					(num "6")
-					(name "DE")
-					(type "input")
-				)
-				(pin
-					(num "7")
-					(name "TxD")
-					(type "input")
-				)
-				(pin
-					(num "8")
-					(name "VCC")
-					(type "power_in")
-				)
-				(pin
-					(num "9")
-					(name "GND1")
-					(type "power_in")
-				)
-				(pin
-					(num "10")
-					(name "GND1")
-					(type "power_in")
-				)
-				(pin
-					(num "11")
-					(name "GND2")
-					(type "power_in")
-				)
-				(pin
-					(num "12")
-					(name "Visoout")
-					(type "power_out")
-				)
-				(pin
-					(num "13")
-					(name "Y")
-					(type "output")
-				)
-				(pin
-					(num "14")
-					(name "GND2")
-					(type "power_in")
-				)
-				(pin
-					(num "15")
-					(name "Z")
-					(type "output")
-				)
-				(pin
-					(num "16")
-					(name "GND2")
-					(type "power_in")
-				)
-				(pin
-					(num "17")
-					(name "B")
-					(type "input")
-				)
-				(pin
-					(num "18")
-					(name "A")
-					(type "input")
-				)
-				(pin
-					(num "19")
-					(name "Visoin")
-					(type "power_in")
-				)
-				(pin
-					(num "20")
-					(name "GND2")
-					(type "power_in")
-				)
-			)
-		)
-		(libpart
 			(lib "Jumper")
 			(part "Jumper_2_Open")
 			(description "Jumper, 2-pole, open")
@@ -5944,10 +5781,6 @@
 			(uri "${KICAD10_SYMBOL_DIR}/Device.kicad_sym")
 		)
 		(library
-			(logical "Interface_UART")
-			(uri "${KICAD10_SYMBOL_DIR}/Interface_UART.kicad_sym")
-		)
-		(library
 			(logical "Jumper")
 			(uri "${KICAD10_SYMBOL_DIR}/Jumper.kicad_sym")
 		)
@@ -5993,11 +5826,6 @@
 			)
 			(node
 				(ref "C14")
-				(pin "1")
-				(pintype "passive")
-			)
-			(node
-				(ref "C15")
 				(pin "1")
 				(pintype "passive")
 			)
@@ -6064,15 +5892,9 @@
 			)
 			(node
 				(ref "U7")
-				(pin "2")
-				(pinfunction "VCC_2")
-				(pintype "power_in")
-			)
-			(node
-				(ref "U7")
-				(pin "8")
-				(pinfunction "VCC_8")
-				(pintype "power_in")
+				(pin "1")
+				(pinfunction "Pin_1_1")
+				(pintype "passive")
 			)
 		)
 		(net
@@ -6373,11 +6195,6 @@
 				(pintype "passive")
 			)
 			(node
-				(ref "C15")
-				(pin "2")
-				(pintype "passive")
-			)
-			(node
 				(ref "C16")
 				(pin "2")
 				(pintype "passive")
@@ -6582,27 +6399,15 @@
 			)
 			(node
 				(ref "U7")
-				(pin "1")
-				(pinfunction "GND1_1")
-				(pintype "power_in")
+				(pin "2")
+				(pinfunction "Pin_2_2")
+				(pintype "passive")
 			)
 			(node
 				(ref "U7")
-				(pin "10")
-				(pinfunction "GND1_10")
-				(pintype "power_in")
-			)
-			(node
-				(ref "U7")
-				(pin "3")
-				(pinfunction "GND1_3")
-				(pintype "power_in")
-			)
-			(node
-				(ref "U7")
-				(pin "9")
-				(pinfunction "GND1_9")
-				(pintype "power_in")
+				(pin "8")
+				(pinfunction "Pin_8_8")
+				(pintype "passive")
 			)
 		)
 		(net
@@ -6687,29 +6492,6 @@
 		)
 		(net
 			(code "16")
-			(name "/ISO_GND_PWR")
-			(class "Default")
-			(node
-				(ref "FB1")
-				(pin "1")
-				(pinfunction "1_1")
-				(pintype "passive")
-			)
-			(node
-				(ref "U7")
-				(pin "11")
-				(pinfunction "GND2_11")
-				(pintype "power_in")
-			)
-			(node
-				(ref "U7")
-				(pin "14")
-				(pinfunction "GND2_14")
-				(pintype "power_in")
-			)
-		)
-		(net
-			(code "17")
 			(name "/ONEWIRE")
 			(class "Default")
 			(node
@@ -6726,7 +6508,7 @@
 			)
 		)
 		(net
-			(code "18")
+			(code "17")
 			(name "/OPAMP_FB")
 			(class "Default")
 			(node
@@ -6747,7 +6529,7 @@
 			)
 		)
 		(net
-			(code "19")
+			(code "18")
 			(name "/OPAMP_OUT")
 			(class "Default")
 			(node
@@ -6767,7 +6549,7 @@
 			)
 		)
 		(net
-			(code "20")
+			(code "19")
 			(name "/PWR_GOOD")
 			(class "Default")
 			(node
@@ -6783,7 +6565,7 @@
 			)
 		)
 		(net
-			(code "21")
+			(code "20")
 			(name "/RH_OUT")
 			(class "Default")
 			(node
@@ -6810,7 +6592,7 @@
 			)
 		)
 		(net
-			(code "22")
+			(code "21")
 			(name "/RS485_A")
 			(class "Default")
 			(node
@@ -6832,19 +6614,13 @@
 			)
 			(node
 				(ref "U7")
-				(pin "13")
-				(pinfunction "Y_13")
-				(pintype "output")
-			)
-			(node
-				(ref "U7")
-				(pin "18")
-				(pinfunction "A_18")
-				(pintype "input")
+				(pin "12")
+				(pinfunction "Pin_12_12")
+				(pintype "passive")
 			)
 		)
 		(net
-			(code "23")
+			(code "22")
 			(name "/RS485_B")
 			(class "Default")
 			(node
@@ -6867,19 +6643,13 @@
 			)
 			(node
 				(ref "U7")
-				(pin "15")
-				(pinfunction "Z_15")
-				(pintype "output")
-			)
-			(node
-				(ref "U7")
-				(pin "17")
-				(pinfunction "B_17")
-				(pintype "input")
+				(pin "13")
+				(pinfunction "Pin_13_13")
+				(pintype "passive")
 			)
 		)
 		(net
-			(code "24")
+			(code "23")
 			(name "/RS485_COM")
 			(class "Default")
 			(node
@@ -6890,12 +6660,6 @@
 			(node
 				(ref "C18")
 				(pin "2")
-				(pintype "passive")
-			)
-			(node
-				(ref "FB1")
-				(pin "2")
-				(pinfunction "2_2")
 				(pintype "passive")
 			)
 			(node
@@ -6912,19 +6676,25 @@
 			)
 			(node
 				(ref "U7")
-				(pin "16")
-				(pinfunction "GND2_16")
-				(pintype "power_in")
+				(pin "10")
+				(pinfunction "Pin_10_10")
+				(pintype "passive")
 			)
 			(node
 				(ref "U7")
-				(pin "20")
-				(pinfunction "GND2_20")
-				(pintype "power_in")
+				(pin "15")
+				(pinfunction "Pin_15_15")
+				(pintype "passive")
+			)
+			(node
+				(ref "U7")
+				(pin "9")
+				(pinfunction "Pin_9_9")
+				(pintype "passive")
 			)
 		)
 		(net
-			(code "25")
+			(code "24")
 			(name "/RS485_DE")
 			(class "Default")
 			(node
@@ -6935,19 +6705,19 @@
 			)
 			(node
 				(ref "U7")
-				(pin "5")
-				(pinfunction "~{RE}_5")
-				(pintype "input")
+				(pin "4")
+				(pinfunction "Pin_4_4")
+				(pintype "passive")
 			)
 			(node
 				(ref "U7")
-				(pin "6")
-				(pinfunction "DE_6")
-				(pintype "input")
+				(pin "5")
+				(pinfunction "Pin_5_5")
+				(pintype "passive")
 			)
 		)
 		(net
-			(code "26")
+			(code "25")
 			(name "/RS485_RX")
 			(class "Default")
 			(node
@@ -6958,13 +6728,13 @@
 			)
 			(node
 				(ref "U7")
-				(pin "4")
-				(pinfunction "RxD_4")
-				(pintype "output")
+				(pin "3")
+				(pinfunction "Pin_3_3")
+				(pintype "passive")
 			)
 		)
 		(net
-			(code "27")
+			(code "26")
 			(name "/RS485_SHIELD")
 			(class "Default")
 			(node
@@ -6975,7 +6745,7 @@
 			)
 		)
 		(net
-			(code "28")
+			(code "27")
 			(name "/RS485_TERM")
 			(class "Default")
 			(node
@@ -6991,7 +6761,7 @@
 			)
 		)
 		(net
-			(code "29")
+			(code "28")
 			(name "/RS485_TX")
 			(class "Default")
 			(node
@@ -7002,13 +6772,13 @@
 			)
 			(node
 				(ref "U7")
-				(pin "7")
-				(pinfunction "TxD_7")
-				(pintype "input")
+				(pin "6")
+				(pinfunction "Pin_6_6")
+				(pintype "passive")
 			)
 		)
 		(net
-			(code "30")
+			(code "29")
 			(name "/STATUS_LED")
 			(class "Default")
 			(node
@@ -7024,7 +6794,7 @@
 			)
 		)
 		(net
-			(code "31")
+			(code "30")
 			(name "/STATUS_LED_R")
 			(class "Default")
 			(node
@@ -7040,7 +6810,7 @@
 			)
 		)
 		(net
-			(code "32")
+			(code "31")
 			(name "/SW")
 			(class "Default")
 			(node
@@ -7062,7 +6832,7 @@
 			)
 		)
 		(net
-			(code "33")
+			(code "32")
 			(name "/SYS_5V")
 			(class "Default")
 			(node
@@ -7108,7 +6878,7 @@
 			)
 		)
 		(net
-			(code "34")
+			(code "33")
 			(name "/TEMP_KTY")
 			(class "Default")
 			(node
@@ -7130,7 +6900,7 @@
 			)
 		)
 		(net
-			(code "35")
+			(code "34")
 			(name "/USB_5V")
 			(class "Default")
 			(node
@@ -7171,7 +6941,7 @@
 			)
 		)
 		(net
-			(code "36")
+			(code "35")
 			(name "/USB_CC1")
 			(class "Default")
 			(node
@@ -7187,7 +6957,7 @@
 			)
 		)
 		(net
-			(code "37")
+			(code "36")
 			(name "/USB_CC2")
 			(class "Default")
 			(node
@@ -7203,7 +6973,7 @@
 			)
 		)
 		(net
-			(code "38")
+			(code "37")
 			(name "/USB_D+")
 			(class "Default")
 			(node
@@ -7238,7 +7008,7 @@
 			)
 		)
 		(net
-			(code "39")
+			(code "38")
 			(name "/USB_D-")
 			(class "Default")
 			(node
@@ -7273,7 +7043,7 @@
 			)
 		)
 		(net
-			(code "40")
+			(code "39")
 			(name "/VCC_BYP")
 			(class "Default")
 			(node
@@ -7289,7 +7059,7 @@
 			)
 		)
 		(net
-			(code "41")
+			(code "40")
 			(name "/VISO")
 			(class "Default")
 			(node
@@ -7304,19 +7074,13 @@
 			)
 			(node
 				(ref "U7")
-				(pin "12")
-				(pinfunction "Visoout_12")
-				(pintype "power_out")
-			)
-			(node
-				(ref "U7")
-				(pin "19")
-				(pinfunction "Visoin_19")
-				(pintype "power_in")
+				(pin "16")
+				(pinfunction "Pin_16_16")
+				(pintype "passive")
 			)
 		)
 		(net
-			(code "42")
+			(code "41")
 			(name "unconnected-(J3-SBU1-PadA8)")
 			(class "Default")
 			(node
@@ -7327,7 +7091,7 @@
 			)
 		)
 		(net
-			(code "43")
+			(code "42")
 			(name "unconnected-(J3-SBU2-PadB8)")
 			(class "Default")
 			(node
@@ -7338,7 +7102,7 @@
 			)
 		)
 		(net
-			(code "44")
+			(code "43")
 			(name "unconnected-(U2-NC-Pad4)")
 			(class "Default")
 			(node
@@ -7349,7 +7113,7 @@
 			)
 		)
 		(net
-			(code "45")
+			(code "44")
 			(name "unconnected-(U3-Pin_8-Pad8)")
 			(class "Default")
 			(node
@@ -7360,7 +7124,7 @@
 			)
 		)
 		(net
-			(code "46")
+			(code "45")
 			(name "unconnected-(U3-Pin_9-Pad9)")
 			(class "Default")
 			(node
@@ -7371,7 +7135,7 @@
 			)
 		)
 		(net
-			(code "47")
+			(code "46")
 			(name "unconnected-(U3-Pin_11-Pad11)")
 			(class "Default")
 			(node
@@ -7382,7 +7146,7 @@
 			)
 		)
 		(net
-			(code "48")
+			(code "47")
 			(name "unconnected-(U3-Pin_12-Pad12)")
 			(class "Default")
 			(node
@@ -7393,7 +7157,7 @@
 			)
 		)
 		(net
-			(code "49")
+			(code "48")
 			(name "unconnected-(U3-Pin_16-Pad16)")
 			(class "Default")
 			(node
@@ -7404,7 +7168,7 @@
 			)
 		)
 		(net
-			(code "50")
+			(code "49")
 			(name "unconnected-(U3-Pin_17-Pad17)")
 			(class "Default")
 			(node
@@ -7415,7 +7179,7 @@
 			)
 		)
 		(net
-			(code "51")
+			(code "50")
 			(name "unconnected-(U3-Pin_18-Pad18)")
 			(class "Default")
 			(node
@@ -7426,7 +7190,7 @@
 			)
 		)
 		(net
-			(code "52")
+			(code "51")
 			(name "unconnected-(U3-Pin_19-Pad19)")
 			(class "Default")
 			(node
@@ -7437,7 +7201,7 @@
 			)
 		)
 		(net
-			(code "53")
+			(code "52")
 			(name "unconnected-(U3-Pin_20-Pad20)")
 			(class "Default")
 			(node
@@ -7448,7 +7212,7 @@
 			)
 		)
 		(net
-			(code "54")
+			(code "53")
 			(name "unconnected-(U3-Pin_22-Pad22)")
 			(class "Default")
 			(node
@@ -7459,7 +7223,7 @@
 			)
 		)
 		(net
-			(code "55")
+			(code "54")
 			(name "unconnected-(U3-Pin_23-Pad23)")
 			(class "Default")
 			(node
@@ -7470,7 +7234,7 @@
 			)
 		)
 		(net
-			(code "56")
+			(code "55")
 			(name "unconnected-(U3-Pin_26-Pad26)")
 			(class "Default")
 			(node
@@ -7481,13 +7245,46 @@
 			)
 		)
 		(net
-			(code "57")
+			(code "56")
 			(name "unconnected-(U3-Pin_30-Pad30)")
 			(class "Default")
 			(node
 				(ref "U3")
 				(pin "30")
 				(pinfunction "Pin_30_30")
+				(pintype "passive+no_connect")
+			)
+		)
+		(net
+			(code "57")
+			(name "unconnected-(U7-Pin_7-Pad7)")
+			(class "Default")
+			(node
+				(ref "U7")
+				(pin "7")
+				(pinfunction "Pin_7_7")
+				(pintype "passive+no_connect")
+			)
+		)
+		(net
+			(code "58")
+			(name "unconnected-(U7-Pin_11-Pad11)")
+			(class "Default")
+			(node
+				(ref "U7")
+				(pin "11")
+				(pinfunction "Pin_11_11")
+				(pintype "passive+no_connect")
+			)
+		)
+		(net
+			(code "59")
+			(name "unconnected-(U7-Pin_14-Pad14)")
+			(class "Default")
+			(node
+				(ref "U7")
+				(pin "14")
+				(pinfunction "Pin_14_14")
 				(pintype "passive+no_connect")
 			)
 		)
