@@ -80,7 +80,7 @@ def build():
         ni=pcbnew.NETINFO_ITEM(b,n); b.Add(ni); nets[n]=ni
     P=[]
     def p(ref,val,lib,name,x,y,r,pins): P.append((ref,val,lib,name,x,y,r,{str(k):v for k,v in pins.items()}))
-    p("J1","IDM 43/42/41/40","TerminalBlock_Phoenix","TerminalBlock_Phoenix_PT-1,5-4-3.5-H_1x04_P3.50mm_Horizontal",16,62,90,{1:"TEMP_KTY",2:"24V_RAW",3:"GND",4:"RH_OUT"})
+    p("J1","43/42/41/40","TerminalBlock_Phoenix","TerminalBlock_Phoenix_PT-1,5-4-3.5-H_1x04_P3.50mm_Horizontal",16,62,90,{1:"TEMP_KTY",2:"24V_RAW",3:"GND",4:"RH_OUT"})
     p("RTH1","KTY81/210,112","Package_TO_SOT_THT","TO-92_Inline",18,46,0,{1:"TEMP_KTY",2:"GND"})
     p("F1","1812L050/30PR","Fuse","Fuse_1812_4532Metric",29,66,0,{1:"24V_RAW",2:"24V_FUSED"})
     p("D1","SS16","Diode_SMD","D_SMA",38,66,0,{1:"24V_PROT",2:"24V_FUSED"}); p("TVS1","SMBJ33A","Diode_SMD","D_SMB",38,73,90,{1:"GND",2:"24V_PROT"})
@@ -121,8 +121,9 @@ def build():
     for ref,x,y in (("H1",14,14),("H2",116,14),("H3",14,76),("H4",116,76)):
         fp=load("MountingHole","MountingHole_3.2mm_M3"); fp.SetReference(ref); fp.SetPosition(point(x,y)); b.Add(fp)
     for layer in (pcbnew.F_Cu,pcbnew.In1_Cu,pcbnew.In2_Cu,pcbnew.B_Cu): keepout(b,layer,((45.7,10.1),(64.3,10.1),(64.3,17.0),(45.7,17.0)))
-    text(b,"IDM ROOM SENSOR B-ES2-C6",83,12,1.1); text(b,"USB-C FLASH / POWER",72,75,.65); text(b,"RS485 ISOLATED",105,77,.65)
-    text(b,"IDM: 43 TEMP | 42 +24V | 41 GND | 40 RH",39,78,.65); text(b,"ENGINEERING SAMPLE - BENCH TEST FIRST",57,33,.7)
+    text(b,"SMART CLIMATE SENSOR",83,12,1.1); text(b,"by Xerolux | xerolux.de | REV B-ES2-C6 | 2026",83,14.5,.65)
+    text(b,"USB-C FLASH / POWER",72,75,.65); text(b,"RS485 ISOLATED",105,77,.65)
+    text(b,"43 TEMP | 42 +24V | 41 GND | 40 RH",37,78,.65); text(b,"ENGINEERING SAMPLE - BENCH TEST FIRST",57,33,.7)
     d=b.GetDesignSettings(); d.m_MinClearance=mm(.2); d.SetCustomTrackWidth(mm(.25)); d.SetCustomViaSize(mm(.7)); d.SetCustomViaDrill(mm(.3))
     return b
 

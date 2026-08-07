@@ -5156,7 +5156,7 @@
 				)
 			)
 		)
-		(property "Value" "IDM 43/42/41/40"
+		(property "Value" "43/42/41/40"
 			(at 5.25 5.62 90)
 			(layer "F.Fab")
 			(uuid "fae34f2e-ef1b-4861-adf7-628905d6f4f7")
@@ -13569,8 +13569,8 @@
 		(layer "Edge.Cuts")
 		(uuid "e9a8aa99-0a3d-4513-9cc7-1a5ba5f80063")
 	)
-	(gr_text "IDM: 43 TEMP | 42 +24V | 41 GND | 40 RH"
-		(at 39 78 0)
+	(gr_text "43 TEMP | 42 +24V | 41 GND | 40 RH"
+		(at 37 78 0)
 		(layer "F.SilkS")
 		(uuid "d7f59df8-cbff-4787-9a09-1b359b1cf2b1")
 		(effects
@@ -13584,6 +13584,17 @@
 		(at 72 75 0)
 		(layer "F.SilkS")
 		(uuid "6e6c9c62-8f26-46d1-aee7-1c71bdb9da28")
+		(effects
+			(font
+				(size 0.65 0.65)
+				(thickness 0.12)
+			)
+		)
+	)
+	(gr_text "by Xerolux | xerolux.de | REV B-ES2-C6 | 2026"
+		(at 83 14.5 0)
+		(layer "F.SilkS")
+		(uuid "6b9be9fd-c89a-4785-9302-e288af48d106")
 		(effects
 			(font
 				(size 0.65 0.65)
@@ -13613,7 +13624,7 @@
 			)
 		)
 	)
-	(gr_text "IDM ROOM SENSOR B-ES2-C6"
+	(gr_text "SMART CLIMATE SENSOR"
 		(at 83 12 0)
 		(layer "F.SilkS")
 		(uuid "279572f6-674e-4f3f-81ab-565026bdbc86")
