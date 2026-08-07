@@ -1,0 +1,7 @@
+Designator,Quantity,Description,Specification,Notes
+ENC-BASE,1,Printed enclosure base,PETG or PLA / 0.20 mm layer,Use supplied STL
+ENC-LID,1,Printed ventilated lid,PETG or PLA / 0.20 mm layer,Use supplied STL
+CASE-SCREW,4,Countersunk screw,M3 x 16 mm,Case closure
+PCB-SCREW,4,Pan-head screw,M2.5 x 6 mm,PCB to printed standoffs
+WASHER,4,Plastic washer,M2.5,Optional PCB protection
+

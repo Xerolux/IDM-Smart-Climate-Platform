@@ -38,7 +38,8 @@ def main() -> None:
     args = parser.parse_args()
     board = pcbnew.LoadBoard(str(args.board))
     extended = pcbnew.ToMM(board.GetBoardEdgesBoundingBox().GetWidth()) > 120
-    air = pcbnew.ToMM(board.GetBoardEdgesBoundingBox().GetHeight()) > 90
+    tall = pcbnew.ToMM(board.GetBoardEdgesBoundingBox().GetHeight()) > 90
+    air = any(fp.GetReference() == "U8" for fp in board.GetFootprints())
 
     # Idempotent when rerun on the released board.
     for zone in list(board.Zones()):
@@ -52,6 +53,9 @@ def main() -> None:
          (103.5, 70.0), (139.5, 70.0), (139.5, 109.5), (50.0, 109.5),
          (50.0, 89.5), (20.0, 89.5), (20.0, 109.5), (10.5, 109.5))
         if air else
+        ((10.5, 10.5), (139.5, 10.5), (139.5, 34.0), (103.5, 34.0),
+         (103.5, 70.0), (139.5, 70.0), (139.5, 109.5), (10.5, 109.5))
+        if tall else
         ((10.5, 10.5), (139.5, 10.5), (139.5, 34.0), (103.5, 34.0),
          (103.5, 70.0), (139.5, 70.0), (139.5, 89.5), (10.5, 89.5))
         if extended else

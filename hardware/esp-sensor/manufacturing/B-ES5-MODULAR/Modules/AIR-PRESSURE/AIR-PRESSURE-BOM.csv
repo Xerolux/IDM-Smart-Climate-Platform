@@ -1,0 +1,7 @@
+Designator,Quantity,Manufacturer,Manufacturer Part Number,Description,Footprint,LCSC Part Number,Assembly
+J1,1,Made in China,2.54mm 2x4 female socket,"AIR-SLOT female socket, vertical",THT P2.54mm 2x04,C58378,JLCPCB Standard PCBA
+U2,1,TECH PUBLIC,AP2112K-3.3TRG1,3.3 V 600 mA LDO,SOT-23-5,C23380830,JLCPCB Standard PCBA
+U1,1,Bosch Sensortec,BMP390,barometric pressure sensor,LGA-10 2x2 mm,C5124834,JLCPCB Standard PCBA
+"C1,C2",2,Murata,GRM188R71H104KA93D,100 nF 50 V X7R,0603,C77055,JLCPCB Standard PCBA
+C3,1,Murata,GRM21BR71A106KE51L,10 uF 10 V X7R,0805,C86038,JLCPCB Standard PCBA
+C4,1,TDK,C2012X5R1A226MT0J0E,22 uF 10 V X5R,0805,C361180,JLCPCB Standard PCBA

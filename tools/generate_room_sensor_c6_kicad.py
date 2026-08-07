@@ -54,8 +54,9 @@ def add_passive(builder: Builder, ref: str, kind: str, center, value: str,
 
 
 def build(revision: str = "B-ES2-C6"):
-    extended = revision in {"B-ES3-C6", "B-ES4-AIR"}
+    extended = revision in {"B-ES3-C6", "B-ES4-AIR", "B-ES5-MODULAR"}
     air = revision == "B-ES4-AIR"
+    modular = revision == "B-ES5-MODULAR"
     terminal = lambda pins: (
         f"TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-{pins:02d}P_1x{pins:02d}_P5.00mm"
         if extended else
@@ -71,6 +72,8 @@ def build(revision: str = "B-ES2-C6"):
             2: "ESP32-C6-WROOM-1-N16; USB-C; isolated Modbus RS-485",
             3: ("SHT45 + SCD41 + SGP41 + BMP390 indoor-air sensing"
                 if air else
+                "SHT45 plus three rotation-safe Xerolux AIR-SLOT sockets"
+                if modular else
                 "SHT45 room sensing; passive KTY81/210; active 0-10 V humidity output"),
         },
     )
@@ -286,6 +289,24 @@ def build(revision: str = "B-ES2-C6"):
             value="AIR_3V3",footprint="TestPoint:TestPoint_Plated_Hole_D2.0mm",datasheet="~",
             nets={"1":"AIR_3V3"})
 
+    if modular:
+        title(b, "MODULAR AIR: three universal, 180-degree rotation-safe I2C sensor slots", 160, 292)
+        # Four duplicated symmetric nets make a module electrically safe when
+        # inserted either way around.  Every module generates its own 3.3 V.
+        slot_nets = {"1":"GND", "2":"SYS_5V", "3":"I2C_SDA", "4":"I2C_SCL",
+                     "5":"I2C_SCL", "6":"I2C_SDA", "7":"SYS_5V", "8":"GND"}
+        for ref, center, label in (
+            ("J9", (80,315), "AIR-SLOT 1 / CO2"),
+            ("J10", (150,315), "AIR-SLOT 2 / VOC-NOx"),
+            ("J11", (220,315), "AIR-SLOT 3 / PRESSURE"),
+        ):
+            b.add(reference=ref, nickname="Connector_Generic", entry="Conn_02x04_Odd_Even",
+                center=center, value=label,
+                footprint="Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical",
+                datasheet="~", nets=slot_nets)
+        add_passive(b,"C30","C_Polarized",(270,315),"220u 10V AIR-SLOT reservoir",
+                    "Capacitor_SMD:CP_Elec_8x10",{"1":"SYS_5V","2":"GND"})
+
     for idx,net in enumerate(("24V_RAW","24V_PROT","SYS_5V","+3V3","I2C_SDA","I2C_SCL","RH_OUT","TEMP_KTY","RS485_A","RS485_B","RS485_COM","GND"),1):
         b.add(reference=f"TP{idx}",nickname="Connector_Generic",entry="Conn_01x01",center=(20+idx*22,205),value=net,
             footprint="TestPoint:TestPoint_Plated_Hole_D2.0mm",datasheet="~",nets={"1":net})
@@ -297,7 +318,7 @@ def build(revision: str = "B-ES2-C6"):
 
 def main() -> None:
     parser=argparse.ArgumentParser(); parser.add_argument("output",type=Path)
-    parser.add_argument("--revision",choices=("B-ES2-C6","B-ES3-C6","B-ES4-AIR"),default="B-ES2-C6"); args=parser.parse_args()
+    parser.add_argument("--revision",choices=("B-ES2-C6","B-ES3-C6","B-ES4-AIR","B-ES5-MODULAR"),default="B-ES2-C6"); args=parser.parse_args()
     args.output.parent.mkdir(parents=True,exist_ok=True); build(args.revision).to_file(args.output,encoding="utf-8")
 
 

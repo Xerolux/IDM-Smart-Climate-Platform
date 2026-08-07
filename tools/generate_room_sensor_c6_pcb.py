@@ -73,9 +73,11 @@ def keepout(board,layer,coords):
 
 
 def build(revision="B-ES2-C6"):
-    extended=revision in {"B-ES3-C6","B-ES4-AIR"}
+    extended=revision in {"B-ES3-C6","B-ES4-AIR","B-ES5-MODULAR"}
     air=revision=="B-ES4-AIR"
-    right,bottom=(140,110) if air else ((140,90) if extended else (120,80))
+    modular=revision=="B-ES5-MODULAR"
+    tall=air or modular
+    right,bottom=(140,110) if tall else ((140,90) if extended else (120,80))
     b=pcbnew.BOARD(); b.SetCopperLayerCount(4); add_outline(b,right,bottom)
     names=["GND","24V_RAW","24V_FUSED","24V_PROT","PWR_GOOD","BUCK_FB","VCC_BYP","BOOT","SW","5V_BUCK","USB_5V","SYS_5V","+3V3",
            "TEMP_KTY","RH_OUT","DAC_RAW","OPAMP_OUT","OPAMP_FB","I2C_SDA","I2C_SCL","C6_EN","C6_BOOT","USB_D-","USB_D+","USB_CC1","USB_CC2",
@@ -108,7 +110,7 @@ def build(revision="B-ES2-C6"):
     c6={1:"GND",2:"+3V3",3:"C6_EN",4:"EXP_GPIO4",5:"EXP_GPIO5",6:"I2C_SDA",7:"I2C_SCL",10:"STATUS_LED",13:"USB_D-",14:"USB_D+",15:"C6_BOOT",21:"ONEWIRE",24:"RS485_RX",25:"RS485_TX",27:"RS485_DE",28:"GND",29:"GND"}
     if extended: c6.update({8:"ADC_0_10",16:"CONTACT1",17:"CONTACT2",18:"SERVICE_BUTTON",20:"BUS_LED"})
     p("U3","ESP32-C6-WROOM-1-N16","Custom","ESP32-C6-WROOM-1",55,22.75,0,c6)
-    p("J3","USB-C","Connector_USB","USB_C_Receptacle_HRO_TYPE-C-31-M-12",75,107.2 if air else (87.2 if extended else 77.2),0,{"A1":"GND","A4":"USB_5V","A5":"USB_CC1","A6":"USB_D+","A7":"USB_D-","A9":"USB_5V","A12":"GND","B1":"GND","B4":"USB_5V","B5":"USB_CC2","B6":"USB_D+","B7":"USB_D-","B9":"USB_5V","B12":"GND","SH":"GND"})
+    p("J3","USB-C","Connector_USB","USB_C_Receptacle_HRO_TYPE-C-31-M-12",103 if modular else 75,107.2 if tall else (87.2 if extended else 77.2),0,{"A1":"GND","A4":"USB_5V","A5":"USB_CC1","A6":"USB_D+","A7":"USB_D-","A9":"USB_5V","A12":"GND","B1":"GND","B4":"USB_5V","B5":"USB_CC2","B6":"USB_D+","B7":"USB_D-","B9":"USB_5V","B12":"GND","SH":"GND"})
     p("ESD1","USBLC6-2SC6","Package_TO_SOT_SMD","SOT-23-6",75,68,0,{1:"USB_D-",2:"GND",3:"USB_D+",4:"USB_D+",5:"USB_5V",6:"USB_D-"})
     p("R4","5.1k","Resistor_SMD","R_0603_1608Metric",68,67,90,{1:"USB_CC1",2:"GND"}); p("R5","5.1k","Resistor_SMD","R_0603_1608Metric",70.5,67,90,{1:"USB_CC2",2:"GND"})
     p("R6","10k","Resistor_SMD","R_0603_1608Metric",65,43,0,{1:"+3V3",2:"C6_EN"}); p("C9","1u","Capacitor_SMD","C_0603_1608Metric",65,46,0,{1:"C6_EN",2:"GND"})
@@ -126,7 +128,7 @@ def build(revision="B-ES2-C6"):
     p("R12","120R","Resistor_SMD","R_1206_3216Metric",116,63,90,{1:"RS485_A",2:"RS485_TERM"})
     if extended: p("SW3","TERM ON/OFF","Button_Switch_SMD","SW_DIP_SPSTx01_Slide_Copal_CHS-01B_W7.62mm_P1.27mm",122,63,90,{1:"RS485_TERM",2:"RS485_B"})
     else: p("JP1","TERM","Jumper","SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm",116,63,90,{1:"RS485_TERM",2:"RS485_B"})
-    p("J4","EXPANSION","Connector_JST","JST_SH_SM08B-SRSS-TB_1x08-1MP_P1.00mm_Horizontal",88,106.5 if air else (86.5 if extended else 76.5),0,{1:"+3V3",2:"GND",3:"I2C_SDA",4:"I2C_SCL",5:"ONEWIRE",6:"EXP_GPIO4",7:"EXP_GPIO5",8:"SYS_5V"})
+    p("J4","EXPANSION","Connector_JST","JST_SH_SM08B-SRSS-TB_1x08-1MP_P1.00mm_Horizontal",119 if modular else 88,106.5 if tall else (86.5 if extended else 76.5),0,{1:"+3V3",2:"GND",3:"I2C_SDA",4:"I2C_SCL",5:"ONEWIRE",6:"EXP_GPIO4",7:"EXP_GPIO5",8:"SYS_5V"})
     p("LED1","STATUS","LED_SMD","LED_0603_1608Metric",82,40,0,{1:"STATUS_LED_R",2:"GND"}); p("R13","1k","Resistor_SMD","R_0603_1608Metric",78,40,0,{1:"STATUS_LED",2:"STATUS_LED_R"})
     if extended:
         p("J5","1WIRE A 3V/DQ/GND",term_lib,term(3),84,15,0,{1:"+3V3",2:"ONEWIRE_EXT",3:"GND"})
@@ -139,7 +141,7 @@ def build(revision="B-ES2-C6"):
         p("C19","100n","Capacitor_SMD","C_0603_1608Metric",112,31,0,{1:"CONTACT1",2:"GND"}); p("C20","100n","Capacitor_SMD","C_0603_1608Metric",124,31,0,{1:"CONTACT2",2:"GND"})
         p("TVS3","3V3 ESD","Diode_SMD","D_SOD-323",108,25,0,{1:"GND",2:"CONTACT1_EXT"}); p("TVS4","3V3 ESD","Diode_SMD","D_SOD-323",128,25,0,{1:"GND",2:"CONTACT2_EXT"})
         p("TVS5","12V ESD","Diode_SMD","D_SOD-323",127,75,90,{1:"GND",2:"AIN_0_10_RAW"}); p("R20","33k","Resistor_SMD","R_0603_1608Metric",124,72,0,{1:"AIN_0_10_RAW",2:"AIN_DIV"}); p("R21","10k","Resistor_SMD","R_0603_1608Metric",124,75,0,{1:"AIN_DIV",2:"GND"}); p("R22","1k","Resistor_SMD","R_0603_1608Metric",120,72,0,{1:"AIN_DIV",2:"ADC_0_10"}); p("C21","100n","Capacitor_SMD","C_0603_1608Metric",120,75,0,{1:"ADC_0_10",2:"GND"}); p("D4","BAT54S","Package_TO_SOT_SMD","SOT-23",116,74,0,{1:"GND",2:"+3V3",3:"ADC_0_10"})
-        p("SW4","SERVICE","Button_Switch_SMD","SW_SPST_B3U-1000P",108,105 if air else 85,0,{1:"SERVICE_BUTTON",2:"GND"}); p("R23","10k","Resistor_SMD","R_0603_1608Metric",103,105 if air else 85,0,{1:"+3V3",2:"SERVICE_BUTTON"})
+        p("SW4","SERVICE","Button_Switch_SMD","SW_SPST_B3U-1000P",116 if modular else 108,96 if modular else (104 if tall else 85),0,{1:"SERVICE_BUTTON",2:"GND"}); p("R23","10k","Resistor_SMD","R_0603_1608Metric",111 if modular else 103,96 if modular else (104 if tall else 85),0,{1:"+3V3",2:"SERVICE_BUTTON"})
         p("R24","12k","Resistor_SMD","R_0603_1608Metric",91,40,0,{1:"24V_PROT",2:"PWR24_LED_R"}); p("LED2","24V","LED_SMD","LED_0603_1608Metric",95,40,0,{1:"PWR24_LED_R",2:"GND"}); p("R25","1k","Resistor_SMD","R_0603_1608Metric",100,40,0,{1:"BUS_LED",2:"BUS_LED_R"}); p("LED3","BUS GREEN","LED_SMD","LED_0603_1608Metric",104,40,0,{1:"BUS_LED_R",2:"GND"})
     if air:
         p("U8","SCD41-D-R1","Xerolux-Air","SENSOR-SMD_SCD41-D-R1",29,101,0,{6:"GND",7:"AIR_3V3",9:"I2C_SCL",10:"I2C_SDA",19:"AIR_3V3",20:"GND",21:"GND"})
@@ -155,6 +157,11 @@ def build(revision="B-ES2-C6"):
         p("R26","10R","Resistor_SMD","R_0603_1608Metric",38,96,90,{1:"AIR_3V3",2:"SGP_VDD"})
         p("C30","220u 10V","Capacitor_SMD","CP_Elec_8x10",126,99,0,{1:"SYS_5V",2:"GND"})
         p("TP13","AIR_3V3","TestPoint","TestPoint_Plated_Hole_D2.0mm",55,104,0,{1:"AIR_3V3"})
+    if modular:
+        slot_pins={1:"GND",2:"SYS_5V",3:"I2C_SDA",4:"I2C_SCL",5:"I2C_SCL",6:"I2C_SDA",7:"SYS_5V",8:"GND"}
+        for ref,x,label in (("J9",25,"CO2"),("J10",53,"VOC-NOx"),("J11",81,"PRESSURE")):
+            p(ref,f"AIR-SLOT {label}","Connector_PinHeader_2.54mm","PinHeader_2x04_P2.54mm_Vertical",x,98,0,slot_pins)
+        p("C30","220u 10V","Capacitor_SMD","CP_Elec_8x10",128,94,0,{1:"SYS_5V",2:"GND"})
     for spec in P: add_part(b,nets,spec)
     tp_positions=((22,38),(30,38),(38,38),(46,39),(54,40),(62,40),(70,38),(83,35),(86,31),(94,31),(102,31),(91,35) if extended else (110,28))
     for idx,(net,(x,y)) in enumerate(zip(("24V_RAW","24V_PROT","SYS_5V","+3V3","I2C_SDA","I2C_SCL","RH_OUT","TEMP_KTY","RS485_A","RS485_B","RS485_COM","GND"),tp_positions),1):
@@ -173,12 +180,16 @@ def build(revision="B-ES2-C6"):
     if air:
         text(b,"SCD41 CO2",29,108,.55); text(b,"SGP41 VOC/NOx | BMP390 hPa",44,106.8,.55)
         text(b,"ULTIMATE AIR - SENSOR ISLAND",45,89.8,.65)
-    d=b.GetDesignSettings(); d.m_MinClearance=mm(.2); d.SetCustomTrackWidth(mm(.25)); d.SetCustomViaSize(mm(.7)); d.SetCustomViaDrill(mm(.3))
+    if modular:
+        text(b,"AIR-SLOT 1 CO2",25,88,.65); text(b,"AIR-SLOT 2 VOC/NOx",53,88,.65)
+        text(b,"AIR-SLOT 3 PRESSURE",81,88,.65)
+        text(b,"MODULES MAY BE ROTATED 180deg - SYMMETRIC SAFE PINOUT",53,106,.55)
+    d=b.GetDesignSettings(); d.m_MinClearance=mm(.2); d.m_TrackMinWidth=mm(.15); d.SetCustomTrackWidth(mm(.25)); d.SetCustomViaSize(mm(.7)); d.SetCustomViaDrill(mm(.3))
     return b
 
 
 def main():
-    ap=argparse.ArgumentParser(); ap.add_argument("output",type=Path); ap.add_argument("--revision",choices=("B-ES2-C6","B-ES3-C6","B-ES4-AIR"),default="B-ES2-C6"); a=ap.parse_args(); a.output.parent.mkdir(parents=True,exist_ok=True); pcbnew.SaveBoard(str(a.output),build(a.revision))
+    ap=argparse.ArgumentParser(); ap.add_argument("output",type=Path); ap.add_argument("--revision",choices=("B-ES2-C6","B-ES3-C6","B-ES4-AIR","B-ES5-MODULAR"),default="B-ES2-C6"); a=ap.parse_args(); a.output.parent.mkdir(parents=True,exist_ok=True); pcbnew.SaveBoard(str(a.output),build(a.revision))
 
 
 if __name__=="__main__": main()

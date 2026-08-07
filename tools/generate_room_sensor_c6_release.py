@@ -83,6 +83,11 @@ AIR_PARTS = [
     ("C30", "KS", "UT1A221M0810VG", "220 uF 10 V USB peak-current reservoir", "SMD D8x10.2 mm", "C963255"),
 ]
 
+MODULAR_PARTS = [
+    ("J9,J10,J11", "CJT", "A2541WV-2x4P", "2x4 2.54 mm vertical AIR-SLOT male header", "THT P2.54mm 2x04", "C225519"),
+    ("C30", "KS", "UT1A221M0810VG", "220 uF 10 V AIR-SLOT reservoir", "SMD D8x10.2 mm", "C963255"),
+]
+
 
 def refs(text: str) -> list[str]:
     return [item.strip() for item in text.split(",")]
@@ -115,7 +120,7 @@ def write_archives(release: Path, revision: str) -> None:
         release / f"IDM-RoomSensor-ESP-{revision}-schematic.pdf",
         release / f"IDM-RoomSensor-ESP-{revision}-top.png",
     ]
-    if revision in {"B-ES3-C6", "B-ES4-AIR"}:
+    if revision in {"B-ES3-C6", "B-ES4-AIR", "B-ES5-MODULAR"}:
         package_files.extend([
             release / "START-HIER-BESTELLUNG.md",
             release / f"{revision}-MECHANIK-BOM.csv",
@@ -126,8 +131,8 @@ def write_archives(release: Path, revision: str) -> None:
             for path in package_files:
                 archive.write(path, path.relative_to(release).as_posix())
 
-    if revision == "B-ES4-AIR" and (release / "Gehaeuse").is_dir() and order.is_file():
-        complete = release / "IDM-RoomSensor-B-ES4-AIR-KOMPLETTPAKET.zip"
+    if revision in {"B-ES4-AIR", "B-ES5-MODULAR"} and (release / "Gehaeuse").is_dir() and order.is_file():
+        complete = release / f"IDM-RoomSensor-{revision}-KOMPLETTPAKET.zip"
         excluded = {complete, release / "DRC.txt"}
         with zipfile.ZipFile(complete, "w", zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
             for path in sorted(release.rglob("*")):
@@ -139,17 +144,19 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("positions", type=Path)
     parser.add_argument("release", type=Path)
-    parser.add_argument("--revision", choices=("B-ES2-C6", "B-ES3-C6", "B-ES4-AIR"), default="B-ES2-C6")
+    parser.add_argument("--revision", choices=("B-ES2-C6", "B-ES3-C6", "B-ES4-AIR", "B-ES5-MODULAR"), default="B-ES2-C6")
     args = parser.parse_args()
     with args.positions.open(newline="", encoding="utf-8-sig") as handle:
         positions = {row["Ref"]: row for row in csv.DictReader(handle)}
 
     parts = list(PARTS)
-    if args.revision in {"B-ES3-C6", "B-ES4-AIR"}:
+    if args.revision in {"B-ES3-C6", "B-ES4-AIR", "B-ES5-MODULAR"}:
         parts[0] = ("J1,J2", "MAX", "MX205R-5.0-04P-GN01-Cu-A", "4-way push-in spring terminal", "THT P5.00mm 1x04", "C7471336")
         parts.extend(ES3_PARTS)
     if args.revision == "B-ES4-AIR":
         parts.extend(AIR_PARTS)
+    if args.revision == "B-ES5-MODULAR":
+        parts.extend(MODULAR_PARTS)
     all_refs = [ref for row in parts for ref in refs(row[0])]
     missing = sorted(set(all_refs) - set(positions))
     if missing:

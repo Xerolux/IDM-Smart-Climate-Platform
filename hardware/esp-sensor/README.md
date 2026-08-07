@@ -1,8 +1,15 @@
 # IDM Room Sensor ESP
 
-The newest manufacturing revision is **B-ES3-C6**, a four-layer engineering
-sample with push-in field terminals, protected 1-Wire, dry-contact and 0-10 V
-inputs, user-switchable RS-485 termination and diagnostic controls.
+The newest manufacturing revision is **B-ES5-MODULAR**, a 130 x 100 mm
+four-layer engineering sample. It keeps ESP32-C6-N16, SHT45, USB-C, 24 V,
+isolated RS-485, 0-10 V input/output, 1-Wire and contact inputs on the base and
+moves CO2, VOC/NOx and pressure onto three universal 25 x 25 mm AIR-SLOT
+modules. The symmetric 2x4 connector is electrically safe after 180-degree
+rotation and each module has its own 3.3 V regulator.
+
+**B-ES4-AIR** remains the lower-cost choice when every unit always needs all
+three air sensors. **B-ES5-MODULAR** is intended for product tiers, later
+upgrades and field-replaceable sensor modules.
 
 Revision **B-ES2-C6** is the smaller baseline engineering
 sample using an ESP32-C6-WROOM-1-N16, native USB-C, SHT45, MCP4725/OPA197
@@ -13,6 +20,12 @@ Revision **B-ES1** remains the simpler ESP32-C3-DevKitM-1 bench-test version.
 
 ## Order files
 
+- B-ES5 complete package: `manufacturing/B-ES5-MODULAR/`
+- B-ES5 PCB/schematic: `IDM-RoomSensor-ESP-B-ES5-MODULAR.kicad_pcb` and
+  `IDM-RoomSensor-ESP-B-ES5-MODULAR.kicad_sch`
+- B-ES5 AIR modules: `modules/`
+- B-ES5 printable enclosure: `enclosure/B-ES5-MODULAR-PRINTING.md`
+- B-ES4 Ultimate package: `manufacturing/B-ES4-AIR/`
 - B-ES3-C6 order instructions: `manufacturing/B-ES3-C6/README.md`
 - B-ES3-C6 PCB source: `IDM-RoomSensor-ESP-B-ES3-C6.kicad_pcb`
 - B-ES3-C6 schematic: `IDM-RoomSensor-ESP-B-ES3-C6.kicad_sch`

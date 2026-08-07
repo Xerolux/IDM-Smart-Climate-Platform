@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "Xerolux-Air")(type "KiCad")(uri "${KIPRJMOD}/../../B-ES4-AIR-lib/Xerolux-Air.pretty")(options "")(descr "Xerolux AIR sensor land patterns"))
+)
