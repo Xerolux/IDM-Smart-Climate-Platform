@@ -99,7 +99,14 @@ def write_archives(release: Path, revision: str) -> None:
         release / "README.md",
         release / f"{revision}-BOM.csv",
         release / f"IDM-RoomSensor-ESP-{revision}-schematic.pdf",
+        release / f"IDM-RoomSensor-ESP-{revision}-top.png",
     ]
+    if revision == "B-ES3-C6":
+        package_files.extend([
+            release / "START-HIER-BESTELLUNG.md",
+            release / "B-ES3-C6-MECHANIK-BOM.csv",
+            release / "RELEASE-VERIFICATION.md",
+        ])
     if all(path.is_file() for path in package_files):
         with zipfile.ZipFile(order, "w", zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
             for path in package_files:
