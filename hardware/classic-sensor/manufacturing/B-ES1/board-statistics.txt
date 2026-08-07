@@ -1,0 +1,61 @@
+Platinenstatistik-Bericht
+=========================
+- Datum: 07.08.2026 12:52:11
+- Projekt: IDM-RoomSensor-Classic-B-ES1
+- Platinennname: IDM-RoomSensor-Classic-B-ES1
+
+Platine
+-----
+- Breite: 145,0000 mm
+- Höhe: 78,0000 mm
+- Fläche: 11310,00 mm²
+- Vorderseitige Kupferfläche: 10612,299 mm²
+- Rückseitige Kupferfläche: 281,376 mm²
+- Min. Leiterbahnfreiraum: 0,2027 mm
+- Min. Leiterbahnbreite: 0,2000 mm
+- Min. Bohrdurchmesser: 0,3000 mm
+- Platinen Lagenaufbaudicke: 1,6000 mm
+
+- Vorderseitige Footprintfläche: 870,504 mm²
+- Rückseitige Footprintfläche: 183,965 mm²
+- Vorderseitige Bauteildichte: 7,70 %
+- Rückseitige Bauteildichte: 1,63 %
+Pads
+----
+- Durchgehende Bohrung: 27
+- SMD: 64
+- Anschluss: 0
+- NPTH: 2
+- Castellated (Halbloch): 0
+- Einpress: 0
+
+Vias
+----
+- Durchkontaktierungen: 27
+- Blinde Vias: 0
+- Vergrabene Vias: 0
+- Mikro-Vias: 0
+
+Bauteile
+----------
+
+|             | Vorderseite | Rückseite | Insgesamt |
+|-------------|-------------|-----------|-----------|
+|Durchsteck:  |           5 |         0 |         5 |
+|SMD:         |          17 |         0 |        17 |
+|Unbestimmt:  |          12 |         0 |        12 |
+|Gesamt:      |          34 |         0 |        34 |
+
+Bohrlöcher
+-----------
+
+| Anzahl |    Form |   Größe X |   Größe Y | Metallisiert |            Via/Pad | Startlage | Endlage |
+|--------|---------|-----------|-----------|--------------|--------------------|-----------|---------|
+|     23 | Rundung | 0,3000 mm | 0,3000 mm |          PTH | Durchkontaktierung |      F.Cu |    B.Cu |
+|     10 | Rundung | 2,0000 mm | 2,0000 mm |          PTH |                Pad |      F.Cu |    B.Cu |
+|      6 | Rundung | 1,0000 mm | 1,0000 mm |          PTH |                Pad |      F.Cu |    B.Cu |
+|      4 | Rundung | 1,0500 mm | 1,0500 mm |          PTH |                Pad |      F.Cu |    B.Cu |
+|      4 | Rundung | 1,2000 mm | 1,2000 mm |          PTH |                Pad |      F.Cu |    B.Cu |
+|      4 | Rundung | 0,4000 mm | 0,4000 mm |          PTH | Durchkontaktierung |      F.Cu |    B.Cu |
+|      3 | Rundung | 0,7500 mm | 0,7500 mm |          PTH |                Pad |      F.Cu |    B.Cu |
+|      2 | Rundung | 3,2000 mm | 3,2000 mm |         NPTH |                Pad |      F.Cu |    B.Cu |

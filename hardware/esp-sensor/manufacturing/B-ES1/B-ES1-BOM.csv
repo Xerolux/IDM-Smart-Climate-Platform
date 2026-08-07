@@ -1,0 +1,22 @@
+Designator,Quantity,Manufacturer,Manufacturer Part Number,Description,Footprint,Assembly,Status
+PCB1,1,Custom,IDM-RoomSensor-ESP-B-ES1,2-layer engineering sample PCB 145x78mm,,PCB fab,Order Gerber ZIP
+J1,1,Phoenix Contact,1984633,PT 1.5/4-3.5-H 4-position terminal block,PT-1.5-4-3.5-H THT,Hand,Required
+F1 clips,2,Littelfuse,111,5x20mm PCB fuse clips,20mm clip spacing THT,Hand,Required
+F1 fuse,1,Littelfuse,0218.500MXP,500mA 250V time-lag fuse,5x20mm,Hand,Required
+D1,1,Vishay,SS16-E3/61T,1A 60V Schottky diode,SMA,SMT,Required
+U1,1,Traco Power,TSR 1-2450,6.5-36V input 5V 1A switching regulator,TSR-1 SIP3,Hand,Required
+A1,1,Espressif,ESP32-C3-DevKitM-1,ESP32-C3 development board,2x15 THT module,Hand,Required
+U3,1,Sensirion,SHT45-AD1B-R2,Digital humidity and temperature sensor,DFN-4 1.5x1.5mm,SMT,Required
+U4,1,Microchip,MCP4725A0T-E/CH,12-bit I2C DAC,SOT-23-6,SMT,Required
+U5,1,Texas Instruments,OPA197IDBVR,36V precision rail-to-rail op amp,SOT-23-5,SMT,Required
+RTH1,1,NXP,"KTY81/210,112",Silicon temperature sensor 2k at 25C,SOD70 / TO-92 inline,Hand,Obsolete - source verified stock and verify IDM characteristic
+R1 R2,2,Yageo,RC0603FR-074K7L,4.7k 1% resistor,0603,SMT,Required
+R3,1,Panasonic,ERA-3AEB2032V,20.3k 0.1% thin-film resistor,0603,SMT,Required
+R4,1,Panasonic,ERA-3AEB103V,10k 0.1% thin-film resistor,0603,SMT,Required
+R5,1,Yageo,RC0603FR-07220RL,220 ohm 1% resistor,0603,SMT,Required
+C1,1,Murata,GRM32ER71H226KE15L,22uF 50V X7R capacitor,1210,SMT,Required
+C2 C5 C6,3,Murata,GRM188R71H104KA93D,100nF 50V X7R capacitor,0603,SMT,Required
+C3,1,Murata,GRM21BR71A106KE51L,10uF 10V X7R capacitor,0805,SMT,Required
+C4,1,Murata,GRM188R71C104KA01D,100nF 16V X7R capacitor,0603,SMT,Required
+TP1-TP10,10,Generic,DNP-wire-loop,Optional plated-hole test loops,2.0mm plated hole,Hand,Optional
+H1 H2,2,Generic,M3 hardware,M3 mounting screws and spacers,3.2mm NPTH,Mechanical,Optional
