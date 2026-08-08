@@ -166,10 +166,19 @@ def main() -> None:
         parts.extend(AIR_PARTS)
     if args.revision == "B-ES4-AIR-R2":
         parts[2] = ("F1", "BHFUSE", "BSMD1812-050-60V", "500 mA hold 60 V resettable fuse", "1812", "C883142")
-        for index, row in enumerate(parts):
-            if row[0] == "R24":
-                parts[index] = ("R24", "UNI-ROYAL", "0603WAF1802T5E", "18 kohm 1% switchable VIN LED resistor", "0603", "C25810")
-                break
+        # Stock snapshot 2026-08-08: drop-in alternatives selected after a
+        # complete JLCPCB BOM review. Critical ICs and connectors stay exact.
+        r2_overrides = {
+            "C1": ("C1", "TDK", "C3225X7S2A475KT003S", "4.7 uF 100 V X7S 10% MLCC", "1210", "C694475"),
+            "C2": ("C2", "KEMET", "C0805C224K1RACTU", "220 nF 100 V X7R 10%", "0805", "C2167405"),
+            "R9": ("R9", "TA-I Tech", "RMS06FT2102", "21 kohm 1%; calibrated gain headroom", "0603", "C209071"),
+            "C14,C17": ("C14,C17", "Walsin", "0805B104K500CT", "100 nF 50 V X7R 10%", "0805", "C83055"),
+            "R24": ("R24", "UNI-ROYAL", "0603WAF1802T5E", "18 kohm 1% switchable VIN LED resistor", "0603", "C25810"),
+            "TVS5": ("TVS5", "UMW", "PESD12VL1BA", "12 V bidirectional 0-10 V input protection", "SOD-323", "C2687119"),
+            "C22,C26,C27": ("C22,C26,C27", "Walsin", "0805B104K500CT", "100 nF 50 V X7R 10%", "0805", "C83055"),
+            "C30": ("C30", "Panasonic", "EEEHB1A221AP", "220 uF 10 V USB peak-current reservoir", "SMD D8x10.2 mm", "C401791"),
+        }
+        parts = [r2_overrides.get(row[0], row) for row in parts]
         parts.extend(AIR_R2_PARTS)
     if args.revision == "B-ES5-MODULAR":
         parts.extend(MODULAR_PARTS)
