@@ -7,9 +7,12 @@ moves CO2, VOC/NOx and pressure onto three universal 25 x 25 mm AIR-SLOT
 modules. The symmetric 2x4 connector is electrically safe after 180-degree
 rotation and each module has its own 3.3 V regulator.
 
-**B-ES4-AIR** remains the lower-cost choice when every unit always needs all
-three air sensors. **B-ES5-MODULAR** is intended for product tiers, later
-upgrades and field-replaceable sensor modules.
+**B-ES4-AIR-R2 Ultimate** is the all-sensors-fitted revision. It adds a
+protected 6-32 VDC input rating, individually switchable LEDs and a
+potential-free COM/NO/NC signal relay while retaining USB-C power/programming.
+USB and external DC may be connected simultaneously through separate
+Schottky OR-ing diodes. **B-ES5-MODULAR** remains intended for product tiers,
+later upgrades and field-replaceable sensor modules.
 
 Revision **B-ES2-C6** is the smaller baseline engineering
 sample using an ESP32-C6-WROOM-1-N16, native USB-C, SHT45, MCP4725/OPA197
@@ -26,6 +29,7 @@ Revision **B-ES1** remains the simpler ESP32-C3-DevKitM-1 bench-test version.
 - B-ES5 AIR modules: `modules/`
 - B-ES5 printable enclosure: `enclosure/B-ES5-MODULAR-PRINTING.md`
 - B-ES4 Ultimate package: `manufacturing/B-ES4-AIR/`
+- B-ES4 Ultimate R2 package: `manufacturing/B-ES4-AIR-R2/`
 - B-ES3-C6 order instructions: `manufacturing/B-ES3-C6/README.md`
 - B-ES3-C6 PCB source: `IDM-RoomSensor-ESP-B-ES3-C6.kicad_pcb`
 - B-ES3-C6 schematic: `IDM-RoomSensor-ESP-B-ES3-C6.kicad_sch`

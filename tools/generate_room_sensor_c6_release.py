@@ -83,6 +83,15 @@ AIR_PARTS = [
     ("C30", "KS", "UT1A221M0810VG", "220 uF 10 V USB peak-current reservoir", "SMD D8x10.2 mm", "C963255"),
 ]
 
+AIR_R2_PARTS = [
+    ("Q1,Q2", "Yangzhou Yangjie Electronic Technology", "2N7002", "60 V N-channel MOSFET for LED and relay switching", "SOT-23", "C8545"),
+    ("R27,R29", "UNI-ROYAL", "0603WAF1003T5E", "100 kohm gate pull-down", "0603", "C25803"),
+    ("R28", "UNI-ROYAL", "0603WAF1000T5E", "100 ohm relay gate resistor", "0603", "C22775"),
+    ("D5", "Jiangsu Changjing Electronics Technology", "1N4148WS", "100 V relay-coil flyback diode", "SOD-323", "C2128"),
+    ("K1", "Hongfa", "HFD4/5", "5 V DPDT potential-free signal relay; one changeover contact used", "DIP 10x6.5 mm", "C23510"),
+    ("J9", "MAX", "MX205R-5.0-03P-GN01-Cu-A", "COM/NO/NC push-in spring terminal", "THT P5.00mm 1x03", "C7471335"),
+]
+
 MODULAR_PARTS = [
     ("J9,J10,J11", "CJT", "A2541WV-2x4P", "2x4 2.54 mm vertical AIR-SLOT male header", "THT P2.54mm 2x04", "C225519"),
     ("C30", "KS", "UT1A221M0810VG", "220 uF 10 V AIR-SLOT reservoir", "SMD D8x10.2 mm", "C963255"),
@@ -120,7 +129,7 @@ def write_archives(release: Path, revision: str) -> None:
         release / f"IDM-RoomSensor-ESP-{revision}-schematic.pdf",
         release / f"IDM-RoomSensor-ESP-{revision}-top.png",
     ]
-    if revision in {"B-ES3-C6", "B-ES4-AIR", "B-ES5-MODULAR"}:
+    if revision in {"B-ES3-C6", "B-ES4-AIR", "B-ES4-AIR-R2", "B-ES5-MODULAR"}:
         package_files.extend([
             release / "START-HIER-BESTELLUNG.md",
             release / f"{revision}-MECHANIK-BOM.csv",
@@ -131,7 +140,7 @@ def write_archives(release: Path, revision: str) -> None:
             for path in package_files:
                 archive.write(path, path.relative_to(release).as_posix())
 
-    if revision in {"B-ES4-AIR", "B-ES5-MODULAR"} and (release / "Gehaeuse").is_dir() and order.is_file():
+    if revision in {"B-ES4-AIR", "B-ES4-AIR-R2", "B-ES5-MODULAR"} and (release / "Gehaeuse").is_dir() and order.is_file():
         complete = release / f"IDM-RoomSensor-{revision}-KOMPLETTPAKET.zip"
         excluded = {complete, release / "DRC.txt"}
         with zipfile.ZipFile(complete, "w", zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
@@ -144,17 +153,24 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("positions", type=Path)
     parser.add_argument("release", type=Path)
-    parser.add_argument("--revision", choices=("B-ES2-C6", "B-ES3-C6", "B-ES4-AIR", "B-ES5-MODULAR"), default="B-ES2-C6")
+    parser.add_argument("--revision", choices=("B-ES2-C6", "B-ES3-C6", "B-ES4-AIR", "B-ES4-AIR-R2", "B-ES5-MODULAR"), default="B-ES2-C6")
     args = parser.parse_args()
     with args.positions.open(newline="", encoding="utf-8-sig") as handle:
         positions = {row["Ref"]: row for row in csv.DictReader(handle)}
 
     parts = list(PARTS)
-    if args.revision in {"B-ES3-C6", "B-ES4-AIR", "B-ES5-MODULAR"}:
+    if args.revision in {"B-ES3-C6", "B-ES4-AIR", "B-ES4-AIR-R2", "B-ES5-MODULAR"}:
         parts[0] = ("J1,J2", "MAX", "MX205R-5.0-04P-GN01-Cu-A", "4-way push-in spring terminal", "THT P5.00mm 1x04", "C7471336")
         parts.extend(ES3_PARTS)
-    if args.revision == "B-ES4-AIR":
+    if args.revision in {"B-ES4-AIR", "B-ES4-AIR-R2"}:
         parts.extend(AIR_PARTS)
+    if args.revision == "B-ES4-AIR-R2":
+        parts[2] = ("F1", "BHFUSE", "BSMD1812-050-60V", "500 mA hold 60 V resettable fuse", "1812", "C883142")
+        for index, row in enumerate(parts):
+            if row[0] == "R24":
+                parts[index] = ("R24", "UNI-ROYAL", "0603WAF1802T5E", "18 kohm 1% switchable VIN LED resistor", "0603", "C25810")
+                break
+        parts.extend(AIR_R2_PARTS)
     if args.revision == "B-ES5-MODULAR":
         parts.extend(MODULAR_PARTS)
     all_refs = [ref for row in parts for ref in refs(row[0])]

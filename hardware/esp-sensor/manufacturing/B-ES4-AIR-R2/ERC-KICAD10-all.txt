@@ -1,0 +1,21 @@
+ERC report (2026-08-08T06:47:08, Encoding UTF8)
+Report includes: Errors, Warnings, Exclusions
+
+***** Sheet /
+[lib_symbol_mismatch]: Symbol "2N7002" stimmt nicht mit Kopie in Bibliothek "Transistor_FET" überein
+    ; warning
+    @(234.95 mm, 314.96 mm): Symbol Q2 [2N7002]
+[lib_symbol_mismatch]: Symbol "2N7002" stimmt nicht mit Kopie in Bibliothek "Transistor_FET" überein
+    ; warning
+    @(245.11 mm, 255.27 mm): Symbol Q1 [2N7002]
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(299.72 mm, 134.62 mm): Label 'RS485_SHIELD'
+
+ ** ERC messages: 3  Errors 0  Warnings 3
+
+ ** Ignored checks:
+    - Global label only appears once in the schematic
+    - Four connection points are joined together
+    - SPICE model issue
+    - Assigned footprint doesn't match footprint filters

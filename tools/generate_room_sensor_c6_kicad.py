@@ -54,8 +54,9 @@ def add_passive(builder: Builder, ref: str, kind: str, center, value: str,
 
 
 def build(revision: str = "B-ES2-C6"):
-    extended = revision in {"B-ES3-C6", "B-ES4-AIR", "B-ES5-MODULAR"}
-    air = revision == "B-ES4-AIR"
+    extended = revision in {"B-ES3-C6", "B-ES4-AIR", "B-ES4-AIR-R2", "B-ES5-MODULAR"}
+    air = revision in {"B-ES4-AIR", "B-ES4-AIR-R2"}
+    air_r2 = revision == "B-ES4-AIR-R2"
     modular = revision == "B-ES5-MODULAR"
     terminal = lambda pins: (
         f"TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-{pins:02d}P_1x{pins:02d}_P5.00mm"
@@ -65,11 +66,13 @@ def build(revision: str = "B-ES2-C6"):
     b = C6Builder()
     b.sch.titleBlock = TitleBlock(
         title=f"IDM Room Sensor {revision} - USB-C / RS-485 / 0-10 V",
-        date="2026-08-07", revision="B-ES2-C6",
+        date="2026-08-08", revision=revision,
         company="IDM Smart Climate Platform",
         comments={
             1: "ENGINEERING SAMPLE - BENCH VALIDATION REQUIRED BEFORE IDM CONNECTION",
-            2: "ESP32-C6-WROOM-1-N16; USB-C; isolated Modbus RS-485",
+            2: ("ESP32-C6-N16; USB-C; 6-32 VDC; switchable LEDs; dry relay"
+                if air_r2 else
+                "ESP32-C6-WROOM-1-N16; USB-C; isolated Modbus RS-485"),
             3: ("SHT45 + SCD41 + SGP41 + BMP390 indoor-air sensing"
                 if air else
                 "SHT45 plus three rotation-safe Xerolux AIR-SLOT sockets"
@@ -84,7 +87,9 @@ def build(revision: str = "B-ES2-C6"):
     title(b, "0-10 V and isolated RS-485", 245, 35)
 
     b.add(reference="J1", nickname="Connector_Generic", entry="Conn_01x04",
-        center=(25, 58), value="1-2834011-4 / IDM 43 TEMP / 42 +24V / 41 GND / 40 RH",
+        center=(25, 58), value=("MX205R / 43 TEMP / 42 +6-32V / 41 GND / 40 RH"
+                               if air_r2 else
+                               "1-2834011-4 / IDM 43 TEMP / 42 +24V / 41 GND / 40 RH"),
         footprint=terminal(4),
         datasheet="https://www.te.com/usa-en/product-1-2834011-4.html",
         nets={"1":"TEMP_KTY", "2":"24V_RAW", "3":"GND", "4":"RH_OUT"})
@@ -92,7 +97,9 @@ def build(revision: str = "B-ES2-C6"):
         center=(25, 82), value="KTY81/210,112", footprint="Package_TO_SOT_THT:TO-92_Inline",
         datasheet="https://www.nxp.com/docs/en/data-sheet/KTY81_SER.pdf",
         nets={"1":"TEMP_KTY", "2":"GND"})
-    add_passive(b, "F1", "Polyfuse", (50,58), "1812L050/30PR 500mA", "Fuse:Fuse_1812_4532Metric", {"1":"24V_RAW","2":"24V_FUSED"})
+    add_passive(b, "F1", "Polyfuse", (50,58),
+        "BSMD1812-050-60V 500mA" if air_r2 else "1812L050/30PR 500mA",
+        "Fuse:Fuse_1812_4532Metric", {"1":"24V_RAW","2":"24V_FUSED"})
     add_passive(b, "D1", "D_Schottky", (70,58), "SS16 60V", "Diode_SMD:D_SMA", {"1":"24V_PROT","2":"24V_FUSED"})
     add_passive(b, "TVS1", "D_TVS", (70,82), "SMBJ33A", "Diode_SMD:D_SMB", {"1":"GND","2":"24V_PROT"})
     b.add(reference="U1", nickname="Regulator_Switching", entry="LMR36510ADDA",
@@ -129,6 +136,9 @@ def build(revision: str = "B-ES2-C6"):
     if extended:
         c6_nets.update({"8":"ADC_0_10", "16":"CONTACT1", "17":"CONTACT2",
                         "18":"SERVICE_BUTTON", "20":"BUS_LED"})
+    if air_r2:
+        c6_nets.pop("10")
+        c6_nets.update({"11":"STATUS_LED", "19":"PWR_LED_EN", "26":"RELAY_CTRL"})
     c6_nc={str(n) for n in range(1,31)}-set(c6_nets)
     b.add(reference="U3", nickname="Connector_Generic", entry="Conn_02x15_Odd_Even",
         center=(150,125), value="ESP32-C6-WROOM-1-N16 (pins per Espressif datasheet)",
@@ -196,10 +206,13 @@ def build(revision: str = "B-ES2-C6"):
         b.add(reference="JP1",nickname="Jumper",entry="Jumper_2_Open",center=(315,155),value="RS485 TERM ENABLE",
             footprint="Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm",datasheet="~",nets={"1":"RS485_TERM","2":"RS485_B"})
 
-    b.add(reference="J4",nickname="Connector_Generic",entry="Conn_01x08",center=(145,180),value="EXPANSION",
+    b.add(reference="J4",nickname="Connector_Generic",entry="Conn_01x08",center=(145,180),
+        value="EXPANSION / LED_EN / RELAY" if air_r2 else "EXPANSION",
         footprint="Connector_JST:JST_SH_SM08B-SRSS-TB_1x08-1MP_P1.00mm_Horizontal",datasheet="~",
-        nets={"1":"+3V3","2":"GND","3":"I2C_SDA","4":"I2C_SCL","5":"ONEWIRE","6":"EXP_GPIO4","7":"EXP_GPIO5","8":"SYS_5V"})
-    add_passive(b,"LED1","LED",(195,180),"STATUS GREEN","LED_SMD:LED_0603_1608Metric",{"1":"STATUS_LED_R","2":"GND"})
+        nets={"1":"+3V3","2":"GND","3":"I2C_SDA","4":"I2C_SCL","5":"ONEWIRE",
+              "6":"EXP_GPIO4","7":"EXP_GPIO5","8":"SYS_5V"})
+    add_passive(b,"LED1","LED",(195,180),"STATUS GREEN","LED_SMD:LED_0603_1608Metric",
+                {"1":"GND","2":"STATUS_LED_R"} if air_r2 else {"1":"STATUS_LED_R","2":"GND"})
     add_passive(b,"R13","R",(180,180),"1k","Resistor_SMD:R_0603_1608Metric",{"1":"STATUS_LED","2":"STATUS_LED_R"})
 
     if extended:
@@ -243,10 +256,41 @@ def build(revision: str = "B-ES2-C6"):
         b.add(reference="SW4",nickname="Switch",entry="SW_Push",center=(205,235),value="SERVICE / IDENTIFY",
             footprint="Button_Switch_SMD:SW_SPST_B3U-1000P",datasheet="~",nets={"1":"SERVICE_BUTTON","2":"GND"})
         add_passive(b,"R23","R",(225,235),"10k","Resistor_SMD:R_0603_1608Metric",{"1":"+3V3","2":"SERVICE_BUTTON"})
-        add_passive(b,"R24","R",(205,255),"12k","Resistor_SMD:R_0603_1608Metric",{"1":"24V_PROT","2":"PWR24_LED_R"})
-        add_passive(b,"LED2","LED",(225,255),"24V GREEN","LED_SMD:LED_0603_1608Metric",{"1":"PWR24_LED_R","2":"GND"})
+        add_passive(b,"R24","R",(205,255),"18k" if air_r2 else "12k","Resistor_SMD:R_0603_1608Metric",{"1":"24V_PROT","2":"PWR24_LED_R"})
+        add_passive(b,"LED2","LED",(225,255),"VIN GREEN","LED_SMD:LED_0603_1608Metric",
+                    {"1":"PWR_LED_K","2":"PWR24_LED_R"} if air_r2 else {"1":"PWR24_LED_R","2":"GND"})
         add_passive(b,"R25","R",(205,270),"1k","Resistor_SMD:R_0603_1608Metric",{"1":"BUS_LED","2":"BUS_LED_R"})
-        add_passive(b,"LED3","LED",(225,270),"BUS GREEN","LED_SMD:LED_0603_1608Metric",{"1":"BUS_LED_R","2":"GND"})
+        add_passive(b,"LED3","LED",(225,270),"BUS GREEN","LED_SMD:LED_0603_1608Metric",
+                    {"1":"GND","2":"BUS_LED_R"} if air_r2 else {"1":"BUS_LED_R","2":"GND"})
+
+        if air_r2:
+            b.add(reference="Q1", nickname="Transistor_FET", entry="2N7002", center=(245,255),
+                value="2N7002 60V VIN LED switch", footprint="Package_TO_SOT_SMD:SOT-23",
+                datasheet="https://assets.nexperia.com/documents/data-sheet/2N7002.pdf",
+                nets={"1":"PWR_LED_EN","2":"GND","3":"PWR_LED_K"})
+            add_passive(b,"R27","R",(265,255),"100k","Resistor_SMD:R_0603_1608Metric",
+                        {"1":"PWR_LED_EN","2":"GND"})
+            title(b, "Potential-free signal relay output (SELV only)", 260, 292)
+            b.add(reference="K1", nickname="Connector_Generic", entry="Conn_02x04_Odd_Even",
+                center=(280,315), value="HFD4/5 5V DPDT signal relay",
+                footprint="Custom:Relay_Hongfa_HFD4_DIP",
+                datasheet="https://en.hongfa.com/product/signal-relay/HFD4",
+                nets={"1":"SYS_5V","2":"RELAY_NC","3":"RELAY_COM","4":"RELAY_NO","8":"RELAY_COIL_L"},
+                no_connect={"5","6","7"})
+            b.add(reference="Q2", nickname="Transistor_FET", entry="2N7002", center=(235,315),
+                value="2N7002 relay driver", footprint="Package_TO_SOT_SMD:SOT-23",
+                datasheet="https://assets.nexperia.com/documents/data-sheet/2N7002.pdf",
+                nets={"1":"RELAY_GATE","2":"GND","3":"RELAY_COIL_L"})
+            add_passive(b,"D5","D",(255,315),"1N4148WS 100V flyback","Diode_SMD:D_SOD-323",
+                        {"1":"SYS_5V","2":"RELAY_COIL_L"})
+            add_passive(b,"R28","R",(225,300),"100R","Resistor_SMD:R_0603_1608Metric",
+                        {"1":"RELAY_CTRL","2":"RELAY_GATE"})
+            add_passive(b,"R29","R",(235,335),"100k","Resistor_SMD:R_0603_1608Metric",
+                        {"1":"RELAY_GATE","2":"GND"})
+            b.add(reference="J9",nickname="Connector_Generic",entry="Conn_01x03",center=(320,315),
+                value="MX205R PUSH-IN / COM / NO / NC",footprint=terminal(3),
+                datasheet="https://www.lcsc.com/product-detail/C7471335.html",
+                nets={"1":"RELAY_COM","2":"RELAY_NO","3":"RELAY_NC"})
 
     if air:
         title(b, "Ultimate AIR: CO2, VOC, NOx and barometric pressure", 155, 292)
@@ -318,7 +362,7 @@ def build(revision: str = "B-ES2-C6"):
 
 def main() -> None:
     parser=argparse.ArgumentParser(); parser.add_argument("output",type=Path)
-    parser.add_argument("--revision",choices=("B-ES2-C6","B-ES3-C6","B-ES4-AIR","B-ES5-MODULAR"),default="B-ES2-C6"); args=parser.parse_args()
+    parser.add_argument("--revision",choices=("B-ES2-C6","B-ES3-C6","B-ES4-AIR","B-ES4-AIR-R2","B-ES5-MODULAR"),default="B-ES2-C6"); args=parser.parse_args()
     args.output.parent.mkdir(parents=True,exist_ok=True); build(args.revision).to_file(args.output,encoding="utf-8")
 
 

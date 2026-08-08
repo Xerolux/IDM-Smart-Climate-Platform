@@ -51,9 +51,27 @@ def custom_c6(board):
     return fp
 
 
+def custom_hfd4(board):
+    """Hongfa HFD4 DIP: 2.54 mm columns, 5.08 mm row spacing."""
+    fp=pcbnew.FOOTPRINT(board); fp.SetReference("K1"); fp.SetValue("HFD4/5")
+    fp.SetFPID(pcbnew.LIB_ID("Custom","Relay_Hongfa_HFD4_DIP"))
+    positions={"1":(-3.81,-2.54),"2":(-1.27,-2.54),"3":(1.27,-2.54),"4":(3.81,-2.54),
+               "8":(-3.81,2.54),"7":(-1.27,2.54),"6":(1.27,2.54),"5":(3.81,2.54)}
+    for number,(x,y) in positions.items():
+        pad=pcbnew.PAD(fp); pad.SetNumber(number); pad.SetAttribute(pcbnew.PAD_ATTRIB_PTH)
+        pad.SetShape(pcbnew.PAD_SHAPE_RECT if number=="1" else pcbnew.PAD_SHAPE_CIRCLE)
+        layers=pcbnew.LSET.AllCuMask(); layers.AddLayer(pcbnew.F_Mask); layers.AddLayer(pcbnew.B_Mask)
+        pad.SetSize(point(1.6,1.6)); pad.SetDrillSize(point(.9,.9)); pad.SetLayerSet(layers)
+        pad.SetFPRelativePosition(point(x,y)); fp.Add(pad)
+    for layer in (pcbnew.F_SilkS,pcbnew.F_Fab):
+        for a,c in zip(((-5,-3.25),(5,-3.25),(5,3.25),(-5,3.25)),((5,-3.25),(5,3.25),(-5,3.25),(-5,-3.25))):
+            line=pcbnew.PCB_SHAPE(fp); line.SetShape(pcbnew.SHAPE_T_SEGMENT); line.SetStart(point(*a)); line.SetEnd(point(*c)); line.SetLayer(layer); line.SetWidth(mm(.15)); fp.Add(line)
+    return fp
+
+
 def add_part(board,nets,spec):
     ref,val,lib,name,x,y,rot,pmap=spec
-    fp=custom_c6(board) if lib=="Custom" else load(lib,name)
+    fp=custom_c6(board) if lib=="Custom" else custom_hfd4(board) if lib=="Xerolux-Relay" else load(lib,name)
     fp.SetReference(ref); fp.SetValue(val); fp.SetPosition(point(x,y)); fp.SetOrientationDegrees(rot)
     for pad in fp.Pads():
         net=pmap.get(pad.GetNumber())
@@ -73,8 +91,9 @@ def keepout(board,layer,coords):
 
 
 def build(revision="B-ES2-C6"):
-    extended=revision in {"B-ES3-C6","B-ES4-AIR","B-ES5-MODULAR"}
-    air=revision=="B-ES4-AIR"
+    extended=revision in {"B-ES3-C6","B-ES4-AIR","B-ES4-AIR-R2","B-ES5-MODULAR"}
+    air=revision in {"B-ES4-AIR","B-ES4-AIR-R2"}
+    air_r2=revision=="B-ES4-AIR-R2"
     modular=revision=="B-ES5-MODULAR"
     tall=air or modular
     right,bottom=(140,110) if tall else ((140,90) if extended else (120,80))
@@ -86,6 +105,7 @@ def build(revision="B-ES2-C6"):
         names += ["ONEWIRE_EXT","CONTACT1","CONTACT2","CONTACT1_EXT","CONTACT2_EXT","SERVICE_BUTTON",
                   "BUS_LED","BUS_LED_R","PWR24_LED_R","AIN_0_10_RAW","AIN_DIV","ADC_0_10"]
     if air: names += ["AIR_3V3","SGP_VDD"]
+    if air_r2: names += ["PWR_LED_EN","PWR_LED_K","RELAY_CTRL","RELAY_GATE","RELAY_COIL_L","RELAY_COM","RELAY_NO","RELAY_NC"]
     nets={}
     for n in names:
         ni=pcbnew.NETINFO_ITEM(b,n); b.Add(ni); nets[n]=ni
@@ -95,7 +115,7 @@ def build(revision="B-ES2-C6"):
     term=lambda pins: (f"TerminalBlock_MaiXu_MX126-5.0-{pins:02d}P_1x{pins:02d}_P5.00mm" if extended else f"TerminalBlock_Phoenix_PT-1,5-{pins}-3.5-H_1x{pins:02d}_P3.50mm_Horizontal")
     p("J1","MX205R PUSH-IN 43/42/41/40" if extended else "43/42/41/40",term_lib,term(4),16,66,90,{1:"TEMP_KTY",2:"24V_RAW",3:"GND",4:"RH_OUT"})
     p("RTH1","KTY81/210,112","Package_TO_SOT_THT","TO-92_Inline",27 if extended else 18,46,0,{1:"TEMP_KTY",2:"GND"})
-    p("F1","1812L050/30PR","Fuse","Fuse_1812_4532Metric",29,66,0,{1:"24V_RAW",2:"24V_FUSED"})
+    p("F1","BSMD1812-050-60V" if air_r2 else "1812L050/30PR","Fuse","Fuse_1812_4532Metric",29,66,0,{1:"24V_RAW",2:"24V_FUSED"})
     p("D1","SS16","Diode_SMD","D_SMA",38,66,0,{1:"24V_PROT",2:"24V_FUSED"}); p("TVS1","SMBJ33A","Diode_SMD","D_SMB",38,73,90,{1:"GND",2:"24V_PROT"})
     p("U1","LMR36510ADDAR","Package_SO","TI_SO-PowerPAD-8_ThermalVias",49,65,0,{1:"GND",2:"24V_PROT",3:"24V_PROT",4:"PWR_GOOD",5:"BUCK_FB",6:"VCC_BYP",7:"BOOT",8:"SW",9:"GND"})
     p("L1","SRP1038A-330M","Inductor_SMD","L_10.4x10.4_H4.8",61,65,0,{1:"SW",2:"5V_BUCK"})
@@ -109,6 +129,9 @@ def build(revision="B-ES2-C6"):
     p("C7","10u","Capacitor_SMD","C_0805_2012Metric",77,59,0,{1:"SYS_5V",2:"GND"}); p("C8","22u","Capacitor_SMD","C_0805_2012Metric",84,59,0,{1:"+3V3",2:"GND"})
     c6={1:"GND",2:"+3V3",3:"C6_EN",4:"EXP_GPIO4",5:"EXP_GPIO5",6:"I2C_SDA",7:"I2C_SCL",10:"STATUS_LED",13:"USB_D-",14:"USB_D+",15:"C6_BOOT",21:"ONEWIRE",24:"RS485_RX",25:"RS485_TX",27:"RS485_DE",28:"GND",29:"GND"}
     if extended: c6.update({8:"ADC_0_10",16:"CONTACT1",17:"CONTACT2",18:"SERVICE_BUTTON",20:"BUS_LED"})
+    if air_r2:
+        c6.pop(10)
+        c6.update({11:"STATUS_LED",19:"PWR_LED_EN",26:"RELAY_CTRL"})
     p("U3","ESP32-C6-WROOM-1-N16","Custom","ESP32-C6-WROOM-1",55,22.75,0,c6)
     p("J3","USB-C","Connector_USB","USB_C_Receptacle_HRO_TYPE-C-31-M-12",103 if modular else 75,107.2 if tall else (87.2 if extended else 77.2),0,{"A1":"GND","A4":"USB_5V","A5":"USB_CC1","A6":"USB_D+","A7":"USB_D-","A9":"USB_5V","A12":"GND","B1":"GND","B4":"USB_5V","B5":"USB_CC2","B6":"USB_D+","B7":"USB_D-","B9":"USB_5V","B12":"GND","SH":"GND"})
     p("ESD1","USBLC6-2SC6","Package_TO_SOT_SMD","SOT-23-6",75,68,0,{1:"USB_D-",2:"GND",3:"USB_D+",4:"USB_D+",5:"USB_5V",6:"USB_D-"})
@@ -129,7 +152,7 @@ def build(revision="B-ES2-C6"):
     if extended: p("SW3","TERM ON/OFF","Button_Switch_SMD","SW_DIP_SPSTx01_Slide_Copal_CHS-01B_W7.62mm_P1.27mm",122,63,90,{1:"RS485_TERM",2:"RS485_B"})
     else: p("JP1","TERM","Jumper","SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm",116,63,90,{1:"RS485_TERM",2:"RS485_B"})
     p("J4","EXPANSION","Connector_JST","JST_SH_SM08B-SRSS-TB_1x08-1MP_P1.00mm_Horizontal",119 if modular else 88,106.5 if tall else (86.5 if extended else 76.5),0,{1:"+3V3",2:"GND",3:"I2C_SDA",4:"I2C_SCL",5:"ONEWIRE",6:"EXP_GPIO4",7:"EXP_GPIO5",8:"SYS_5V"})
-    p("LED1","STATUS","LED_SMD","LED_0603_1608Metric",82,40,0,{1:"STATUS_LED_R",2:"GND"}); p("R13","1k","Resistor_SMD","R_0603_1608Metric",78,40,0,{1:"STATUS_LED",2:"STATUS_LED_R"})
+    p("LED1","STATUS","LED_SMD","LED_0603_1608Metric",82,40,0,{1:"GND",2:"STATUS_LED_R"} if air_r2 else {1:"STATUS_LED_R",2:"GND"}); p("R13","1k","Resistor_SMD","R_0603_1608Metric",78,40,0,{1:"STATUS_LED",2:"STATUS_LED_R"})
     if extended:
         p("J5","1WIRE A 3V/DQ/GND",term_lib,term(3),84,15,0,{1:"+3V3",2:"ONEWIRE_EXT",3:"GND"})
         p("J6","1WIRE B 3V/DQ/GND",term_lib,term(3),104,15,0,{1:"+3V3",2:"ONEWIRE_EXT",3:"GND"})
@@ -141,8 +164,17 @@ def build(revision="B-ES2-C6"):
         p("C19","100n","Capacitor_SMD","C_0603_1608Metric",112,31,0,{1:"CONTACT1",2:"GND"}); p("C20","100n","Capacitor_SMD","C_0603_1608Metric",124,31,0,{1:"CONTACT2",2:"GND"})
         p("TVS3","3V3 ESD","Diode_SMD","D_SOD-323",108,25,0,{1:"GND",2:"CONTACT1_EXT"}); p("TVS4","3V3 ESD","Diode_SMD","D_SOD-323",128,25,0,{1:"GND",2:"CONTACT2_EXT"})
         p("TVS5","12V ESD","Diode_SMD","D_SOD-323",127,75,90,{1:"GND",2:"AIN_0_10_RAW"}); p("R20","33k","Resistor_SMD","R_0603_1608Metric",124,72,0,{1:"AIN_0_10_RAW",2:"AIN_DIV"}); p("R21","10k","Resistor_SMD","R_0603_1608Metric",124,75,0,{1:"AIN_DIV",2:"GND"}); p("R22","1k","Resistor_SMD","R_0603_1608Metric",120,72,0,{1:"AIN_DIV",2:"ADC_0_10"}); p("C21","100n","Capacitor_SMD","C_0603_1608Metric",120,75,0,{1:"ADC_0_10",2:"GND"}); p("D4","BAT54S","Package_TO_SOT_SMD","SOT-23",116,74,0,{1:"GND",2:"+3V3",3:"ADC_0_10"})
-        p("SW4","SERVICE","Button_Switch_SMD","SW_SPST_B3U-1000P",116 if modular else 108,96 if modular else (104 if tall else 85),0,{1:"SERVICE_BUTTON",2:"GND"}); p("R23","10k","Resistor_SMD","R_0603_1608Metric",111 if modular else 103,96 if modular else (104 if tall else 85),0,{1:"+3V3",2:"SERVICE_BUTTON"})
-        p("R24","12k","Resistor_SMD","R_0603_1608Metric",91,40,0,{1:"24V_PROT",2:"PWR24_LED_R"}); p("LED2","24V","LED_SMD","LED_0603_1608Metric",95,40,0,{1:"PWR24_LED_R",2:"GND"}); p("R25","1k","Resistor_SMD","R_0603_1608Metric",100,40,0,{1:"BUS_LED",2:"BUS_LED_R"}); p("LED3","BUS GREEN","LED_SMD","LED_0603_1608Metric",104,40,0,{1:"BUS_LED_R",2:"GND"})
+        p("SW4","SERVICE","Button_Switch_SMD","SW_SPST_B3U-1000P",87 if air_r2 else (116 if modular else 108),100 if air_r2 else (96 if modular else (104 if tall else 85)),0,{1:"SERVICE_BUTTON",2:"GND"}); p("R23","10k","Resistor_SMD","R_0603_1608Metric",82 if air_r2 else (111 if modular else 103),100 if air_r2 else (96 if modular else (104 if tall else 85)),0,{1:"+3V3",2:"SERVICE_BUTTON"})
+        p("R24","18k" if air_r2 else "12k","Resistor_SMD","R_0603_1608Metric",91,40,0,{1:"24V_PROT",2:"PWR24_LED_R"}); p("LED2","VIN","LED_SMD","LED_0603_1608Metric",95,40,0,{1:"PWR_LED_K",2:"PWR24_LED_R"} if air_r2 else {1:"PWR24_LED_R",2:"GND"}); p("R25","1k","Resistor_SMD","R_0603_1608Metric",100,40,0,{1:"BUS_LED",2:"BUS_LED_R"}); p("LED3","BUS GREEN","LED_SMD","LED_0603_1608Metric",104,40,0,{1:"GND",2:"BUS_LED_R"} if air_r2 else {1:"BUS_LED_R",2:"GND"})
+        if air_r2:
+            p("Q1","2N7002 VIN LED","Package_TO_SOT_SMD","SOT-23",109,44,0,{1:"PWR_LED_EN",2:"GND",3:"PWR_LED_K"})
+            p("R27","100k","Resistor_SMD","R_0603_1608Metric",113,44,0,{1:"PWR_LED_EN",2:"GND"})
+            p("K1","HFD4/5","Xerolux-Relay","Relay_Hongfa_HFD4_DIP",108,97,0,{1:"SYS_5V",2:"RELAY_NC",3:"RELAY_COM",4:"RELAY_NO",8:"RELAY_COIL_L"})
+            p("Q2","2N7002 RELAY","Package_TO_SOT_SMD","SOT-23",99,94,0,{1:"RELAY_GATE",2:"GND",3:"RELAY_COIL_L"})
+            p("D5","1N4148WS FLYBACK","Diode_SMD","D_SOD-323",101,99,90,{1:"SYS_5V",2:"RELAY_COIL_L"})
+            p("R28","100R","Resistor_SMD","R_0603_1608Metric",94,94,0,{1:"RELAY_CTRL",2:"RELAY_GATE"})
+            p("R29","100k","Resistor_SMD","R_0603_1608Metric",94,98,0,{1:"RELAY_GATE",2:"GND"})
+            p("J9","RELAY COM/NO/NC",term_lib,term(3),117,106.5,0,{1:"RELAY_COM",2:"RELAY_NO",3:"RELAY_NC"})
     if air:
         p("U8","SCD41-D-R1","Xerolux-Air","SENSOR-SMD_SCD41-D-R1",29,101,0,{6:"GND",7:"AIR_3V3",9:"I2C_SCL",10:"I2C_SDA",19:"AIR_3V3",20:"GND",21:"GND"})
         p("U9","SGP41-D-R4","Xerolux-Air","DFN-6_L2.4-W2.4-P0.80-TL-EP",40.5,101.5,0,{1:"SGP_VDD",2:"GND",3:"I2C_SDA",4:"GND",5:"AIR_3V3",6:"I2C_SCL",7:"GND"})
@@ -155,7 +187,7 @@ def build(revision="B-ES2-C6"):
             ("C28","10u",59,92.5,{1:"SYS_5V",2:"GND"}),("C29","22u",63,92.5,{1:"AIR_3V3",2:"GND"}),
         ]: p(ref,val,"Capacitor_SMD","C_0805_2012Metric",x,y,0,pins)
         p("R26","10R","Resistor_SMD","R_0603_1608Metric",38,96,90,{1:"AIR_3V3",2:"SGP_VDD"})
-        p("C30","220u 10V","Capacitor_SMD","CP_Elec_8x10",126,99,0,{1:"SYS_5V",2:"GND"})
+        p("C30","220u 10V","Capacitor_SMD","CP_Elec_8x10",77 if air_r2 else 126,92 if air_r2 else 99,0,{1:"SYS_5V",2:"GND"})
         p("TP13","AIR_3V3","TestPoint","TestPoint_Plated_Hole_D2.0mm",55,104,0,{1:"AIR_3V3"})
     if modular:
         slot_pins={1:"GND",2:"SYS_5V",3:"I2C_SDA",4:"I2C_SCL",5:"I2C_SCL",6:"I2C_SDA",7:"SYS_5V",8:"GND"}
@@ -171,7 +203,7 @@ def build(revision="B-ES2-C6"):
     for layer in (pcbnew.F_Cu,pcbnew.In1_Cu,pcbnew.In2_Cu,pcbnew.B_Cu): keepout(b,layer,((45.7,10.1),(64.3,10.1),(64.3,17.0),(45.7,17.0)))
     text(b,"SMART CLIMATE SENSOR",35 if extended else 83,20 if extended else 12,1.1); text(b,f"by Xerolux | xerolux.de | REV {revision} | 2026",35 if extended else 83,22.5 if extended else 14.5,.65)
     text(b,"USB-C FLASH / POWER",75 if extended else 72,102 if air else (82 if extended else bottom-5),.65); text(b,"RS485 ISOLATED",130 if extended else 105,68 if extended else bottom-3,.65)
-    text(b,"43 TEMP | 42 +24V | 41 GND | 40 RH",40 if extended else 37,84 if extended else bottom-2,.65); text(b,"ENGINEERING SAMPLE - BENCH TEST FIRST",57,33,.7)
+    text(b,"43 TEMP | 42 +6-32V | 41 GND | 40 RH" if air_r2 else "43 TEMP | 42 +24V | 41 GND | 40 RH",40 if extended else 37,84 if extended else bottom-2,.65); text(b,"ENGINEERING SAMPLE - BENCH TEST FIRST",57,33,.7)
     if extended:
         text(b,"PUSH-IN FIELD I/O - NO USER SOLDERING",108,35,.65)
         text(b,"1W-A: 3V DQ GND",84,22.5,.55); text(b,"1W-B: 3V DQ GND",104,22.5,.55)
@@ -180,6 +212,9 @@ def build(revision="B-ES2-C6"):
     if air:
         text(b,"SCD41 CO2",29,108,.55); text(b,"SGP41 VOC/NOx | BMP390 hPa",44,106.8,.55)
         text(b,"ULTIMATE AIR - SENSOR ISLAND",45,89.8,.65)
+    if air_r2:
+        text(b,"RELAY: COM NO NC - SELV ONLY",121,101,.55)
+        text(b,"GPIO21 LED ENABLE | GPIO3 RELAY",88,103.5,.48)
     if modular:
         text(b,"AIR-SLOT 1 CO2",25,88,.65); text(b,"AIR-SLOT 2 VOC/NOx",53,88,.65)
         text(b,"AIR-SLOT 3 PRESSURE",81,88,.65)
@@ -189,7 +224,7 @@ def build(revision="B-ES2-C6"):
 
 
 def main():
-    ap=argparse.ArgumentParser(); ap.add_argument("output",type=Path); ap.add_argument("--revision",choices=("B-ES2-C6","B-ES3-C6","B-ES4-AIR","B-ES5-MODULAR"),default="B-ES2-C6"); a=ap.parse_args(); a.output.parent.mkdir(parents=True,exist_ok=True); pcbnew.SaveBoard(str(a.output),build(a.revision))
+    ap=argparse.ArgumentParser(); ap.add_argument("output",type=Path); ap.add_argument("--revision",choices=("B-ES2-C6","B-ES3-C6","B-ES4-AIR","B-ES4-AIR-R2","B-ES5-MODULAR"),default="B-ES2-C6"); a=ap.parse_args(); a.output.parent.mkdir(parents=True,exist_ok=True); pcbnew.SaveBoard(str(a.output),build(a.revision))
 
 
 if __name__=="__main__": main()
