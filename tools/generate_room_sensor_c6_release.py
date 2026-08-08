@@ -166,8 +166,10 @@ def main() -> None:
         parts.extend(AIR_PARTS)
     if args.revision == "B-ES4-AIR-R2":
         parts[2] = ("F1", "BHFUSE", "BSMD1812-050-60V", "500 mA hold 60 V resettable fuse", "1812", "C883142")
+        parts.extend(AIR_R2_PARTS)
         # Stock snapshot 2026-08-08: drop-in alternatives selected after a
-        # complete JLCPCB BOM review. Critical ICs and connectors stay exact.
+        # complete JLCPCB BOM review. C5188435 matches the existing 5.00 mm
+        # three-pin THT footprint; it uses screws instead of push-in springs.
         r2_overrides = {
             "C1": ("C1", "TDK", "C3225X7S2A475KT003S", "4.7 uF 100 V X7S 10% MLCC", "1210", "C694475"),
             "C2": ("C2", "KEMET", "C0805C224K1RACTU", "220 nF 100 V X7R 10%", "0805", "C2167405"),
@@ -177,9 +179,10 @@ def main() -> None:
             "TVS5": ("TVS5", "UMW", "PESD12VL1BA", "12 V bidirectional 0-10 V input protection", "SOD-323", "C2687119"),
             "C22,C26,C27": ("C22,C26,C27", "Walsin", "0805B104K500CT", "100 nF 50 V X7R 10%", "0805", "C83055"),
             "C30": ("C30", "Panasonic", "EEEHB1A221AP", "220 uF 10 V USB peak-current reservoir", "SMD D8x10.2 mm", "C401791"),
+            "J5,J6,J7": ("J5,J6,J7", "MAX", "MX126-5.0-03P-GN01-Cu-S-A", "3-way screw terminal", "THT P5.00mm 1x03", "C5188435"),
+            "J9": ("J9", "MAX", "MX126-5.0-03P-GN01-Cu-S-A", "COM/NO/NC screw terminal", "THT P5.00mm 1x03", "C5188435"),
         }
         parts = [r2_overrides.get(row[0], row) for row in parts]
-        parts.extend(AIR_R2_PARTS)
     if args.revision == "B-ES5-MODULAR":
         parts.extend(MODULAR_PARTS)
     all_refs = [ref for row in parts for ref in refs(row[0])]

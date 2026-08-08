@@ -38,7 +38,7 @@ J4,1,JST,SM08B-SRSS-TB(LF)(SN),8-way 1 mm expansion connector,SMD right angle,C1
 LED1,1,MEIHUA,MHT192CGCT,green status LED,0603,C389518,JLCPCB Standard PCBA
 R13,1,Yageo,RC0603FR-071KL,1 kohm 1%,0603,C21190,JLCPCB Standard PCBA
 SW3,1,BIWIN,SOP01,user-accessible RS-485 termination switch,SMD DIP SPST,C3294660,JLCPCB Standard PCBA
-"J5,J6,J7",3,MAX,MX205R-5.0-03P-GN01-Cu-A,3-way push-in spring terminal,THT P5.00mm 1x03,C7471335,JLCPCB Standard PCBA
+"J5,J6,J7",3,MAX,MX126-5.0-03P-GN01-Cu-S-A,3-way screw terminal,THT P5.00mm 1x03,C5188435,JLCPCB Standard PCBA
 J8,1,MAX,MX205R-5.0-02P-GN01-Cu-A,2-way push-in spring terminal,THT P5.00mm 1x02,C7471334,JLCPCB Standard PCBA
 R14,1,UNI-ROYAL,0603WAF1000T5E,100 ohm 1% 1-Wire series resistor,0603,C22775,JLCPCB Standard PCBA
 R15,1,Yageo,RC0603FR-074K7L,4.7 kohm 1% 1-Wire pull-up,0603,C99782,JLCPCB Standard PCBA
@@ -68,4 +68,4 @@ C30,1,Panasonic,EEEHB1A221AP,220 uF 10 V USB peak-current reservoir,SMD D8x10.2 
 R28,1,UNI-ROYAL,0603WAF1000T5E,100 ohm relay gate resistor,0603,C22775,JLCPCB Standard PCBA
 D5,1,Jiangsu Changjing Electronics Technology,1N4148WS,100 V relay-coil flyback diode,SOD-323,C2128,JLCPCB Standard PCBA
 K1,1,Hongfa,HFD4/5,5 V DPDT potential-free signal relay; one changeover contact used,DIP 10x6.5 mm,C23510,JLCPCB Standard PCBA
-J9,1,MAX,MX205R-5.0-03P-GN01-Cu-A,COM/NO/NC push-in spring terminal,THT P5.00mm 1x03,C7471335,JLCPCB Standard PCBA
+J9,1,MAX,MX126-5.0-03P-GN01-Cu-S-A,COM/NO/NC screw terminal,THT P5.00mm 1x03,C5188435,JLCPCB Standard PCBA

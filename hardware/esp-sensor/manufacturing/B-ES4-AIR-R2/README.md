@@ -24,10 +24,10 @@ for SELV/signalling loads only, not uncertified mains switching.
 The BOM contains the verified drop-in stock alternatives selected on
 2026-08-08 for C1, C2, C14/C17, C22/C26/C27, C30, R9 and TVS5. Stock remains
 dynamic. Keep U3 as ESP32-C6-WROOM-1-N16 and U10 as BMP390 even when JLCPCB
-requires pre-order. J5/J6/J7/J9 must be matched manually to C7471335 if the
-automatic matcher leaves the identical three-way terminal rows unselected.
+requires pre-order. J5/J6/J7/J9 use C5188435, a footprint-compatible 5.00 mm
+three-way screw terminal. C7471335 is not a valid selectable part.
 
-Push-in terminals and K1 are THT parts. Stock, sourcing and wave-solder charges
+The field terminals and K1 are THT parts. Stock, sourcing and wave-solder charges
 must be confirmed in the JLCPCB viewer immediately before payment.
 
 ## Verified release status

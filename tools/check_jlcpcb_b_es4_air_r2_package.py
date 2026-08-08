@@ -49,7 +49,7 @@ def main() -> None:
         "TVS5": "C2687119", "F1": "C883142", "U3": "C5445014", "U4": "C5221601",
         "U7": "C2890051", "U8": "C3659362", "U9": "C3659325",
         "U10": "C5124834", "K1": "C23510", "Q1,Q2": "C8545",
-        "D5": "C2128", "J9": "C7471335",
+        "D5": "C2128", "J5,J6,J7": "C5188435", "J9": "C5188435",
     }
     for designators, number in expected.items():
         assert part[designators] == number, (designators, part[designators])
