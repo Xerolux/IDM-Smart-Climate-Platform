@@ -32,7 +32,7 @@ def main() -> None:
         bom_refs |= refs(row["Designator"])
         assert row["JLCPCB Part #"].startswith("C") and "TBD" not in str(row).upper()
     cpl_refs = {row["Designator"] for row in cpl}
-    assert len(bom) == 70, len(bom)
+    assert len(bom) == 69, len(bom)
     assert len(cpl) == 102, len(cpl)
     assert bom_refs == cpl_refs == set(positions)
     for row in cpl:
@@ -50,6 +50,7 @@ def main() -> None:
         "U7": "C2890051", "U8": "C3659362", "U9": "C3659325",
         "U10": "C5124834", "K1": "C23510", "Q1,Q2": "C8545",
         "D5": "C2128", "J5,J6,J7": "C5188435", "J9": "C5188435",
+        "R13,R16,R17,R22,R25": "C21190",
     }
     for designators, number in expected.items():
         assert part[designators] == number, (designators, part[designators])

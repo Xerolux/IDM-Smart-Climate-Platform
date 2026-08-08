@@ -26,6 +26,8 @@ The BOM contains the verified drop-in stock alternatives selected on
 dynamic. Keep U3 as ESP32-C6-WROOM-1-N16 and U10 as BMP390 even when JLCPCB
 requires pre-order. J5/J6/J7/J9 use C5188435, a footprint-compatible 5.00 mm
 three-way screw terminal. C7471335 is not a valid selectable part.
+R13/R16/R17/R22/R25 are intentionally combined into one C21190 BOM row so
+JLCPCB calculates the required quantity instead of flagging a duplicate match.
 
 The field terminals and K1 are THT parts. Stock, sourcing and wave-solder charges
 must be confirmed in the JLCPCB viewer immediately before payment.

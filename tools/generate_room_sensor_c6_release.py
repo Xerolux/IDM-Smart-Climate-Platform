@@ -183,6 +183,12 @@ def main() -> None:
             "J9": ("J9", "MAX", "MX126-5.0-03P-GN01-Cu-S-A", "COM/NO/NC screw terminal", "THT P5.00mm 1x03", "C5188435"),
         }
         parts = [r2_overrides.get(row[0], row) for row in parts]
+        # JLCPCB treats duplicate BOM rows mapped to one inventory part as an
+        # ambiguous match and reports quantity zero. Keep all five identical
+        # 1 kohm resistors on one BOM row.
+        parts = [row for row in parts if row[0] not in {"R13", "R16,R17,R22,R25"}]
+        parts.append(("R13,R16,R17,R22,R25", "UNI-ROYAL", "0603WAF1001T5E",
+                      "1 kohm 1%", "0603", "C21190"))
     if args.revision == "B-ES5-MODULAR":
         parts.extend(MODULAR_PARTS)
     all_refs = [ref for row in parts for ref in refs(row[0])]
