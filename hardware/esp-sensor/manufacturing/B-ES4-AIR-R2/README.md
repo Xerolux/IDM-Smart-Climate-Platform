@@ -23,8 +23,10 @@ for SELV/signalling loads only, not uncertified mains switching.
 
 The BOM contains the verified drop-in stock alternatives selected on
 2026-08-08 for C1, C2, C14/C17, C22/C26/C27, C30, R9 and TVS5. Stock remains
-dynamic. Keep U3 as ESP32-C6-WROOM-1-N16 and U10 as BMP390 even when JLCPCB
-requires pre-order. J5/J6/J7/J9 use C5188435, a footprint-compatible 5.00 mm
+dynamic. U3 uses the stocked ESP32-C6-WROOM-1-N8 (C5366877); its 8 MB flash is
+sufficient for the planned firmware. U10 uses the stocked BMP388 (C779278),
+which is pin-compatible with BMP390 and supported by the same ESPHome bmp3xx
+driver. J5/J6/J7/J9 use C5188435, a footprint-compatible 5.00 mm
 three-way screw terminal. C7471335 is not a valid selectable part.
 R13/R16/R17/R22/R25 are intentionally combined into one C21190 BOM row so
 JLCPCB calculates the required quantity instead of flagging a duplicate match.

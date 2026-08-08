@@ -70,10 +70,10 @@ def build(revision: str = "B-ES2-C6"):
         company="IDM Smart Climate Platform",
         comments={
             1: "ENGINEERING SAMPLE - BENCH VALIDATION REQUIRED BEFORE IDM CONNECTION",
-            2: ("ESP32-C6-N16; USB-C; 6-32 VDC; switchable LEDs; dry relay"
+            2: ("ESP32-C6-N8; USB-C; 6-32 VDC; switchable LEDs; dry relay"
                 if air_r2 else
                 "ESP32-C6-WROOM-1-N16; USB-C; isolated Modbus RS-485"),
-            3: ("SHT45 + SCD41 + SGP41 + BMP390 indoor-air sensing"
+            3: (f"SHT45 + SCD41 + SGP41 + {'BMP388' if air_r2 else 'BMP390'} indoor-air sensing"
                 if air else
                 "SHT45 plus three rotation-safe Xerolux AIR-SLOT sockets"
                 if modular else
@@ -141,7 +141,7 @@ def build(revision: str = "B-ES2-C6"):
         c6_nets.update({"11":"STATUS_LED", "19":"PWR_LED_EN", "26":"RELAY_CTRL"})
     c6_nc={str(n) for n in range(1,31)}-set(c6_nets)
     b.add(reference="U3", nickname="Connector_Generic", entry="Conn_02x15_Odd_Even",
-        center=(150,125), value="ESP32-C6-WROOM-1-N16 (pins per Espressif datasheet)",
+        center=(150,125), value=f"ESP32-C6-WROOM-1-{'N8' if air_r2 else 'N16'} (pins per Espressif datasheet)",
         footprint="Custom:ESP32-C6-WROOM-1", datasheet="https://documentation.espressif.com/esp32-c6-wroom-1_wroom-1u_datasheet_en.pdf",
         nets=c6_nets, no_connect=c6_nc)
     b.add(reference="J3", nickname="Connector", entry="USB_C_Receptacle_USB2.0_16P",
@@ -305,8 +305,10 @@ def build(revision: str = "B-ES2-C6"):
             nets={"1":"SGP_VDD", "2":"GND", "3":"I2C_SDA", "4":"GND",
                   "5":"AIR_3V3", "6":"I2C_SCL", "7":"GND"})
         b.add(reference="U10", nickname="Connector_Generic", entry="Conn_02x05_Odd_Even",
-            center=(155,315), value="BMP390", footprint="Xerolux-Air:LGA-10_L2.0-W2.0-P0.50-BL",
-            datasheet="https://www.bosch-sensortec.com/products/environmental-sensors/pressure-sensors/bmp390/",
+            center=(155,315), value="BMP388" if air_r2 else "BMP390", footprint="Xerolux-Air:LGA-10_L2.0-W2.0-P0.50-BL",
+            datasheet=("https://www.bosch-sensortec.com/products/environmental-sensors/pressure-sensors/bmp388/"
+                       if air_r2 else
+                       "https://www.bosch-sensortec.com/products/environmental-sensors/pressure-sensors/bmp390/"),
             nets={"1":"AIR_3V3", "2":"I2C_SCL", "3":"GND", "4":"I2C_SDA",
                   "5":"GND", "6":"AIR_3V3", "8":"GND", "9":"GND", "10":"AIR_3V3"},
             no_connect={"7"})

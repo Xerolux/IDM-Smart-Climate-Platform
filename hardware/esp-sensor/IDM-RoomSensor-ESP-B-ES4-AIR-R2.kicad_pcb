@@ -2682,7 +2682,7 @@
 				)
 			)
 		)
-		(property "Value" "ESP32-C6-WROOM-1-N16"
+		(property "Value" "ESP32-C6-WROOM-1-N8"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "0a4c004a-b81b-40c9-94f4-ff9d0dcf32b9")
@@ -9173,7 +9173,7 @@
 				)
 			)
 		)
-		(property "Value" "BMP390"
+		(property "Value" "BMP388"
 			(at 0 4.78 0)
 			(layer "F.Fab")
 			(uuid "1e213cd8-19e5-421c-8afd-d2f77889e08a")
@@ -9206,7 +9206,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C5124834"
+		(property "LCSC Part" "C779278"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -25001,7 +25001,7 @@
 			)
 		)
 	)
-	(gr_text "SGP41 VOC/NOx | BMP390 hPa"
+	(gr_text "SGP41 VOC/NOx | BMP388 hPa"
 		(at 44 106.8 0)
 		(layer "F.SilkS")
 		(uuid "ea287747-77bc-4fc7-a386-71c88751fcf9")

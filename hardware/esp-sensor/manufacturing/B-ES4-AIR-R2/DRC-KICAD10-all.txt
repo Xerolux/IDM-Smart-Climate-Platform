@@ -1,5 +1,5 @@
 ** Drc report for IDM-RoomSensor-ESP-B-ES4-AIR-R2.kicad_pcb **
-** Created on 2026-08-08T06:42:55 **
+** Created on 2026-08-08T12:25:49 **
 ** Report includes: Errors, Warnings, Exclusions **
 
 ** Found 68 DRC violations **
@@ -46,7 +46,7 @@
     @(29.0000 mm, 108.0000 mm): PCB text 'SCD41 CO2' on F.Silkscreen
 [text_height]: Schrifthöhe außerhalb des zulässigen Bereichs (Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe min. Breite 0,8000 mm; tatsächlich 0,5500 mm)
     Rule: Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe; warning
-    @(44.0000 mm, 106.8000 mm): PCB text 'SGP41 VOC/NOx | BMP390 hPa' on F.Silkscreen
+    @(44.0000 mm, 106.8000 mm): PCB text 'SGP41 VOC/NOx | BMP388 hPa' on F.Silkscreen
 [text_height]: Schrifthöhe außerhalb des zulässigen Bereichs (Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe min. Breite 0,8000 mm; tatsächlich 0,5500 mm)
     Rule: Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe; warning
     @(84.0000 mm, 22.5000 mm): PCB text '1W-A: 3V DQ GND' on F.Silkscreen
@@ -1655,7 +1655,7 @@
 [footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint
     Local override; warning
     @(80.0000 mm, 64.0000 mm): Footprint U2
-[footprint_symbol_mismatch]: Wert (U3) stimmt nicht mit Symbolwert (ESP32-C6-WROOM-1-N16) überein.
+[footprint_symbol_mismatch]: Wert (U3) stimmt nicht mit Symbolwert (ESP32-C6-WROOM-1-N8) überein.
     Local override; warning
     @(55.0000 mm, 22.7500 mm): Footprint U3
 [footprint_symbol_field_mismatch]: Fehlendes Symbolfeld "ki_keywords" in Footprint

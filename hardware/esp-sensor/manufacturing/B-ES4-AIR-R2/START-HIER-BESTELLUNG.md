@@ -6,7 +6,8 @@ Order five engineering samples first.
 2. Enable Standard PCBA, top-side SMT and THT/wave soldering.
 3. Upload the BOM and CPL from the `JLCPCB` folder.
 4. Confirm the exact parts and orientation in the placement viewer.
-5. Keep U3=C5445014 and U10=C5124834 exact; pre-order them when required.
+5. Use the stocked parts U3=C5366877 (ESP32-C6-WROOM-1-N8) and
+   U10=C779278 (BMP388). No pre-order is required for these two rows.
 6. J5/J6/J7/J9 use the footprint-compatible 3-way screw terminal C5188435.
    Do not select the unavailable C7471335. Enable THT/wave soldering.
 7. Print the base and lid using the supplied Ultimaker S5 files.

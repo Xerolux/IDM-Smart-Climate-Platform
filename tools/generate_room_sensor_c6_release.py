@@ -171,6 +171,7 @@ def main() -> None:
         # complete JLCPCB BOM review. C5188435 matches the existing 5.00 mm
         # three-pin THT footprint; it uses screws instead of push-in springs.
         r2_overrides = {
+            "U3": ("U3", "Espressif Systems", "ESP32-C6-WROOM-1-N8", "Wi-Fi 6/BLE/Thread module 8 MB flash", "LCC-LGA 18x25.5 mm", "C5366877"),
             "C1": ("C1", "TDK", "C3225X7S2A475KT003S", "4.7 uF 100 V X7S 10% MLCC", "1210", "C694475"),
             "C2": ("C2", "KEMET", "C0805C224K1RACTU", "220 nF 100 V X7R 10%", "0805", "C2167405"),
             "R9": ("R9", "TA-I Tech", "RMS06FT2102", "21 kohm 1%; calibrated gain headroom", "0603", "C209071"),
@@ -179,6 +180,7 @@ def main() -> None:
             "TVS5": ("TVS5", "UMW", "PESD12VL1BA", "12 V bidirectional 0-10 V input protection", "SOD-323", "C2687119"),
             "C22,C26,C27": ("C22,C26,C27", "Walsin", "0805B104K500CT", "100 nF 50 V X7R 10%", "0805", "C83055"),
             "C30": ("C30", "Panasonic", "EEEHB1A221AP", "220 uF 10 V USB peak-current reservoir", "SMD D8x10.2 mm", "C401791"),
+            "U10": ("U10", "Bosch Sensortec", "BMP388", "barometric pressure sensor; BMP390 pin-compatible", "LGA-10 2x2 mm", "C779278"),
             "J5,J6,J7": ("J5,J6,J7", "MAX", "MX126-5.0-03P-GN01-Cu-S-A", "3-way screw terminal", "THT P5.00mm 1x03", "C5188435"),
             "J9": ("J9", "MAX", "MX126-5.0-03P-GN01-Cu-S-A", "COM/NO/NC screw terminal", "THT P5.00mm 1x03", "C5188435"),
         }

@@ -132,7 +132,7 @@ def build(revision="B-ES2-C6"):
     if air_r2:
         c6.pop(10)
         c6.update({11:"STATUS_LED",19:"PWR_LED_EN",26:"RELAY_CTRL"})
-    p("U3","ESP32-C6-WROOM-1-N16","Custom","ESP32-C6-WROOM-1",55,22.75,0,c6)
+    p("U3","ESP32-C6-WROOM-1-N8" if air_r2 else "ESP32-C6-WROOM-1-N16","Custom","ESP32-C6-WROOM-1",55,22.75,0,c6)
     p("J3","USB-C","Connector_USB","USB_C_Receptacle_HRO_TYPE-C-31-M-12",103 if modular else 75,107.2 if tall else (87.2 if extended else 77.2),0,{"A1":"GND","A4":"USB_5V","A5":"USB_CC1","A6":"USB_D+","A7":"USB_D-","A9":"USB_5V","A12":"GND","B1":"GND","B4":"USB_5V","B5":"USB_CC2","B6":"USB_D+","B7":"USB_D-","B9":"USB_5V","B12":"GND","SH":"GND"})
     p("ESD1","USBLC6-2SC6","Package_TO_SOT_SMD","SOT-23-6",75,68,0,{1:"USB_D-",2:"GND",3:"USB_D+",4:"USB_D+",5:"USB_5V",6:"USB_D-"})
     p("R4","5.1k","Resistor_SMD","R_0603_1608Metric",68,67,90,{1:"USB_CC1",2:"GND"}); p("R5","5.1k","Resistor_SMD","R_0603_1608Metric",70.5,67,90,{1:"USB_CC2",2:"GND"})
@@ -178,7 +178,7 @@ def build(revision="B-ES2-C6"):
     if air:
         p("U8","SCD41-D-R1","Xerolux-Air","SENSOR-SMD_SCD41-D-R1",29,101,0,{6:"GND",7:"AIR_3V3",9:"I2C_SCL",10:"I2C_SDA",19:"AIR_3V3",20:"GND",21:"GND"})
         p("U9","SGP41-D-R4","Xerolux-Air","DFN-6_L2.4-W2.4-P0.80-TL-EP",40.5,101.5,0,{1:"SGP_VDD",2:"GND",3:"I2C_SDA",4:"GND",5:"AIR_3V3",6:"I2C_SCL",7:"GND"})
-        p("U10","BMP390","Xerolux-Air","LGA-10_L2.0-W2.0-P0.50-BL",46,101.5,0,{1:"AIR_3V3",2:"I2C_SCL",3:"GND",4:"I2C_SDA",5:"GND",6:"AIR_3V3",8:"GND",9:"GND",10:"AIR_3V3"})
+        p("U10","BMP388" if air_r2 else "BMP390","Xerolux-Air","LGA-10_L2.0-W2.0-P0.50-BL",46,101.5,0,{1:"AIR_3V3",2:"I2C_SCL",3:"GND",4:"I2C_SDA",5:"GND",6:"AIR_3V3",8:"GND",9:"GND",10:"AIR_3V3"})
         p("U11","AP2112K-3.3 AIR","Package_TO_SOT_SMD","SOT-23-5",64,101,0,{1:"SYS_5V",2:"GND",3:"SYS_5V",5:"AIR_3V3"})
         for ref,val,x,y,pins in [
             ("C22","100n",35,92.5,{1:"AIR_3V3",2:"GND"}),("C23","4.7u",39,92.5,{1:"AIR_3V3",2:"GND"}),
@@ -210,7 +210,7 @@ def build(revision="B-ES2-C6"):
         text(b,"DI1 COM DI2",126,22.5,.55); text(b,"A B COM SH",128,61,.55)
         text(b,"0-10V IN | GND",127,84,.55); text(b,"SERVICE",108,82,.55); text(b,"TERM",122,69,.55)
     if air:
-        text(b,"SCD41 CO2",29,108,.55); text(b,"SGP41 VOC/NOx | BMP390 hPa",44,106.8,.55)
+        text(b,"SCD41 CO2",29,108,.55); text(b,f"SGP41 VOC/NOx | {'BMP388' if air_r2 else 'BMP390'} hPa",44,106.8,.55)
         text(b,"ULTIMATE AIR - SENSOR ISLAND",45,89.8,.65)
     if air_r2:
         text(b,"RELAY: COM NO NC - SELV ONLY",121,101,.55)

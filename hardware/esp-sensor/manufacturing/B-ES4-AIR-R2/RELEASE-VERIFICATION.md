@@ -8,7 +8,7 @@
 - [ ] Status, bus and VIN LEDs individually switch and remain off after reboot
 - [ ] Relay defaults off and COM/NO/NC continuity matches firmware state
 - [ ] Relay tested only with SELV/signalling load within its qualified rating
-- [ ] SHT45, SCD41, SGP41 and BMP390 readings plausible
+- [ ] SHT45, SCD41, SGP41 and BMP388 readings plausible
 - [ ] RS-485 isolation, polarity and termination verified
 - [ ] 0-10 V input calibrated and protected-path test passed
 - [ ] 0-10 V output calibrated across the intended load range
