@@ -1,0 +1,43 @@
+Reference,Qty,Part / exact search term,Package / interface,Fit now,Assembly note
+PCB,1,Climate-Sensor-Universal-B-SU1 bare PCB,220x130 mm 2-layer,Yes,Order from supplied Gerber ZIP without assembly
+A1,1,ESP32-C6-DevKitC-1-N8 with male headers,Socketed module,Yes,USB faces enclosure opening
+A2,1,GY-SHT45 breakout 3.3V GND SCL SDA,Socketed module,Yes,Room temperature and humidity
+A3,1,GP8403 or DFR0971 compatible 0-10V I2C module,Socketed module,Yes,Address 0x58 channel 0
+A4,1,XL7015 adjustable 5-80V buck module,4-wire module interface,Yes,Adjust to 5.00V before modules are inserted
+A5,0 or 1,Silvertel Ag97005-FL isolated 5V PoE module,Direct solder split SIL,Optional,Never socket; fit only for PoE
+A6,0 or 1,WIZnet W5500-io module,Three socket rows,Optional,Plug for Ethernet or PoE
+RTH1,1,"NXP KTY81/210,112 genuine",TO-92 inline,Yes,"LCSC C481813; verify about 2kohm near 25C"
+K1,1,Omron G5V-1-DC5 SPDT relay,THT,Yes,Potential-free cooling permit
+J1,1,5-way 5.00mm screw terminal,THT,Yes,72 42 43 41 73 printed on PCB
+J2-J3,2,JST-XH 3-pin header plus housing,THT 2.50mm,Yes,DS18B20 supply and return
+J4,1,2-pin 2.54mm precision female socket,THT,Yes,Test point only; never plug a second KTY
+J5-J6,2,1x16 2.54mm turned-pin female socket,THT,Yes,ESP32-C6 socket
+J7,1,1x4 2.54mm turned-pin female socket,THT,Yes,SHT45 socket
+J8-J9,2,1x4 and 1x3 turned-pin female sockets,THT,Yes,GP8403 interfaces
+J10,1,3-way 5.00mm screw terminal,THT,Yes,Relay COM NO NC
+J11-J14,4,1x4 2.54mm turned-pin female socket,THT,Yes,All optional I2C sockets fitted
+J15,1,Wurth Elektronik 7499210124A PoE MagJack,THT exact footprint,Yes,Do not substitute without footprint and pinout check
+J16-J18,3,1x6 plus two 1x7 2.54mm turned-pin female sockets,THT,Yes,W5500-io socket set
+J19,1,1x4 2.54mm turned-pin female socket,THT,Yes,Future UART socket
+F1,1,0.5A resettable fuse rated at least 30V,Radial THT,Yes,Field input protection
+D1-D2,2,SR560 Schottky diode,DO-15 THT,Yes,Observe band
+D3,1,1N4007,DO-41 THT,Yes,Relay flyback
+D4,1,SR560 Schottky diode,DO-15 THT,Yes,PoE output blocking / power OR
+D5,1,P6KE58CA bidirectional TVS,DO-15 THT,Yes,PoE input protection
+TVS1,1,P6KE33A unidirectional TVS,DO-15 THT,Yes,24V input protection
+R1,1,4.7k 1%,DIN0207 THT,Yes,1-Wire pull-up
+R2,1,100R 1%,DIN0207 THT,Yes,1-Wire series
+R3-R5,3,1k 1%,DIN0207 THT,Yes,LED resistors
+R6,1,220R 1%,DIN0207 THT,Yes,0-10V output protection
+R7,1,2.2k 1%,DIN0207 THT,Yes,Relay transistor base
+C1-C2,2,100nF 50V,THT 5.00mm,Yes,Input/output bypass
+C3,1,100uF 10V low-ESR,Radial THT 6.3mm,Yes,PoE output bulk
+C4,1,10uF 16V low-ESR,Radial THT 5mm,Yes,PoE output filter
+C5,1,100nF 25V,THT 5.00mm,Yes,PoE output bypass
+LED1-LED3,3,3mm green amber red LED,THT,Yes,Observe polarity
+SW1-SW2,2,APEM MJTP1243 compatible tactile switch,THT,Yes,Service and function
+Q1,1,BC337 C-B-E pin order,TO-92 inline,Yes,Check substitute pinout
+DS1-DS2,2,Waterproof DS18B20 3-wire probe,External cable,Yes,Record each address
+M1,0 or 1,SCD40 or SCD41 3.3V I2C breakout,J11 module,Optional,Pin order must match
+M2,0 or 1,SGP41 3.3V I2C breakout,J12 module,Optional,Pin order must match
+M3,0 or 1,BMP390 or BME280 3.3V I2C breakout,J13 module,Optional,Pin order must match

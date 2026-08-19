@@ -1,0 +1,6 @@
+Position,Menge pro Gerät,Beschreibung,Spezifikation,Montagehinweis
+M1,4,Senkkopfschraube für Deckel,M3 x 25 mm,Von oben durch den Deckel
+M2,4,Messing-Gewindeeinsatz,M3; 4.0-4.2 mm Außendurchmesser; 5 mm lang,In 3.9-mm-Pilot im Unterteil thermisch einsetzen
+M3,4,Kunststoff-formende Schraube für Platine,M2.5 x 6 mm,Platine auf vier Abstandshaltern befestigen
+M4,2,Wandschraube optional,maximal 4 mm Schaft,Passenden Dübel für den Untergrund wählen
+M5,1,Filament für ein Gehäuse,PETG bevorzugt oder PLA für Innenraum-Prototyp,Etwa 154 g beim vorbereiteten S5-PLA-Slice

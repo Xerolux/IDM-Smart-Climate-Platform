@@ -1,0 +1,18 @@
+Reference,Qty,Manufacturer part / search description,Package / interface,Required,Assembly note
+PCB,1,Climate-Sensor-B-SS2-NET bare PCB,130x85 mm 2-layer FR-4,Yes,Order from supplied Gerber ZIP; no assembly service
+J1-J2,2,Samtec ESQ-116-44-G-S 1x16 elevated stack-through socket,2.54 mm THT; lead style 44; B=18.67 mm,Yes,Required high profile clears fitted parts below; lower pins plug into carrier and DevKit plugs above
+J3,1,Wuerth Elektronik 7499210124A,PoE MagJack THT,Yes,Exact footprint and enclosure opening are designed for this part
+J4,1,1x6 turned-pin female socket strip,2.54 mm THT,Yes,W5500-io magnetics row
+J5-J6,2,1x7 turned-pin female socket strip,2.54 mm THT,Yes,W5500-io side rows
+J7-J10,4,1x4 turned-pin female socket strip,2.54 mm THT,Optional,"Top-access CO2, VOC-NOx, pressure and future I2C; order is 3V3 GND SCL SDA"
+A1,1,Silvertel Ag97005-FL,10-pin SIL THT isolated 5 V PoE module,Yes,Fit directly; pins 5 6 9 10 remain unused
+A2,1,WIZnet W5500-io,W5500-io socketed module,Yes,Do not substitute W5500 mini boards with a different pinout
+D1,1,SR560,DO-15 axial THT,Yes,Cathode band toward SYS_5V / J1-J2 side
+D2-D3,2,P6KE58CA bidirectional TVS,DO-15 axial THT,Yes,PoE input transient protection
+C1,1,100 uF 10 V low-ESR electrolytic,Radial D6.3 P2.5 mm,Yes,Observe polarity
+C2,1,10 uF 16 V electrolytic,Radial D5 P2.0 mm,Yes,Observe polarity
+C3,1,100 nF 25 V ceramic or film,Disc P5.0 mm,Yes,PoE output decoupling
+R1-R2,2,1 kOhm 0.25 W 1 percent,DIN0207 axial THT,Yes,RJ45 link and activity LED current limit
+TP1-TP3,3,Keystone 5000 or 1 mm loop test point,THT,Optional,Convenient 5 V 3V3 and GND measurements
+H1-H4,4,M3x6 screw plus spacer,M3 mounting,Yes,Use non-conductive spacers where required
+ENC,1,Printed B-SS2-NET base and tall lid,STL PETG or ABS,Recommended,RJ45 opening is specific to J3
